@@ -14,14 +14,15 @@ import javax.annotation.Resource;
  * @author Administrator
  */
 @RestController
+//@CrossOrigin
 @RequestMapping("/home")
 public class HomeController {
-
     @Autowired
     private HomeService homeService;
 
     @GetMapping
-    public ResultVO index(){
+    public ResultVO index() {
         return ResultVOUtil.success(homeService.testFindNickName());
     }
+
 }
