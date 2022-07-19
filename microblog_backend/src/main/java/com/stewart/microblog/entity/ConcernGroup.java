@@ -10,7 +10,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-public class Group {
+public class ConcernGroup {
     @Id
     private Integer id;
     private Integer userId;

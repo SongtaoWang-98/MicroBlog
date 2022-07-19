@@ -4,4 +4,6 @@ import com.stewart.microblog.entity.Follow;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface FollowRepository extends JpaRepository<Follow, Integer> {
+    Integer countByFollowingId(Integer userId);
+    Integer countByUserId(Integer userId);
 }

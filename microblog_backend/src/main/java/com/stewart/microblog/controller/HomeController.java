@@ -22,7 +22,7 @@ public class HomeController {
 
     @GetMapping
     public ResultVO index() {
-        return ResultVOUtil.success(homeService.testFindNickName());
+        return ResultVOUtil.success(homeService.showHotBlogsHome());
     }
 
 }
