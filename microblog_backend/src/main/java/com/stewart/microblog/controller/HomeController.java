@@ -20,14 +20,14 @@ public class HomeController {
     @Autowired
     private HomeService homeService;
 
-//    @GetMapping
-//    public ResultVO index() {
-//        return ResultVOUtil.success(homeService.showHotBlogsHome());
-//    }
-
     @GetMapping
-    public ResultVO test() {
-        return ResultVOUtil.success(homeService.testFindNickName());
+    public ResultVO index() {
+        return ResultVOUtil.success(homeService.showHotBlogsHome());
     }
+
+//    @GetMapping
+//    public ResultVO test() {
+//        return ResultVOUtil.success(homeService.testFindNickName());
+//    }
 
 }
