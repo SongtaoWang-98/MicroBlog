@@ -150,21 +150,8 @@ export default {
   name: 'Home',
   components: {
   },
-  // data() {
-  //   return{
-  //     msg: "hello nonono"
-  //   }
-  // },
-  // created() {
-  //   const _this = this
-  //   axios.get('http://localhost:8181/home').then(function (resp) {
-  //     _this.msg = resp.data.data
-  //   })
-  // }
   data () {
     return {
-      count: 10,
-      msg: "hello lll",
       circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
       nickname:"Cheryl",
       username:"Cheryl@yeah.net",
@@ -190,7 +177,7 @@ export default {
           "time": "2022-07-18 14:58",
           "content": "天气阴沉，上班好困~",
           "topics": ["#topic3"],
-          "img": 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg',
+          "img": require('../../static/Stewart/train.jpg'),
           "repostNum": 0,
           "collectNum": 10,
           "likeNum": 5,
@@ -204,18 +191,18 @@ export default {
   created() {
     const _this = this
     axios.get('http://localhost:8181/home').then(function (resp) {
-      _this.msg = resp.data.data;
-      _this.circleUrl = resp.data.data.userImg;
+      // _this.circleUrl = require(resp.data.data.userImg);
       _this.nickname = resp.data.data.nickName;
       _this.username = resp.data.data.userName;
       _this.followingNum = resp.data.data.followingNum;
       _this.followerNum = resp.data.data.followerNum;
-      // _this.groupList = resp.data.data.groups;
+      _this.groupList = resp.data.data.groups;
       // _this.blogList = resp.data.data.blogs;
-      // _this.topicList = resp.data.data.topics;
-      // _this.radio = 1;
-      // _this.input = '';
-      // _this.comment = ''
+      _this.topicList = resp.data.data.topics;
+      _this.radio = 1;
+      _this.input = '';
+      _this.comment = ''
+      console.log(resp.data.data)
     })
   },
   computed: {
@@ -239,13 +226,6 @@ export default {
 </script>
 
 <style>
-/*.el-main {*/
-/*  background-color: #E9EEF3;*/
-/*  color: #333;*/
-/*  text-align: center;*/
-/*  line-height: 300px;*/
-/*}*/
-
 body > .el-container {
   margin-bottom: 140px;
 }

@@ -13,6 +13,7 @@ import javax.persistence.Id;
 public class Picture {
     @Id
     private Integer id;
+    private Integer photographId;
     private String url;
     private Boolean deleted;
 }

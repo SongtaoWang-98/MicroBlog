@@ -35,6 +35,9 @@ public class HomeServiceImpl implements HomeService {
     @Autowired
     private BlogRepository blogRepository;
 
+    @Autowired
+    private PictureRepository pictureRepository;
+
     @Override
     public String testFindNickName() {
         String userName = "songtao_wang@qq.com";
@@ -71,7 +74,7 @@ public class HomeServiceImpl implements HomeService {
             topicNameList.add(topicList.get(i).getName());
         }
         return new HomeVO(
-                "imgUrl",
+                pictureRepository.findPictureById(user.getPhotoId()).getUrl(),
                 user.getNickname(),
                 user.getUsername(),
                 followRepository.countByUserId(userId),

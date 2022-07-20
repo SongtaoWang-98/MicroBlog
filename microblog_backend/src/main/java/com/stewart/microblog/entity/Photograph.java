@@ -14,6 +14,5 @@ public class Photograph {
     @Id
     private Integer id;
     private String name;
-    private Integer photoId;
     private Boolean deleted;
 }
