@@ -4,7 +4,7 @@
       <div class="user_info">
         <div style="height: 20px"></div>
         <div class="block" style="height: 180px">
-            <el-avatar :size="160" :src="circleUrl"></el-avatar>
+            <el-avatar :size="160" :src=getImgUrl(circleUrl)></el-avatar>
         </div>
         <div class="info">
           <div class="nickname" style="font-size: 30px">{{ nickname }}</div>
@@ -24,36 +24,28 @@
       </div>
       <div style="height: 100px"></div>
       <div class="functions">
-        <div class="photograph">
-          <el-button type="primary" plain icon="el-icon-camera-solid">我的相册</el-button>
-        </div>
+        <div><el-button type="success" plain icon="el-icon-camera-solid">我的相册</el-button></div>
         <div style="height: 40px"></div>
-        <div class="photograph">
-          <el-button type="primary" plain icon="el-icon-s-promotion">我的私信</el-button>
-        </div>
+        <div><el-button type="primary" plain icon="el-icon-s-promotion">我的私信</el-button></div>
         <div style="height: 40px"></div>
-        <div class="photograph">
-          <el-button type="primary" plain icon="el-icon-s-data">我的数据</el-button>
-        </div>
+        <div><el-button type="info" plain icon="el-icon-s-data">我的数据</el-button></div>
         <div style="height: 40px"></div>
-        <div class="photograph">
-          <el-button type="primary" plain icon="el-icon-star-on">我的收藏</el-button>
-        </div>
+        <div><el-button type="danger" plain icon="el-icon-star-on">我的收藏</el-button></div>
         <div style="height: 40px"></div>
       </div>
     </el-aside>
     <el-container>
-      <el-header style="height: 100px; background-color: #91bdc9; ">
+      <el-header style="height: 100px; background-color: #99b7f8; ">
         <div style="height: 30px"></div>
         <div class="group">
           <el-link :underline="false" href="http://localhost:8080/home" style="font-size: 28px; color: crimson">热门</el-link>
           <span>&emsp;&emsp;&emsp;</span>
           <el-link :underline="false" href="https://element.eleme.io" style="font-size: 28px; color: darkorange">最新</el-link>
           <span>&emsp;&emsp;&emsp;</span>
-          <el-link :underline="false" href="https://element.eleme.io" style="font-size: 28px; color: darkorchid">关注</el-link>
+          <el-link :underline="false" href="https://element.eleme.io" style="font-size: 28px; color: #171418">关注</el-link>
           <span>&emsp;&emsp;&emsp;</span>
           <el-dropdown>
-          <el-button style="font-size: 20px; background-color: #b2eaea; border: 0">
+          <el-button style="font-size: 20px; background-color: #f3e9eb; border: 0">
             分组查看<i class="el-icon-arrow-down el-icon--right"></i>
           </el-button>
           <el-dropdown-menu slot="dropdown">
@@ -61,7 +53,8 @@
           </el-dropdown-menu>
           </el-dropdown>
           <span>&emsp;&emsp;&emsp;</span>
-          <el-link :underline="false" icon="el-icon-circle-plus" href="http://localhost:8080/home" style="font-size: 30px; color: #ff0939; margin: 0 auto">发布新博文</el-link>
+          <el-button type="warning" round icon="el-icon-edit" size ="large">发布新博文</el-button>
+<!--          <el-link :underline="false" icon="el-icon-circle-plus" href="http://localhost:8080/home" style="font-size: 30px; color: #fc754e; margin: 0 auto">发布新博文</el-link>-->
         </div>
       </el-header>
       <el-main style="background-color: #e5ecf8">
@@ -75,13 +68,21 @@
               <div style="width: 750px; background-color: #c7d9fc; margin: 0 auto">
                 <div class="time" style="height: 20px">{{blog.time}}</div>
                 <div style="height: 20px"><el-link :underline="false" href="https://element.eleme.io" icon="el-icon-warning-outline" style="font-size: 10px; color: rgba(255,9,57,0.89); float: right; margin-right: 20px">举报</el-link></div>
-                <div class="topic" v-for="topic in blog.topics">
-                  <div style="height: 24px; width:300px; font-size: 20px; color: darkblue; margin: 0 auto; text-align: left">{{topic}}</div>
+                <div class="block" style="height: 80px">
+                  <el-avatar :size="60" :src=getImgUrl(blog.publisherImg)></el-avatar>
                 </div>
+                <div class="info">
+                  <div class="nickname" style="font-size: 20px">{{ blog.publisherName }}</div>
+                </div>
+                <div style="height: 20px"></div>
+                <div class="topic" v-for="topic in blog.topics">
+                  <div style="height: 24px; width:300px; font-size: 20px; color: darkblue; margin: 0 auto; text-align: left">#{{topic}}</div>
+                </div>
+                <div style="height: 10px"></div>
                 <div class="content" style="width: 300px; margin: 0 auto; text-align: left">{{blog.content}}</div>
                 <div style="height: 20px"></div>
-                <div class="pic">
-                  <el-image style="width: 300px; height: 200px" :fit="scale-down" :src="blog.img"></el-image>
+                <div class="pic" v-show="blog.img !== ''">
+                  <el-image style="width: 300px; height: 200px" :fit="scale-down" :src=getImgUrl(blog.img)></el-image>
                 </div>
                 <div style="height: 10px"></div>
                 <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">
@@ -115,8 +116,8 @@
         </div>
       </el-main>
     </el-container>
-    <el-aside width="500px" style="background-color: cornsilk">
-      <div style="height: 100px; background-color: cornsilk"></div>
+    <el-aside width="500px" style="background-color: #faf1e7">
+      <div style="height: 100px; background-color: #faf1e7"></div>
       <div class="search" style="height: 150px">
         <div style="height: 60px; font-size: 40px; color: rgba(58,58,70,0.89)">搜一搜</div>
         <div style="height: 50px">
@@ -138,8 +139,9 @@
       <div style="height: 50px"></div>
       <div class="topics" style="height: 200px">
         <div style="height: 60px; font-size: 40px; color: rgba(58,58,70,0.89)">热门话题</div>
-        <div v-for="topic in tpoicList" key="index" style="font-size: 28px; color: rgba(255,9,57,0.89)">
-          <div style="height: 40px"></div>{{topic}}</div>
+        <div style="height: 80px"></div>
+        <div v-for="topic in topicList" key="index" style="font-size: 28px; color: rgba(255,9,57,0.89)">
+          <div style="width: 300px; height: 80px; margin: 0 auto; text-align: left">#{{topic}}</div></div>
       </div>
     </el-aside>
   </el-container>
@@ -154,55 +156,56 @@ export default {
     return {
       circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
       nickname:"Cheryl",
-      username:"Cheryl@yeah.net",
-      followingNum:234,
-      followerNum:3028,
-      groupList:["朋友","同学","默认分组"],
-      radio: '1',
-      input:'',
-      tpoicList:["天气真好","猫猫狗狗","发工资"],
-      blogList:[
-        {
-          "time": "2022-06-18 14:56",
-          "content": "今天天气真好！",
-          "topics": ["#topic1","#topic2"],
-          "img": 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg',
-          "repostNum": 5,
-          "collectNum": 3,
-          "likeNum": 2,
-          "commentNum": 3,
-          "comments": ["Jack:123123","William:0000"]
-        },
-        {
-          "time": "2022-07-18 14:58",
-          "content": "天气阴沉，上班好困~",
-          "topics": ["#topic3"],
-          "img": require('../../static/Stewart/train.jpg'),
-          "repostNum": 0,
-          "collectNum": 10,
-          "likeNum": 5,
-          "commentNum": 0,
-          "comments": []
-        }
-      ],
-      comment:''
+      // username:"Cheryl@yeah.net",
+      // followingNum:234,
+      // followerNum:3028,
+      // groupList:["朋友","同学","默认分组"],
+      // radio: '1',
+      // input:'',
+      // comment:'',
+      // topicList:["天气真好","猫猫狗狗","发工资"],
+      // blogList:[
+      //   {
+      //     "time": "2022-06-18 14:56",
+      //     "content": "今天天气真好！",
+      //     "topics": ["#topic1","#topic2"],
+      //     "img": '',
+      //     "repostNum": 5,
+      //     "collectNum": 3,
+      //     "likeNum": 2,
+      //     "commentNum": 3,
+      //     "comments": ["Jack:123123","William:0000"]
+      //   },
+      //   {
+      //     "time": "2022-07-18 14:58",
+      //     "content": "123123~",
+      //     "topics": ["#topic3"],
+      //     "img": 'Stewart/2.jpg',
+      //     "repostNum": 0,
+      //     "collectNum": 10,
+      //     "likeNum": 5,
+      //     "commentNum": 0,
+      //     "comments": []
+      //   }
+      // ]
     }
   },
   created() {
     const _this = this
     axios.get('http://localhost:8181/home').then(function (resp) {
-      // _this.circleUrl = require(resp.data.data.userImg);
-      _this.nickname = resp.data.data.nickName;
-      _this.username = resp.data.data.userName;
-      _this.followingNum = resp.data.data.followingNum;
-      _this.followerNum = resp.data.data.followerNum;
-      _this.groupList = resp.data.data.groups;
-      // _this.blogList = resp.data.data.blogs;
-      _this.topicList = resp.data.data.topics;
-      _this.radio = 1;
-      _this.input = '';
-      _this.comment = ''
       console.log(resp.data.data)
+      _this.circleUrl = resp.data.data.userImg
+      _this.nickname = resp.data.data.nickName
+      _this.username = resp.data.data.userName
+      _this.followingNum = resp.data.data.followingNum
+      _this.followerNum = resp.data.data.followerNum
+      _this.groupList = resp.data.data.groups
+      _this.blogList = resp.data.data.blogs
+      _this.topicList = resp.data.data.topics
+      console.log(_this)
+      _this.radio = 1
+      _this.input = ''
+      _this.comment = ''
     })
   },
   computed: {
@@ -220,6 +223,10 @@ export default {
         this.count += 2
         this.loading = false
       }, 2000)
+    },
+    getImgUrl(src) {
+      if(src==='') return
+      return require('../../static/' + src)
     }
   }
 }

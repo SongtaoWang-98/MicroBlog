@@ -18,4 +18,10 @@ public interface HomeService {
      * @return
      */
     HomeVO showHotBlogsHome();
+
+    HomeVO showNewBlogsHome();
+
+    HomeVO showFriendsBlogsHome();
+
+    HomeVO showGroupBlogsHome(Integer groupId);
 }

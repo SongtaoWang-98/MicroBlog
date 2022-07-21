@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.23, for macos10.15 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: microblog
 -- ------------------------------------------------------
--- Server version	8.0.23
+-- Server version	8.0.29
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -38,7 +38,7 @@ CREATE TABLE `blog` (
   `heat` int DEFAULT '0',
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `blog` (
 
 LOCK TABLES `blog` WRITE;
 /*!40000 ALTER TABLE `blog` DISABLE KEYS */;
-INSERT INTO `blog` VALUES (1,1,'2022-06-18 14:56:36','PUBLIC','今天天气真好！',NULL,0,0,0,'NORMAL','ORIGINAL',NULL,0,0),(2,2,'2022-07-18 14:58:54','PUBLIC','天气阴沉，上班好困~',NULL,0,0,0,'NORMAL','ORIGINAL',NULL,0,0);
+INSERT INTO `blog` VALUES (1,1,'2022-06-18 14:56:36','PUBLIC','今天天气真好！',1,1,1,0,'NORMAL','ORIGINAL',NULL,6,0),(2,2,'2022-07-18 14:58:54','PUBLIC','天气阴沉，上班好困~',NULL,1,0,0,'NORMAL','ORIGINAL',NULL,1,0),(3,3,'2022-07-21 15:04:34','PUBLIC','每天做核酸真的谢0.0',NULL,0,0,0,'NORMAL','ORIGINAL',NULL,0,0),(4,4,'2022-07-21 15:12:20','PUBLIC','健身房都关门了',NULL,0,0,0,'NORMAL','ORIGINAL',NULL,0,0);
 /*!40000 ALTER TABLE `blog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,7 +64,7 @@ CREATE TABLE `blog_topic` (
   `topic_id` int NOT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `blog_topic` (
 
 LOCK TABLES `blog_topic` WRITE;
 /*!40000 ALTER TABLE `blog_topic` DISABLE KEYS */;
-INSERT INTO `blog_topic` VALUES (1,1,1,0),(2,2,1,0),(3,2,2,0);
+INSERT INTO `blog_topic` VALUES (1,1,1,0),(2,2,1,0),(3,2,2,0),(4,3,3,0),(5,4,3,0);
 /*!40000 ALTER TABLE `blog_topic` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +120,7 @@ CREATE TABLE `comment` (
   `reply_comment_id` int DEFAULT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (1,1,2,'确实','2022-07-18 17:01:53',0,NULL,0);
+INSERT INTO `comment` VALUES (1,1,2,'确实','2022-07-18 17:01:53',0,NULL,0),(2,1,3,'哈哈哈！','2022-07-21 09:04:31',0,NULL,0);
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,7 +198,7 @@ CREATE TABLE `group_follow` (
   `follow_id` int NOT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,7 +207,7 @@ CREATE TABLE `group_follow` (
 
 LOCK TABLES `group_follow` WRITE;
 /*!40000 ALTER TABLE `group_follow` DISABLE KEYS */;
-INSERT INTO `group_follow` VALUES (1,4,1,0),(2,5,4,0);
+INSERT INTO `group_follow` VALUES (1,4,1,0),(2,5,4,0),(3,2,2,0),(4,3,3,0),(5,6,5,0);
 /*!40000 ALTER TABLE `group_follow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -279,7 +279,7 @@ CREATE TABLE `like` (
   `blog_id` int NOT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -288,7 +288,7 @@ CREATE TABLE `like` (
 
 LOCK TABLES `like` WRITE;
 /*!40000 ALTER TABLE `like` DISABLE KEYS */;
-INSERT INTO `like` VALUES (1,2,1,0);
+INSERT INTO `like` VALUES (1,2,1,0),(2,1,2,0);
 /*!40000 ALTER TABLE `like` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -358,7 +358,7 @@ CREATE TABLE `picture` (
   `url` varchar(255) DEFAULT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -367,7 +367,7 @@ CREATE TABLE `picture` (
 
 LOCK TABLES `picture` WRITE;
 /*!40000 ALTER TABLE `picture` DISABLE KEYS */;
-INSERT INTO `picture` VALUES (1,1,'../../static/Stewart/train.jpg',0),(2,1,'../../static/Stewart/hills.jpg',0);
+INSERT INTO `picture` VALUES (1,1,'Stewart/1.jpg',0),(2,1,'Stewart/2.jpg',0),(3,NULL,'Default/1.png',0),(4,NULL,'Default/2.png',0);
 /*!40000 ALTER TABLE `picture` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -412,7 +412,7 @@ CREATE TABLE `topic` (
   `heat` int DEFAULT '0',
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -421,7 +421,7 @@ CREATE TABLE `topic` (
 
 LOCK TABLES `topic` WRITE;
 /*!40000 ALTER TABLE `topic` DISABLE KEYS */;
-INSERT INTO `topic` VALUES (1,'成都天气',0,0),(2,'上班第一周',0,0);
+INSERT INTO `topic` VALUES (1,'成都天气',0,0),(2,'上班第一周',0,0),(3,'24小时核酸',0,0);
 /*!40000 ALTER TABLE `topic` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -450,7 +450,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'songtao_wang@qq.com','Stewart','123456','USER','NORMAL',1),(2,'zhangsan@yeah.net','TT','123456','USER','NORMAL',1),(3,'lisi@eastmoney.com','Jack','123456','USER','NORMAL',1),(4,'123456789@qq.com','Mr.Ba','123456','USER','NORMAL',1);
+INSERT INTO `user` VALUES (1,'songtao_wang@qq.com','Stewart','123456','USER','NORMAL',1),(2,'zhangsan@yeah.net','TT','123456','USER','NORMAL',3),(3,'lisi@eastmoney.com','Jack','123456','USER','NORMAL',4),(4,'123456789@qq.com','Mr.Ba','123456','USER','NORMAL',3);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -463,4 +463,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-20 23:02:30
+-- Dump completed on 2022-07-21 18:11:19

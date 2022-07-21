@@ -16,6 +16,10 @@ import java.util.List;
 public class BlogVO {
     @JsonProperty("time")
     private String blogTime;
+    @JsonProperty("publisherName")
+    private String publisherName;
+    @JsonProperty("publisherImg")
+    private String publisherImg;
     @JsonProperty("content")
     private String blogContent;
     @JsonProperty("topics")

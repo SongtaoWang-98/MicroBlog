@@ -4,5 +4,5 @@ import com.stewart.microblog.entity.Picture;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PictureRepository extends JpaRepository<Picture, Integer> {
-    Picture findPictureById(Integer id);
+    Picture findPictureByIdAndDeleted(Integer id, Boolean deleted);
 }
