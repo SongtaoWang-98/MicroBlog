@@ -15,10 +15,9 @@ import javax.annotation.Resource;
  * @author Administrator
  */
 @RestController
-//@CrossOrigin
 @RequestMapping("/home")
 public class HomeController {
-    @Autowired
+    @Resource
     private HomeService homeService;
 
     @GetMapping("/hot")
@@ -36,8 +35,8 @@ public class HomeController {
         return ResultVOUtil.success(homeService.showFriendsBlogsHome());
     }
 
-    @GetMapping("/group/{groupId}")
-    public ResultVO groupBlogs(@PathVariable Integer groupId) {
+    @GetMapping("/group")
+    public ResultVO groupBlogs(Integer groupId) {
         return ResultVOUtil.success(homeService.showGroupBlogsHome(groupId));
     }
 
