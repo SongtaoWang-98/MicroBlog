@@ -5,16 +5,15 @@ import com.stewart.microblog.repository.*;
 import com.stewart.microblog.service.HomeService;
 import com.stewart.microblog.vo.BlogVO;
 import com.stewart.microblog.vo.HomeVO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.Collection;
 
 /**
- * @author Administrator
+ * 主页功能接口实现类
+ * @author 王松涛
  */
 @Service
 public class HomeServiceImpl implements HomeService {
@@ -38,11 +37,6 @@ public class HomeServiceImpl implements HomeService {
     private GroupFollowRepository groupFollowRepository;
 
     @Override
-    public String testFindNickName() {
-        String userName = "songtao_wang@qq.com";
-        return userRepository.findByUsername(userName).getNickname();
-    }
-    @Override
     public HomeVO showHotBlogsHome() {
         String userName = "songtao_wang@qq.com";
         User user = userRepository.findByUsername(userName);
@@ -58,16 +52,16 @@ public class HomeServiceImpl implements HomeService {
             Integer blogId = blogList.get(i).getId();
             Blog blog = blogRepository.findBlogByIdAndDeleted(blogId, false);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-            User publisher = userRepository.findUserById(blog.getPublisherId());
+            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), "NORMAL");
             List<String> blogTopicList = new ArrayList<>();
-            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogId(blogId);
+            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
             for(BlogTopic blogTopic: blogTopics) {
                 blogTopicList.add(topicRepository.findTopicByIdAndDeleted(blogTopic.getTopicId(), false).getName());
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
             for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserById(comments.get(j).getSenderId()).getNickname() + "： " + comments.get(j).getContent());
+                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
@@ -116,16 +110,16 @@ public class HomeServiceImpl implements HomeService {
             Integer blogId = blogList.get(i).getId();
             Blog blog = blogRepository.findBlogByIdAndDeleted(blogId, false);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-            User publisher = userRepository.findUserById(blog.getPublisherId());
+            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), "NORMAL");
             List<String> blogTopicList = new ArrayList<>();
-            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogId(blogId);
+            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
             for(BlogTopic blogTopic: blogTopics) {
                 blogTopicList.add(topicRepository.findTopicByIdAndDeleted(blogTopic.getTopicId(), false).getName());
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
             for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserById(comments.get(j).getSenderId()).getNickname() + "： " + comments.get(j).getContent());
+                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
@@ -189,16 +183,16 @@ public class HomeServiceImpl implements HomeService {
             Integer blogId = blogList.get(i).getId();
             Blog blog = blogRepository.findBlogByIdAndDeleted(blogId, false);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-            User publisher = userRepository.findUserById(blog.getPublisherId());
+            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), "NORMAL");
             List<String> blogTopicList = new ArrayList<>();
-            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogId(blogId);
+            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
             for(BlogTopic blogTopic: blogTopics) {
                 blogTopicList.add(topicRepository.findTopicByIdAndDeleted(blogTopic.getTopicId(), false).getName());
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
             for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserById(comments.get(j).getSenderId()).getNickname() + "： " + comments.get(j).getContent());
+                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
@@ -241,10 +235,10 @@ public class HomeServiceImpl implements HomeService {
         for(ConcernGroup concernGroup : concernGroupList) {
             groupNameList.add(concernGroup.getName());
         }
-        List<GroupFollow>groupFollowList = groupFollowRepository.findAllByGroupId(groupId);
+        List<GroupFollow>groupFollowList = groupFollowRepository.findAllByGroupIdAndDeleted(groupId, false);
         List<Integer> groupMemberIds = new ArrayList<>();
         for(GroupFollow groupFollow: groupFollowList) {
-            groupMemberIds.add(followRepository.findFollowById(groupFollow.getFollowId()).getFollowingId());
+            groupMemberIds.add(followRepository.findFollowByIdAndDeleted(groupFollow.getFollowId(), false).getFollowingId());
         }
         List<String> scopes = new ArrayList<>();
         scopes.add("PUBLIC");
@@ -255,16 +249,16 @@ public class HomeServiceImpl implements HomeService {
             Integer blogId = blogList.get(i).getId();
             Blog blog = blogRepository.findBlogByIdAndDeleted(blogId, false);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-            User publisher = userRepository.findUserById(blog.getPublisherId());
+            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), "NORMAL");
             List<String> blogTopicList = new ArrayList<>();
-            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogId(blogId);
+            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
             for(BlogTopic blogTopic: blogTopics) {
                 blogTopicList.add(topicRepository.findTopicByIdAndDeleted(blogTopic.getTopicId(), false).getName());
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
             for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserById(comments.get(j).getSenderId()).getNickname() + "： " + comments.get(j).getContent());
+                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(

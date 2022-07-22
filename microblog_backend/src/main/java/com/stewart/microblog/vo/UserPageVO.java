@@ -5,7 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author stewartwang
+ * 用户页视图类
+ * @author 王松涛
  */
 @Data
 @NoArgsConstructor

@@ -2,6 +2,11 @@ package com.stewart.microblog.enums;
 
 import lombok.Getter;
 
+/**
+ * 登录返回代码枚举类
+ * @author 王松涛
+ */
+
 @Getter
 public enum LoginCode {
 
@@ -31,9 +36,8 @@ public enum LoginCode {
     /* 业务错误 */
     NO_PERMISSION(3001, "没有权限");
 
-
-    private Integer code;
-    private String message;
+    private final Integer code;
+    private final String message;
 
     LoginCode(Integer code, String message) {
         this.code = code;

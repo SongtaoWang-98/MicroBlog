@@ -4,6 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+/**
+ * 注册表单类
+ * @author 王松涛
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

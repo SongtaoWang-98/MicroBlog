@@ -2,6 +2,10 @@ package com.stewart.microblog.util;
 
 import com.stewart.microblog.vo.ResultVO;
 
+/**
+ * 向前端返回信息模板工具类
+ * @author 王松涛
+ */
 public class ResultVOUtil {
     public static ResultVO success(Object data){
         ResultVO resultVO = new ResultVO();

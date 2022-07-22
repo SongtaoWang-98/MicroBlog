@@ -5,6 +5,10 @@ import com.stewart.microblog.dto.RegisterDTO;
 import com.stewart.microblog.enums.StatusCode;
 import com.stewart.microblog.vo.*;
 
+/**
+ * 用户功能接口
+ * @author 王松涛
+ */
 public interface UserService {
     StatusCode register(RegisterDTO registerDTO);
     UserPageVO showPersonalPage(Integer userId);

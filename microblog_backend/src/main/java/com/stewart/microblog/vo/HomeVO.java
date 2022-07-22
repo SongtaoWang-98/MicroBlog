@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @author Administrator
+ * 首页视图类
+ * @author 王松涛
  */
 @Data
 @NoArgsConstructor

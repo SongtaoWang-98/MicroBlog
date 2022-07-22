@@ -154,8 +154,8 @@ export default {
   },
   data () {
     return {
-      circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
-      nickname:"Cheryl",
+      circleUrl: "",
+      // nickname:"Cheryl",
       // username:"Cheryl@yeah.net",
       // followingNum:234,
       // followerNum:3028,
@@ -180,7 +180,7 @@ export default {
       //     "time": "2022-07-18 14:58",
       //     "content": "123123~",
       //     "topics": ["#topic3"],
-      //     "img": 'Stewart/2.jpg',
+      //     "img": '',
       //     "repostNum": 0,
       //     "collectNum": 10,
       //     "likeNum": 5,
@@ -192,7 +192,7 @@ export default {
   },
   created() {
     const _this = this
-    axios.get('http://localhost:8181/home').then(function (resp) {
+    axios.get('http://localhost:8181/home/hot').then(function (resp) {
       console.log(resp.data.data)
       _this.circleUrl = resp.data.data.userImg
       _this.nickname = resp.data.data.nickName

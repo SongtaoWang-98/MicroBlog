@@ -7,7 +7,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author stewartwang
+ * 博客功能接口
+ * @author 王松涛
  */
 public interface BlogService {
     StatusCode likeBlog(Integer blogId);

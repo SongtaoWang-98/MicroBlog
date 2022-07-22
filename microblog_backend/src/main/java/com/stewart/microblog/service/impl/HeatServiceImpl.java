@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+/**
+ * 热度功能接口实现类
+ * @author 王松涛
+ */
 @Service
 public class HeatServiceImpl implements HeatService {
 

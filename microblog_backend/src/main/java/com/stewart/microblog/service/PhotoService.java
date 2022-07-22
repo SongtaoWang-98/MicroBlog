@@ -5,7 +5,8 @@ import com.stewart.microblog.vo.PhotographsVO;
 import com.stewart.microblog.vo.PhotosVO;
 
 /**
- * @author stewartwang
+ * 照片功能接口
+ * @author 王松涛
  */
 public interface PhotoService {
     PhotographsVO showPhotographs();

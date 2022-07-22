@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * @author stewartwang
+ * 博客功能控制层类
+ * @author 王松涛
  */
 @RestController
 @RequestMapping("/blog")

@@ -5,10 +5,48 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
+/**
+ * 关注持久化接口
+ * @author 王松涛
+ */
 public interface FollowRepository extends JpaRepository<Follow, Integer> {
+    /**
+     * 根据被关注id查找粉丝数量
+     * @param userId
+     * Integer类型用户id
+     * @param deleted
+     * Boolean类型的删除标记
+     * @return Integer类型粉丝数量
+     */
     Integer countByFollowingIdAndDeleted(Integer userId, Boolean deleted);
+
+    /**
+     * 根据用户id查找关注数量
+     * @param userId
+     * Integer类型用户id
+     * @param deleted
+     * Boolean类型删除标记
+     * @return Integer类型关注数量
+     */
     Integer countByUserIdAndDeleted(Integer userId, Boolean deleted);
+
+    /**
+     * 根据用户id查找所有关注列表
+     * @param userId
+     * Integer类型用户id
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 关注列表
+     */
     List<Follow> findAllByUserIdAndDeleted(Integer userId, Boolean deleted);
-    List<Follow> findAllByFollowingIdAndDeleted(Integer userId, Boolean deleted);
-    Follow findFollowById(Integer id);
+
+    /**
+     * 根据id查找关注信息
+     * @param id
+     * 关注表主键id
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 关注对象Follow
+     */
+    Follow findFollowByIdAndDeleted(Integer id, Boolean deleted);
 }

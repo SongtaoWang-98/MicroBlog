@@ -5,7 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 /**
- * @author Administrator
+ * 启动类
+ * @author 王松涛
  */
 @SpringBootApplication
 public class MicroblogApplication {

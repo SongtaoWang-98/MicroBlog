@@ -6,7 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * @author Administrator
+ * 关注组实体类
+ * @author 王松涛
  */
 @Data
 @Entity

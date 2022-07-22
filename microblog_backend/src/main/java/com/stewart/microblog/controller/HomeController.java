@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * @author Administrator
+ * 博客首页控制层类
+ * @author 王松涛
  */
 @RestController
 @RequestMapping("/home")
@@ -39,10 +40,4 @@ public class HomeController {
     public ResultVO groupBlogs(Integer groupId) {
         return ResultVOUtil.success(homeService.showGroupBlogsHome(groupId));
     }
-
-//    @GetMapping
-//    public ResultVO test() {
-//        return ResultVOUtil.success(homeService.testFindNickName());
-//    }
-
 }

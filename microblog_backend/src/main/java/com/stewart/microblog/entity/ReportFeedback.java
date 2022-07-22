@@ -7,7 +7,8 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * @author Administrator
+ * 举报反馈实体类
+ * @author 王松涛
  */
 @Data
 @Entity

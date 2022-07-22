@@ -7,7 +7,8 @@ import java.util.Date;
 
 
 /**
- * @author Administrator
+ * 博客实体类
+ * @author 王松涛
  */
 @Data
 @Entity
