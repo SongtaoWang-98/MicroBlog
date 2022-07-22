@@ -172,7 +172,7 @@ CREATE TABLE `follow` (
   `following_id` int DEFAULT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `follow` (
 
 LOCK TABLES `follow` WRITE;
 /*!40000 ALTER TABLE `follow` DISABLE KEYS */;
-INSERT INTO `follow` VALUES (1,1,2,0),(2,2,1,0),(3,3,1,0),(4,1,3,0),(5,4,1,0);
+INSERT INTO `follow` VALUES (1,1,2,0),(2,2,1,0),(3,3,1,0),(4,1,3,0),(5,4,1,0),(6,1,5,0);
 /*!40000 ALTER TABLE `follow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -253,7 +253,8 @@ CREATE TABLE `information` (
   `university` varchar(255) DEFAULT NULL,
   `tel_number` varchar(255) DEFAULT NULL,
   `hobby` varchar(255) DEFAULT NULL,
-  `province` varchar(255) DEFAULT NULL
+  `province` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -441,7 +442,7 @@ CREATE TABLE `user` (
   `state` enum('NORMAL','BANNED') DEFAULT 'NORMAL',
   `photo_id` int DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -450,7 +451,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'songtao_wang@qq.com','Stewart','123456','USER','NORMAL',1),(2,'zhangsan@yeah.net','TT','123456','USER','NORMAL',3),(3,'lisi@eastmoney.com','Jack','123456','USER','NORMAL',4),(4,'123456789@qq.com','Mr.Ba','123456','USER','NORMAL',3);
+INSERT INTO `user` VALUES (1,'songtao_wang@qq.com','Stewart','123456','USER','NORMAL',1),(2,'zhangsan@yeah.net','TT','123456','USER','NORMAL',3),(3,'lisi@eastmoney.com','Jack','123456','USER','NORMAL',4),(4,'123456789@qq.com','Mr.Ba','123456','USER','NORMAL',3),(5,'gogogo@go.com','heihei','123456','USER','NORMAL',4);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -463,4 +464,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-21 18:11:19
+-- Dump completed on 2022-07-22 17:56:48

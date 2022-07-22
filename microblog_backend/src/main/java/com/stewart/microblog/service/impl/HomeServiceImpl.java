@@ -3,6 +3,7 @@ package com.stewart.microblog.service.impl;
 import com.stewart.microblog.entity.*;
 import com.stewart.microblog.repository.*;
 import com.stewart.microblog.service.HomeService;
+import com.stewart.microblog.util.GetCurrentUserUtil;
 import com.stewart.microblog.vo.BlogVO;
 import com.stewart.microblog.vo.HomeVO;
 import org.springframework.stereotype.Service;
@@ -38,7 +39,7 @@ public class HomeServiceImpl implements HomeService {
 
     @Override
     public HomeVO showHotBlogsHome() {
-        String userName = "songtao_wang@qq.com";
+        String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<String> groupNameList = new ArrayList<>();
@@ -96,7 +97,7 @@ public class HomeServiceImpl implements HomeService {
 
     @Override
     public HomeVO showNewBlogsHome() {
-        String userName = "songtao_wang@qq.com";
+        String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<String> groupNameList = new ArrayList<>();
@@ -154,7 +155,7 @@ public class HomeServiceImpl implements HomeService {
 
     @Override
     public HomeVO showFriendsBlogsHome() {
-        String userName = "songtao_wang@qq.com";
+        String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<String> groupNameList = new ArrayList<>();
@@ -227,7 +228,7 @@ public class HomeServiceImpl implements HomeService {
 
     @Override
     public HomeVO showGroupBlogsHome(Integer groupId) {
-        String userName = "songtao_wang@qq.com";
+        String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<String> groupNameList = new ArrayList<>();

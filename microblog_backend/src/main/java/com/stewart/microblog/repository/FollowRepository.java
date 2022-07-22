@@ -41,6 +41,16 @@ public interface FollowRepository extends JpaRepository<Follow, Integer> {
     List<Follow> findAllByUserIdAndDeleted(Integer userId, Boolean deleted);
 
     /**
+     * 根据用户id查找所有被关注（粉丝）列表
+     * @param userId
+     * Integer类型用户id
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 粉丝列表
+     */
+    List<Follow> findAllByFollowingIdAndDeleted(Integer userId, Boolean deleted);
+
+    /**
      * 根据id查找关注信息
      * @param id
      * 关注表主键id
@@ -49,4 +59,16 @@ public interface FollowRepository extends JpaRepository<Follow, Integer> {
      * @return 关注对象Follow
      */
     Follow findFollowByIdAndDeleted(Integer id, Boolean deleted);
+
+    /**
+     * 根据用户id和关注id查找关注关系
+     * @param userId
+     * Integer类型用户id
+     * @param followingId
+     * Integer类型关注
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 关注关系对象Follow
+     */
+    Follow findFollowByUserIdAndFollowingIdAndDeleted(Integer userId, Integer followingId, Boolean deleted);
 }

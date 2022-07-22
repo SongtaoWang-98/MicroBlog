@@ -5,26 +5,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 /**
- * 用户页视图类
+ * 用户列表条目视图类
  * @author 王松涛
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class UserPageVO {
+@NoArgsConstructor
+public class UserListItemVO {
     @JsonProperty("userImg")
     private String userImg;
     @JsonProperty("nickName")
     private String nickName;
     @JsonProperty("userName")
     private String userName;
-    @JsonProperty("followingNum")
-    private Integer followingNum;
-    @JsonProperty("followerNum")
-    private Integer followerNum;
-    @JsonProperty("blogs")
-    private List<BlogVO> blogVOList;
 }

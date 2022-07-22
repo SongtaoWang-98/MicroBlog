@@ -1,27 +1,20 @@
-package com.stewart.microblog.entity;
+package com.stewart.microblog.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Date;
-
 /**
- * 个人信息实体类
+ * 个人信息表单类
  * @author 王松涛
  */
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Information {
-    @Id
-    private Integer userId;
+public class DetailedInfoDTO {
     private String realName;
     private String gender;
-    private Date birthday;
+    private String birthday;
     private String company;
     private String job;
     private String university;

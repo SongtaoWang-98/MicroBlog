@@ -51,7 +51,7 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * @param scopes
      * String集合可见范围列表
      * @param deleted
-     * String类型删除标记
+     * Boolean类型删除标记
      * @param state
      * String类型封禁状态
      * @param personIds
@@ -59,4 +59,15 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * @return 限定范围内博文列表
      */
     List<Blog> findAllByScopeInAndDeletedAndStateAndPublisherIdInOrderByTimeDesc(Collection<String> scopes, Boolean deleted, String state, Collection<Integer> personIds);
+
+    /**
+     * 根据发布者查询其所有博文列表
+     * @param publishId
+     * Integer类型发布者id
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 该发布者的博文列表
+     */
+    List<Blog> findAllByPublisherIdAndDeleted(Integer publishId, Boolean deleted);
+    Blog findFirstByOrderByHeat();
 }

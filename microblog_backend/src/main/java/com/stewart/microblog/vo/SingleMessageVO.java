@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
  * @author 王松涛
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class SingleMessageVO {
 }
