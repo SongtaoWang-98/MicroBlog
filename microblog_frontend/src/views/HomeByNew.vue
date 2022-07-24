@@ -186,7 +186,7 @@ export default {
   },
   created() {
     const _this = this
-    axios.get('http://localhost:8181/home/hot').then(function (resp) {
+    axios.get('http://localhost:8181/home/new').then(function (resp) {
       console.log(resp.data.data)
       _this.circleUrl = resp.data.data.userImg
       _this.nickname = resp.data.data.nickName
@@ -196,7 +196,6 @@ export default {
       _this.groupList = resp.data.data.groups
       _this.blogList = resp.data.data.blogs
       _this.topicList = resp.data.data.topics
-      console.log(_this)
       _this.radio = 1
       _this.input = ''
       _this.comment = ''

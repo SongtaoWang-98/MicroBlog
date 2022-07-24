@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.23, for macos10.15 (x86_64)
 --
 -- Host: 127.0.0.1    Database: microblog
 -- ------------------------------------------------------
--- Server version	8.0.29
+-- Server version	8.0.23
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -120,7 +120,7 @@ CREATE TABLE `comment` (
   `reply_comment_id` int DEFAULT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (1,1,2,'确实','2022-07-18 17:01:53',0,NULL,0),(2,1,3,'哈哈哈！','2022-07-21 09:04:31',0,NULL,0);
+INSERT INTO `comment` VALUES (1,1,2,'确实','2022-07-18 17:01:53',0,NULL,0),(2,1,3,'哈哈哈！','2022-07-21 09:04:31',0,NULL,0),(3,1,2,'第三条评论','2022-07-23 23:14:49',0,NULL,0),(4,1,4,'第四条评论','2022-07-23 23:15:24',0,NULL,0);
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,7 +198,7 @@ CREATE TABLE `group_follow` (
   `follow_id` int NOT NULL,
   `deleted` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,7 +207,7 @@ CREATE TABLE `group_follow` (
 
 LOCK TABLES `group_follow` WRITE;
 /*!40000 ALTER TABLE `group_follow` DISABLE KEYS */;
-INSERT INTO `group_follow` VALUES (1,4,1,0),(2,5,4,0),(3,2,2,0),(4,3,3,0),(5,6,5,0);
+INSERT INTO `group_follow` VALUES (1,4,1,0),(2,5,4,0),(3,2,2,0),(4,3,3,0),(5,6,5,0),(6,1,6,0);
 /*!40000 ALTER TABLE `group_follow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -464,4 +464,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-22 17:56:48
+-- Dump completed on 2022-07-24 23:40:15

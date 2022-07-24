@@ -1,26 +1,45 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About'
+import HomeByNew from '../views/HomeByNew.vue'
+import HomeByFriends  from "@/views/HomeByFriends";
+import HomeByGroup from "@/views/HomeByGroup";
+import FollowingList from '../views/FollowingList'
+import FollowerList from '../views/FollowerList'
 import HelloWorld from "@/components/HelloWorld";
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        path: '/home',
         name: 'Home',
         component: Home
     },
     {
-        path: '/about',
-        name: 'About',
-        component: About
+        path: '/home/new',
+        name: 'HomeByNew',
+        component: HomeByNew
     },
     {
-        path: '/hello',
-        name: 'Hello',
-        component: HelloWorld
+        path: '/home/friends',
+        name: 'HomeByFriends',
+        component: HomeByFriends
+    },
+    {
+        path: '/home/group/:id',
+        name: 'HomeByGroup',
+        component: HomeByGroup
+    },
+    {
+        path: '/followingList',
+        name: 'FollowingList',
+        component: FollowingList
+    },
+    {
+        path: '/followerList',
+        name: 'FollowerList',
+        component: FollowerList
     }
 ]
 

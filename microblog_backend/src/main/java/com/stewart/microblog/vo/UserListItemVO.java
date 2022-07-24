@@ -13,6 +13,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserListItemVO {
+    @JsonProperty("userId")
+    private Integer userId;
     @JsonProperty("userImg")
     private String userImg;
     @JsonProperty("nickName")

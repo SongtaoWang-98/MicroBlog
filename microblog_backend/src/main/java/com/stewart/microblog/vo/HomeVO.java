@@ -26,7 +26,7 @@ public class HomeVO {
     @JsonProperty("followerNum")
     private Integer followerNum;
     @JsonProperty("groups")
-    private List<String> groupNameList;
+    private List<HomeGroupVO> groupNameList;
     @JsonProperty("blogs")
     private List<BlogVO> blogVOList;
     @JsonProperty("topics")

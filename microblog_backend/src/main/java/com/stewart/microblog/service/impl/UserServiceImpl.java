@@ -162,10 +162,11 @@ public class UserServiceImpl implements UserService{
             totalRepostNum += blog.getForwardNum();
             totalCollectNum += blog.getCollectNum();
         }
-        return new UserStatVO(
-            totalBlogNum, totalHeat, totalCommentNum, totalLikeNum, totalRepostNum, totalCollectNum,
-                blogRepository.findFirstByOrderByHeat()
-        );
+//        return new UserStatVO(
+//            totalBlogNum, totalHeat, totalCommentNum, totalLikeNum, totalRepostNum, totalCollectNum,
+//                blogRepository.findFirstByOrderByHeat()
+//        );
+        return null;
     }
 
     @Override

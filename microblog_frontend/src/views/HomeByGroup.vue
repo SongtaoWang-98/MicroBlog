@@ -186,7 +186,7 @@ export default {
   },
   created() {
     const _this = this
-    axios.get('http://localhost:8181/home/hot').then(function (resp) {
+    axios.get('http://localhost:8181/home/group?groupId=' + this.$route.params.id).then(function (resp) {
       console.log(resp.data.data)
       _this.circleUrl = resp.data.data.userImg
       _this.nickname = resp.data.data.nickName
@@ -223,7 +223,7 @@ export default {
       return require('../../static/' + src)
     },
     showByGroup(id) {
-      window.location.href='http://localhost:8080/home/group/' + id
+      window.location.href='http://localhost:8080/home/group/' + id;
     }
   }
 }

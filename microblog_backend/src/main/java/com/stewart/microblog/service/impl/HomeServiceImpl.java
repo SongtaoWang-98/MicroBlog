@@ -5,6 +5,7 @@ import com.stewart.microblog.repository.*;
 import com.stewart.microblog.service.HomeService;
 import com.stewart.microblog.util.GetCurrentUserUtil;
 import com.stewart.microblog.vo.BlogVO;
+import com.stewart.microblog.vo.HomeGroupVO;
 import com.stewart.microblog.vo.HomeVO;
 import org.springframework.stereotype.Service;
 
@@ -42,10 +43,10 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
-        List<String> groupNameList = new ArrayList<>();
+        List<HomeGroupVO> groupNameList = new ArrayList<>();
         List<ConcernGroup> concernGroupList = concernGroupRepository.findByUserIdAndDeleted(userId, false);
         for(ConcernGroup concernGroup : concernGroupList) {
-            groupNameList.add(concernGroup.getName());
+            groupNameList.add(new HomeGroupVO(concernGroup.getId(), concernGroup.getName()));
         }
         List<BlogVO> blogVOList = new ArrayList<>();
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByHeatDesc("PUBLIC", false, "NORMAL");
@@ -61,11 +62,12 @@ public class HomeServiceImpl implements HomeService {
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
-            for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
+            for(Comment comment: comments) {
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
                     pictureRepository.findPictureByIdAndDeleted(publisher.getPhotoId(), false).getUrl(),
@@ -100,10 +102,10 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
-        List<String> groupNameList = new ArrayList<>();
+        List<HomeGroupVO> groupNameList = new ArrayList<>();
         List<ConcernGroup> concernGroupList = concernGroupRepository.findByUserIdAndDeleted(userId, false);
         for(ConcernGroup concernGroup : concernGroupList) {
-            groupNameList.add(concernGroup.getName());
+            groupNameList.add(new HomeGroupVO(concernGroup.getId(), concernGroup.getName()));
         }
         List<BlogVO> blogVOList = new ArrayList<>();
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByTimeDesc("PUBLIC", false, "NORMAL");
@@ -119,11 +121,12 @@ public class HomeServiceImpl implements HomeService {
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
-            for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
+            for(Comment comment: comments) {
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
                     pictureRepository.findPictureByIdAndDeleted(publisher.getPhotoId(), false).getUrl(),
@@ -158,10 +161,10 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
-        List<String> groupNameList = new ArrayList<>();
+        List<HomeGroupVO> groupNameList = new ArrayList<>();
         List<ConcernGroup> concernGroupList = concernGroupRepository.findByUserIdAndDeleted(userId, false);
         for(ConcernGroup concernGroup : concernGroupList) {
-            groupNameList.add(concernGroup.getName());
+            groupNameList.add(new HomeGroupVO(concernGroup.getId(), concernGroup.getName()));
         }
         List<Integer> friendIds = new ArrayList<>();
         friendIds.add(userId);
@@ -192,11 +195,12 @@ public class HomeServiceImpl implements HomeService {
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
-            for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
+            for(Comment comment: comments) {
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
                     pictureRepository.findPictureByIdAndDeleted(publisher.getPhotoId(), false).getUrl(),
@@ -231,10 +235,10 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
-        List<String> groupNameList = new ArrayList<>();
+        List<HomeGroupVO> groupNameList = new ArrayList<>();
         List<ConcernGroup> concernGroupList = concernGroupRepository.findByUserIdAndDeleted(userId, false);
         for(ConcernGroup concernGroup : concernGroupList) {
-            groupNameList.add(concernGroup.getName());
+            groupNameList.add(new HomeGroupVO(concernGroup.getId(), concernGroup.getName()));
         }
         List<GroupFollow>groupFollowList = groupFollowRepository.findAllByGroupIdAndDeleted(groupId, false);
         List<Integer> groupMemberIds = new ArrayList<>();
@@ -258,11 +262,12 @@ public class HomeServiceImpl implements HomeService {
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
-            for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
+            for(Comment comment: comments) {
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
                     pictureRepository.findPictureByIdAndDeleted(publisher.getPhotoId(), false).getUrl(),
