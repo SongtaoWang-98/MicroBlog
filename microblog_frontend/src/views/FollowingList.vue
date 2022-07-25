@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header>
-      <div class="followingList">
+      <div>
         <div style="width:200px; margin-left:0">
           <el-button icon="el-icon-arrow-left" onclick="window.location.href='http://localhost:8080/home'">返回</el-button>
         </div>

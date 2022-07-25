@@ -12,5 +12,6 @@ import javax.annotation.Resource;
 public class GetCurrentUserUtil {
     public static String getCurrentUserName() {
         return "songtao_wang@qq.com";
+//        return "lisi@eastmoney.com";
     }
 }

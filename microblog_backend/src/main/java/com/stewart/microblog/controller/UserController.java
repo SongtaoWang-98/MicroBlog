@@ -23,6 +23,10 @@ public class UserController {
     public ResultVO personalHomePage(Integer userId) {
         return ResultVOUtil.success(userService.showPersonalPage(userId));
     }
+    @GetMapping("/collections")
+    public ResultVO showMyCollections() {
+        return ResultVOUtil.success(userService.showMyCollections());
+    }
     @GetMapping("/followingList")
     public ResultVO followingList() {
         return ResultVOUtil.success(userService.showFollowingList());
@@ -52,5 +56,9 @@ public class UserController {
     @PostMapping("/unfollow")
     public ResultVO unfollowPerson(Integer personId) {
         return ResultVOUtil.success(userService.unfollow(personId));
+    }
+    @GetMapping("/personalStat")
+    public ResultVO showPersonalStat() {
+        return ResultVOUtil.success(userService.showUserStatInfo());
     }
 }

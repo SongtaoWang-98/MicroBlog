@@ -4,7 +4,7 @@
       <div class="user_info">
         <div style="height: 20px"></div>
         <div class="block" style="height: 180px">
-            <el-avatar :size="160" :src=getImgUrl(circleUrl)></el-avatar>
+          <el-avatar :size="160" :src=getImgUrl(circleUrl) onclick="window.location.href='http://localhost:8080/myInfoPage'"></el-avatar>
         </div>
         <div class="info">
           <div class="nickname" style="font-size: 30px">{{ nickname }}</div>
@@ -28,9 +28,9 @@
         <div style="height: 40px"></div>
         <div><el-button type="primary" plain icon="el-icon-s-promotion">我的私信</el-button></div>
         <div style="height: 40px"></div>
-        <div><el-button type="info" plain icon="el-icon-s-data">我的数据</el-button></div>
+        <div><el-button type="info" plain icon="el-icon-s-data" onclick="window.location.href='http://localhost:8080/myStatPage'">我的数据</el-button></div>
         <div style="height: 40px"></div>
-        <div><el-button type="danger" plain icon="el-icon-star-on">我的收藏</el-button></div>
+        <div><el-button type="danger" plain icon="el-icon-star-on" onclick="window.location.href='http://localhost:8080/myCollections'">我的收藏</el-button></div>
         <div style="height: 40px"></div>
       </div>
     </el-aside>
@@ -68,7 +68,7 @@
                 <div class="time" style="height: 20px">{{blog.time}}</div>
                 <div style="height: 20px"><el-link :underline="false" href="https://element.eleme.io" icon="el-icon-warning-outline" style="font-size: 10px; color: rgba(255,9,57,0.89); float: right; margin-right: 20px">举报</el-link></div>
                 <div class="block" style="height: 80px">
-                  <el-avatar :size="60" :src=getImgUrl(blog.publisherImg)></el-avatar>
+                  <el-avatar :size="60" :src=getImgUrl(blog.publisherImg) @click.native="showPersonalPage(blog.publisherId)"></el-avatar>
                 </div>
                 <div class="info">
                   <div class="nickname" style="font-size: 20px">{{ blog.publisherName }}</div>
@@ -224,6 +224,9 @@ export default {
     },
     showByGroup(id) {
       window.location.href='http://localhost:8080/home/group/' + id
+    },
+    showPersonalPage(id) {
+      window.location.href='http://localhost:8080/personalPage/' + id
     }
   }
 }

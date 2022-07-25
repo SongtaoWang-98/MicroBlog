@@ -21,10 +21,49 @@ public interface UserService {
      * @return 用户主页视图对象
      */
     UserPageVO showPersonalPage(Integer userId);
+
+    /**
+     * 展示用户收藏页面
+     * @return 用户收藏页视图对象
+     */
+    CollectionPageVO showMyCollections();
+
+    /**
+     * 展示用户详细信息页面
+     * @return 用户详细信息视图对象
+     */
     UserDetailedInfoVO showDetailedInfo();
+
+    /**
+     * 更新用户详细信息
+     * @param detailedInfoDTO
+     * 用户详细信息表单
+     * @return 修改状态码
+     * @throws ParseException
+     * 抛出异常
+     */
     StatusCode updateDetailedInfo(DetailedInfoDTO detailedInfoDTO) throws ParseException;
+
+    /**
+     * 展示用户统计信息
+     * @return 用户统计信息视图对象
+     */
     UserStatVO showUserStatInfo();
+
+    /**
+     * 关注接口
+     * @param userId
+     * Integer类型目标用户id
+     * @return 状态码
+     */
     StatusCode follow(Integer userId);
+
+    /**
+     * 取消关注接口
+     * @param userId
+     * Integer类型目标用户id
+     * @return 状态码
+     */
     StatusCode unfollow(Integer userId);
 
     /**

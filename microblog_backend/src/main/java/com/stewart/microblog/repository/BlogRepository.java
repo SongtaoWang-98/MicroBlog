@@ -23,6 +23,18 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
     Blog findBlogByIdAndDeleted(Integer id, Boolean deleted);
 
     /**
+     * 根据博客id查找博客
+     * @param id
+     * Integer类型博客id
+     * @param state
+     * String类型博客状态
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 博客对象Blog
+     */
+    Blog findBlogByIdAndStateAndDeleted(Integer id, String state, Boolean deleted);
+
+    /**
      * 根据可见范围按热度倒序查看最热博文列表
      * @param scope
      * String类型可见范围
@@ -69,5 +81,6 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * @return 该发布者的博文列表
      */
     List<Blog> findAllByPublisherIdAndDeleted(Integer publishId, Boolean deleted);
-    Blog findFirstByOrderByHeat();
+//    Blog findFirstByOrderByHeat();
+    Blog findFirstByPublisherIdAndDeletedOrderByHeat(Integer publishId, Boolean deleted);
 }

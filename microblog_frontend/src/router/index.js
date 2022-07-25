@@ -6,7 +6,10 @@ import HomeByFriends  from "@/views/HomeByFriends";
 import HomeByGroup from "@/views/HomeByGroup";
 import FollowingList from '../views/FollowingList'
 import FollowerList from '../views/FollowerList'
-import HelloWorld from "@/components/HelloWorld";
+import PersonalPage from "@/views/PersonalPage";
+import MyCollections from "@/views/MyCollections";
+import MyInfoPage from "@/views/MyInfoPage";
+import MyStatPage from "@/views/MyStatPage";
 
 Vue.use(VueRouter)
 
@@ -40,6 +43,26 @@ const routes = [
         path: '/followerList',
         name: 'FollowerList',
         component: FollowerList
+    },
+    {
+        path: '/personalPage/:id',
+        name: 'PersonalPage',
+        component: PersonalPage
+    },
+    {
+        path: '/myCollections',
+        name: 'MyCollections',
+        component: MyCollections
+    },
+    {
+        path: '/myInfoPage',
+        name: 'MyInfoPage',
+        component: MyInfoPage
+    },
+    {
+        path: '/myStatPage',
+        name: 'MyStatPage',
+        component: MyStatPage
     }
 ]
 

@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService{
     @Resource
     private InformationRepository informationRepository;
     @Resource
-    private LikeRepository likeRepository;
+    private CollectionRepository collectionRepository;
 
     @Override
     public StatusCode register(RegisterDTO registerDTO) {
@@ -80,11 +80,12 @@ public class UserServiceImpl implements UserService{
             }
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
-            for(int j = 0; j < Math.min(comments.size(), 3); j++) {
-                commentList.add(userRepository.findUserByIdAndState(comments.get(j).getSenderId(), "NORMAL").getNickname() + "： " + comments.get(j).getContent());
+            for(Comment comment: comments) {
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
                     pictureRepository.findPictureByIdAndDeleted(publisher.getPhotoId(), false).getUrl(),
@@ -100,6 +101,45 @@ public class UserServiceImpl implements UserService{
         return new UserPageVO(
                 personPicImg, person.getNickname(), person.getUsername(), followingNum, followerNum, blogVOList
         );
+    }
+
+    @Override
+    public CollectionPageVO showMyCollections() {
+        String userName = GetCurrentUserUtil.getCurrentUserName();
+        User user = userRepository.findByUsername(userName);
+        Integer userId = user.getId();
+        List<BlogVO> blogVOList = new ArrayList<>();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        List<Collection> collectionList = collectionRepository.findAllByUserIdAndDeleted(userId, false);
+        for(Collection collection: collectionList) {
+            Blog blog = blogRepository.findBlogByIdAndStateAndDeleted(collection.getBlogId(), "NORMAL", false);
+            Integer blogId = blog.getId();
+            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), "NORMAL");
+            List<String> blogTopicList = new ArrayList<>();
+            List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
+            for(BlogTopic blogTopic: blogTopics) {
+                blogTopicList.add(topicRepository.findTopicByIdAndDeleted(blogTopic.getTopicId(), false).getName());
+            }
+            List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
+            List<String> commentList = new ArrayList<>();
+            for(Comment comment: comments) {
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
+            }
+            String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
+            blogVOList.add(new BlogVO(
+                    publisher.getId(),
+                    dateFormat.format(blog.getTime()),
+                    publisher.getNickname(),
+                    pictureRepository.findPictureByIdAndDeleted(publisher.getPhotoId(), false).getUrl(),
+                    blog.getContent(),
+                    blogTopicList,
+                    picUrl,
+                    blog.getForwardNum(),
+                    blog.getCollectNum(),
+                    blog.getLikeNum(), comments.size(), commentList
+            ));
+        }
+        return new CollectionPageVO(blogVOList);
     }
 
     @Override
@@ -157,16 +197,41 @@ public class UserServiceImpl implements UserService{
         for(Blog blog: blogList) {
             totalHeat += blog.getHeat();
             Integer blogId = blog.getId();
-            totalCollectNum += commentRepository.findAllByBlogIdAndDeleted(blogId, false).size();
+            totalCommentNum += commentRepository.findAllByBlogIdAndDeleted(blogId, false).size();
             totalLikeNum += blog.getLikeNum();
             totalRepostNum += blog.getForwardNum();
             totalCollectNum += blog.getCollectNum();
         }
-//        return new UserStatVO(
-//            totalBlogNum, totalHeat, totalCommentNum, totalLikeNum, totalRepostNum, totalCollectNum,
-//                blogRepository.findFirstByOrderByHeat()
-//        );
-        return null;
+        Blog hotBlog =  blogRepository.findFirstByPublisherIdAndDeletedOrderByHeat(userId, false);
+        User publisher = userRepository.findUserByIdAndState(userId, "NORMAL");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Integer blogId = hotBlog.getId();
+        List<String> blogTopicList = new ArrayList<>();
+        List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
+        for(BlogTopic blogTopic: blogTopics) {
+            blogTopicList.add(topicRepository.findTopicByIdAndDeleted(blogTopic.getTopicId(), false).getName());
+        }
+        List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
+        List<String> commentList = new ArrayList<>();
+        for(Comment comment: comments) {
+            commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
+        }
+        String picUrl = (hotBlog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(hotBlog.getPhotoId(), false).getUrl());
+        BlogVO blogVO = new BlogVO(
+                publisher.getId(),
+                dateFormat.format(hotBlog.getTime()),
+                publisher.getNickname(),
+                pictureRepository.findPictureByIdAndDeleted(publisher.getPhotoId(), false).getUrl(),
+                hotBlog.getContent(),
+                blogTopicList,
+                picUrl,
+                hotBlog.getForwardNum(),
+                hotBlog.getCollectNum(),
+                hotBlog.getLikeNum(), comments.size(), commentList
+        );
+        return new UserStatVO(
+            totalBlogNum, totalHeat, totalCommentNum, totalLikeNum, totalRepostNum, totalCollectNum, blogVO
+        );
     }
 
     @Override
@@ -205,6 +270,7 @@ public class UserServiceImpl implements UserService{
             Integer personId = follow.getFollowingId();
             User person = userRepository.findUserByIdAndState(personId, "NORMAL");
             userListItemVOList.add(new UserListItemVO(
+                    personId,
                     pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl(),
                     person.getNickname(), person.getUsername()
             ));
@@ -223,6 +289,7 @@ public class UserServiceImpl implements UserService{
             Integer personId = follow.getUserId();
             User person = userRepository.findUserByIdAndState(personId, "NORMAL");
             userListItemVOList.add(new UserListItemVO(
+                    personId,
                     pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl(),
                     person.getNickname(), person.getUsername()
             ));
