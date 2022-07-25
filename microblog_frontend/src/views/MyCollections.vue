@@ -1,8 +1,13 @@
 <template>
   <el-container>
     <el-main style="background-color: #e5ecf8">
+      <div>
+        <div style="width:200px; margin-left:0">
+          <el-button icon="el-icon-arrow-left" onclick="window.location.href='http://localhost:8080/home'">返回</el-button>
+        </div>
+      </div>
       <h style="font-size: 30px">我的收藏</h>
-      <div style="overflow:auto">
+      <div style="overflow:auto" >
         <dl class="list">
           <dd v-for="blog in blogList" class="list-item">
             <div style="width: 750px; background-color: #c7d9fc; margin: 0 auto">
