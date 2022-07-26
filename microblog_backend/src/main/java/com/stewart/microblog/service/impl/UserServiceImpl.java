@@ -98,8 +98,9 @@ public class UserServiceImpl implements UserService{
             );
             blogVOList.add(blogVO);
         }
+        Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, false);
         return new UserPageVO(
-                personPicImg, person.getNickname(), person.getUsername(), followingNum, followerNum, blogVOList
+                personPicImg, person.getNickname(), person.getUsername(), followingNum, followerNum, (follow==null), blogVOList
         );
     }
 
@@ -147,6 +148,13 @@ public class UserServiceImpl implements UserService{
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
         Information information = informationRepository.findInformationByUserId(userId);
+        if(information == null) {
+           informationRepository.save(new Information(
+                userId, null, null, new Date(), null, null, null,
+                   null, null, null
+           ));
+           information = informationRepository.findInformationByUserId(userId);
+        }
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         return new UserDetailedInfoVO(
                 information.getRealName(),

@@ -20,8 +20,8 @@ public class UserController {
     @Resource
     private UserService userService;
     @GetMapping("/homePage")
-    public ResultVO personalHomePage(Integer userId) {
-        return ResultVOUtil.success(userService.showPersonalPage(userId));
+    public ResultVO personalHomePage(Integer personId) {
+        return ResultVOUtil.success(userService.showPersonalPage(personId));
     }
     @GetMapping("/collections")
     public ResultVO showMyCollections() {

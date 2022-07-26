@@ -2,7 +2,7 @@
   <el-form ref="form" :model="form" label-width="80px">
     <el-form-item label="真实姓名">
       <el-col :span="5">
-        <el-input v-model="form.name"></el-input>
+        <el-input v-model="form.realName"></el-input>
       </el-col>
     </el-form-item>
     <el-form-item label="性别">
@@ -13,7 +13,7 @@
     </el-form-item>
     <el-form-item label="生日">
       <el-col :span="5">
-        <el-date-picker type="date" placeholder="选择日期" v-model="form.date" style="width: 100%;"></el-date-picker>
+        <el-date-picker type="date" placeholder="选择日期" v-model="form.birthday" style="width: 100%;"></el-date-picker>
       </el-col>
     </el-form-item>
     <el-form-item label="公司">
@@ -47,8 +47,15 @@ export default {
   data() {
     return {
       form: {
-        name: '123',
-
+        realName: "",
+        gender:"",
+        birthday:"",
+        company:"",
+        job:"",
+        university:"",
+        telNumber:"",
+        hobby:"",
+        province:""
       }
     }
   },
@@ -56,13 +63,26 @@ export default {
     const _this = this
     axios.get('http://localhost:8181/user/detailedInfo').then(function (resp) {
       console.log(resp.data.data)
-      _this.form.name = resp.data.data.realName
+      _this.form.realName = resp.data.data.realName
+      _this.form.gender = resp.data.data.gender
+      _this.form.birthday = resp.data.data.birthday
+      _this.form.company = resp.data.data.company
+      _this.form.job = resp.data.data.job
+      _this.form.university = resp.data.data.university
+      _this.form.telNumber = resp.data.data.telNumber
+      _this.form.hobby = resp.data.data.hobby
+      _this.form.province = resp.data.data.province
     })
   },
   methods: {
     onSubmit() {
       console.log('submit!')
-      // axios.post('http://localhost:8181/user/updateDetailedInfo')
+      axios({
+        method:"post",
+        url:"http://localhost:8181/user/updateDetailedInfo",
+        data:this.form
+      })
+      // axios.post('http://localhost:8181/user/updateDetailedInfo', data:this.form)
     }
   }
 }

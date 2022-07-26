@@ -24,7 +24,8 @@
       </div>
       <div style="height: 100px"></div>
       <div class="functions">
-        <div><el-button type="success" plain>关注</el-button></div>
+        <div><el-button type="success" plain v-show="following">关注</el-button></div>
+        <div><el-button type="success" plain v-show="!following">已关注</el-button></div>
         <div style="height: 40px"></div>
         <div><el-button type="primary" plain>私信</el-button></div>
         <div style="height: 40px"></div>
@@ -88,7 +89,7 @@ export default {
   },
   created() {
     const _this = this
-    axios.get('http://localhost:8181/user/homePage?userId=' + this.$route.params.id).then(function (resp) {
+    axios.get('http://localhost:8181/user/homePage?personId=' + this.$route.params.id).then(function (resp) {
       console.log(resp.data.data)
       _this.circleUrl = resp.data.data.userImg
       _this.nickname = resp.data.data.nickName
@@ -98,6 +99,7 @@ export default {
       _this.groupList = resp.data.data.groups
       _this.blogList = resp.data.data.blogs
       _this.comment = ''
+      _this.following = false
     })
   },
   methods: {

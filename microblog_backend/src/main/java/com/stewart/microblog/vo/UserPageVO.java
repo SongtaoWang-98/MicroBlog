@@ -25,6 +25,8 @@ public class UserPageVO {
     private Integer followingNum;
     @JsonProperty("followerNum")
     private Integer followerNum;
+    @JsonProperty("following")
+    private Boolean following;
     @JsonProperty("blogs")
     private List<BlogVO> blogVOList;
 }
