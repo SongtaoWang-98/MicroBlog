@@ -100,7 +100,7 @@ public class UserServiceImpl implements UserService{
         }
         Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, false);
         return new UserPageVO(
-                personPicImg, person.getNickname(), person.getUsername(), followingNum, followerNum, (follow==null), blogVOList
+                personPicImg, person.getNickname(), person.getUsername(), followingNum, followerNum, (!(follow == null)), blogVOList
         );
     }
 

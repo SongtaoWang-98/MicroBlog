@@ -24,8 +24,8 @@
       </div>
       <div style="height: 100px"></div>
       <div class="functions">
-        <div><el-button type="success" plain v-show="following">关注</el-button></div>
-        <div><el-button type="success" plain v-show="!following">已关注</el-button></div>
+        <div><el-button type="success" plain v-show="!following" @click="follow">关注</el-button></div>
+        <div><el-button type="success" plain v-show="following" @click="unfollow">已关注</el-button></div>
         <div style="height: 40px"></div>
         <div><el-button type="primary" plain>私信</el-button></div>
         <div style="height: 40px"></div>
@@ -99,13 +99,23 @@ export default {
       _this.groupList = resp.data.data.groups
       _this.blogList = resp.data.data.blogs
       _this.comment = ''
-      _this.following = false
+      _this.following = resp.data.data.following
     })
   },
   methods: {
     getImgUrl(src) {
       if(src==='') return
       return require('../../static/' + src)
+    },
+    follow() {
+      axios.post('http://localhost:8181/user/follow?personId=' + this.$route.params.id)
+      this.$set(this ,this.following, true)
+      location.reload()
+    },
+    unfollow() {
+      axios.post('http://localhost:8181/user/unfollow?personId=' + this.$route.params.id)
+      this.$set(this ,this.following, false)
+      location.reload()
     }
   }
 }
