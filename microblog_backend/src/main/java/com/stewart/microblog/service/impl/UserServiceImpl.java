@@ -181,16 +181,12 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public StatusCode updateDetailedInfo(DetailedInfoDTO detailedInfoDTO) {
+    public StatusCode updateDetailedInfo(DetailedInfoDTO detailedInfoDTO) throws ParseException {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date birthday;
-        try {
-            birthday = dateFormat.parse(detailedInfoDTO.getBirthday());
-        } catch (ParseException e) {
-            return StatusCode.FAIL;
-        }
+        birthday = dateFormat.parse(detailedInfoDTO.getBirthday());
         Information information = new Information(
                 userId, detailedInfoDTO.getRealName(), detailedInfoDTO.getGender(),
                 birthday, detailedInfoDTO.getCompany(),

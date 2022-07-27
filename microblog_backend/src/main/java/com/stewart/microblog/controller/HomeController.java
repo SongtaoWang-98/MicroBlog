@@ -1,11 +1,10 @@
 package com.stewart.microblog.controller;
 
+import com.stewart.microblog.exception.BizException;
 import com.stewart.microblog.service.HomeService;
 import com.stewart.microblog.util.ResultVOUtil;
 import com.stewart.microblog.vo.ResultVO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,6 +37,9 @@ public class HomeController {
 
     @GetMapping("/group")
     public ResultVO groupBlogs(Integer groupId) {
+        if(groupId == null) {
+            throw new BizException("-1", "分组id不能为空");
+        }
         return ResultVOUtil.success(homeService.showGroupBlogsHome(groupId));
     }
 }

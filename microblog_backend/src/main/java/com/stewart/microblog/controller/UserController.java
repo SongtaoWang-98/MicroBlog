@@ -2,6 +2,7 @@ package com.stewart.microblog.controller;
 
 import com.stewart.microblog.dto.DetailedInfoDTO;
 import com.stewart.microblog.enums.StatusCode;
+import com.stewart.microblog.exception.BizException;
 import com.stewart.microblog.service.UserService;
 import com.stewart.microblog.util.ResultVOUtil;
 import com.stewart.microblog.vo.ResultVO;
@@ -21,6 +22,9 @@ public class UserController {
     private UserService userService;
     @GetMapping("/homePage")
     public ResultVO personalHomePage(Integer personId) {
+        if(personId == null) {
+            throw new BizException("-1", "用户id不能为空");
+        }
         return ResultVOUtil.success(userService.showPersonalPage(personId));
     }
     @GetMapping("/collections")
@@ -42,19 +46,20 @@ public class UserController {
     @PostMapping("/updateDetailedInfo")
     public ResultVO updateDetailedInfo(@RequestBody DetailedInfoDTO detailedInfoDTO) throws ParseException {
         StatusCode statusCode = userService.updateDetailedInfo(detailedInfoDTO);
-        if(statusCode.getCode() == 200) {
-            return ResultVOUtil.success(statusCode.getMsg());
-        }
-        else {
-            return ResultVOUtil.fail(statusCode.getMsg());
-        }
+        return ResultVOUtil.success(statusCode.getMsg());
     }
     @PostMapping("/follow")
     public ResultVO followPerson(Integer personId) {
+        if(personId == null) {
+            throw new BizException("-1", "关注用户id不能为空");
+        }
         return ResultVOUtil.success(userService.follow(personId));
     }
     @PostMapping("/unfollow")
     public ResultVO unfollowPerson(Integer personId) {
+        if(personId == null) {
+            throw new BizException("-1", "取消关注用户id不能为空");
+        }
         return ResultVOUtil.success(userService.unfollow(personId));
     }
     @GetMapping("/personalStat")
