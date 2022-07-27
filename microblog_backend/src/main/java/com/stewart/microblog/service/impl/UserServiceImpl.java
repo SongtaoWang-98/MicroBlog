@@ -41,6 +41,8 @@ public class UserServiceImpl implements UserService{
     private InformationRepository informationRepository;
     @Resource
     private CollectionRepository collectionRepository;
+    @Resource
+    private LikeSetRepository likeSetRepository;
 
     @Override
     public StatusCode register(RegisterDTO registerDTO) {
@@ -85,6 +87,7 @@ public class UserServiceImpl implements UserService{
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    blogId,
                     publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
@@ -93,7 +96,9 @@ public class UserServiceImpl implements UserService{
                     blogTopicList,
                     picUrl,
                     blog.getForwardNum(),
+                    (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getCollectNum(),
+                    (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getLikeNum(), comments.size(), commentList
             );
             blogVOList.add(blogVO);
@@ -128,6 +133,7 @@ public class UserServiceImpl implements UserService{
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             blogVOList.add(new BlogVO(
+                    blogId,
                     publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
@@ -136,7 +142,9 @@ public class UserServiceImpl implements UserService{
                     blogTopicList,
                     picUrl,
                     blog.getForwardNum(),
+                    (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getCollectNum(),
+                    (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getLikeNum(), comments.size(), commentList
             ));
         }
@@ -226,6 +234,7 @@ public class UserServiceImpl implements UserService{
         }
         String picUrl = (hotBlog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(hotBlog.getPhotoId(), false).getUrl());
         BlogVO blogVO = new BlogVO(
+                blogId,
                 publisher.getId(),
                 dateFormat.format(hotBlog.getTime()),
                 publisher.getNickname(),
@@ -234,7 +243,9 @@ public class UserServiceImpl implements UserService{
                 blogTopicList,
                 picUrl,
                 hotBlog.getForwardNum(),
+                (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                 hotBlog.getCollectNum(),
+                (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                 hotBlog.getLikeNum(), comments.size(), commentList
         );
         return new UserStatVO(

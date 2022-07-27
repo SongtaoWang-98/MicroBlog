@@ -54,14 +54,18 @@
                 <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">
                   <i class="el-icon-s-promotion"></i>{{blog.repostNum}}
                   <span>&emsp;&emsp;&emsp;</span>
-                  <i class="el-icon-star-off"></i>{{blog.collectNum}}
+                  <i class="el-icon-star-off" v-show="!blog.collecting" @click="collect(blog.blogId)"></i>
+                  <i class="el-icon-star-on" style="color: crimson" v-show="blog.collecting" @click="disCollect(blog.blogId)"></i>
+                  {{blog.collectNum}}
                   <span>&emsp;&emsp;&emsp;</span>
-                  <i class="el-icon-circle-check"></i>{{blog.likeNum}}
+                  <i class="el-icon-circle-check" v-show="!blog.liking" @click="like(blog.blogId)"></i>
+                  <i class="el-icon-success" style="color: crimson" v-show="blog.liking" @click="dislike(blog.blogId)"></i>
+                  {{blog.likeNum}}
                 </div>
                 <div style="height: 20px"></div>
                 <div class="comment" style="height: 40px; width:320px; font-size: 20px; margin: 0 auto">
                   <el-input v-model="comment" placeholder="评论" style="width: 250px"></el-input>
-                  <el-button type="primary" size="small">发送</el-button>
+                  <el-button type="primary" size="small" @click="commentSubmit(blog.blogId)">发送</el-button>
                 </div>
                 <div style="height: 20px"></div>
                 <div class="comments" v-for="comment in blog.comments" style=" width: 300px; margin: 0 auto; text-align: left">
@@ -84,7 +88,7 @@ export default {
   data () {
     return {
       circleUrl: "",
-
+      comment: ""
     }
   },
   created() {
@@ -115,6 +119,26 @@ export default {
     unfollow() {
       axios.post('http://localhost:8181/user/unfollow?personId=' + this.$route.params.id)
       this.$set(this ,this.following, false)
+      location.reload()
+    },
+    like(blogId) {
+      axios.post('http://localhost:8181/blog/like?blogId=' + blogId)
+      location.reload()
+    },
+    dislike(blogId) {
+      axios.post('http://localhost:8181/blog/dislike?blogId=' + blogId)
+      location.reload()
+    },
+    collect(blogId) {
+      axios.post('http://localhost:8181/blog/collect?blogId=' + blogId)
+      location.reload()
+    },
+    disCollect(blogId) {
+      axios.post('http://localhost:8181/blog/disCollect?blogId=' + blogId)
+      location.reload()
+    },
+    commentSubmit(blogId) {
+      axios.post('http://localhost:8181/blog/comment?blogId=' + blogId + '&content=' + this.comment)
       location.reload()
     }
   }

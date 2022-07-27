@@ -15,6 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BlogVO {
+    @JsonProperty("blogId")
+    private Integer blogId;
     @JsonProperty("publisherId")
     private Integer publisherId;
     @JsonProperty("time")
@@ -31,8 +33,12 @@ public class BlogVO {
     private String blogImg;
     @JsonProperty("repostNum")
     private Integer repostNum;
+    @JsonProperty("collecting")
+    private Boolean collecting;
     @JsonProperty("collectNum")
     private Integer collectNum;
+    @JsonProperty("liking")
+    private Boolean liking;
     @JsonProperty("likeNum")
     private Integer likeNum;
     @JsonProperty("commentNum")

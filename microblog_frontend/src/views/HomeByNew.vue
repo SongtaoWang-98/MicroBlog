@@ -87,14 +87,18 @@
                 <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">
                   <i class="el-icon-s-promotion"></i>{{blog.repostNum}}
                   <span>&emsp;&emsp;&emsp;</span>
-                  <i class="el-icon-star-off"></i>{{blog.collectNum}}
+                  <i class="el-icon-star-off" v-show="!blog.collecting" @click="collect(blog.blogId)"></i>
+                  <i class="el-icon-star-on" style="color: crimson" v-show="blog.collecting" @click="disCollect(blog.blogId)"></i>
+                  {{blog.collectNum}}
                   <span>&emsp;&emsp;&emsp;</span>
-                  <i class="el-icon-circle-check"></i>{{blog.likeNum}}
+                  <i class="el-icon-circle-check" v-show="!blog.liking" @click="like(blog.blogId)"></i>
+                  <i class="el-icon-success" style="color: crimson" v-show="blog.liking" @click="dislike(blog.blogId)"></i>
+                  {{blog.likeNum}}
                 </div>
                 <div style="height: 20px"></div>
                 <div class="comment" style="height: 40px; width:320px; font-size: 20px; margin: 0 auto">
                   <el-input v-model="comment" placeholder="评论" style="width: 250px"></el-input>
-                  <el-button type="primary" size="small">发送</el-button>
+                  <el-button type="primary" size="small" @click="commentSubmit(blog.blogId)">发送</el-button>
                 </div>
                 <div style="height: 20px"></div>
                 <div class="comments" v-for="comment in blog.comments" style=" width: 300px; margin: 0 auto; text-align: left">
@@ -149,39 +153,16 @@ export default {
   data () {
     return {
       circleUrl: "",
-      // nickname:"Cheryl",
-      // username:"Cheryl@yeah.net",
-      // followingNum:234,
-      // followerNum:3028,
-      // groupList:["朋友","同学","默认分组"],
-      // radio: '1',
-      // input:'',
-      // comment:'',
-      // topicList:["天气真好","猫猫狗狗","发工资"],
-      // blogList:[
-      //   {
-      //     "time": "2022-06-18 14:56",
-      //     "content": "今天天气真好！",
-      //     "topics": ["#topic1","#topic2"],
-      //     "img": '',
-      //     "repostNum": 5,
-      //     "collectNum": 3,
-      //     "likeNum": 2,
-      //     "commentNum": 3,
-      //     "comments": ["Jack:123123","William:0000"]
-      //   },
-      //   {
-      //     "time": "2022-07-18 14:58",
-      //     "content": "123123~",
-      //     "topics": ["#topic3"],
-      //     "img": '',
-      //     "repostNum": 0,
-      //     "collectNum": 10,
-      //     "likeNum": 5,
-      //     "commentNum": 0,
-      //     "comments": []
-      //   }
-      // ]
+      nickname:"Cheryl",
+      username:"Cheryl@yeah.net",
+      followingNum:234,
+      followerNum:3028,
+      groupList:["朋友","同学","默认分组"],
+      radio: '1',
+      input:'',
+      comment:'',
+      topicList:["天气真好","猫猫狗狗","发工资"],
+      blogList:[]
     }
   },
   created() {
@@ -226,6 +207,26 @@ export default {
     },
     showPersonalPage(id) {
       window.location.href='http://localhost:8080/personalPage/' + id
+    },
+    like(blogId) {
+      axios.post('http://localhost:8181/blog/like?blogId=' + blogId)
+      location.reload()
+    },
+    dislike(blogId) {
+      axios.post('http://localhost:8181/blog/dislike?blogId=' + blogId)
+      location.reload()
+    },
+    collect(blogId) {
+      axios.post('http://localhost:8181/blog/collect?blogId=' + blogId)
+      location.reload()
+    },
+    disCollect(blogId) {
+      axios.post('http://localhost:8181/blog/disCollect?blogId=' + blogId)
+      location.reload()
+    },
+    commentSubmit(blogId) {
+      axios.post('http://localhost:8181/blog/comment?blogId=' + blogId + '&content=' + this.comment)
+      location.reload()
     }
   }
 }

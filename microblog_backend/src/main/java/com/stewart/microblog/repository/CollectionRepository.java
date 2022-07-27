@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface CollectionRepository extends JpaRepository<Collection, Integer> {
     List<Collection> findAllByUserIdAndDeleted(Integer userId, Boolean deleted);
+    Collection findByUserIdAndBlogId(Integer userId, Integer blogId);
+    Collection findByUserIdAndBlogIdAndDeleted(Integer userId, Integer blogId, Boolean deleted);
 }

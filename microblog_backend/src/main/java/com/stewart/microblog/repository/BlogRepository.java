@@ -81,6 +81,5 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * @return 该发布者的博文列表
      */
     List<Blog> findAllByPublisherIdAndDeleted(Integer publishId, Boolean deleted);
-//    Blog findFirstByOrderByHeat();
     Blog findFirstByPublisherIdAndDeletedOrderByHeat(Integer publishId, Boolean deleted);
 }

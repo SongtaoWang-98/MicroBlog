@@ -1,9 +1,11 @@
 package com.stewart.microblog.controller;
 
+import com.stewart.microblog.dto.NewBlogDTO;
 import com.stewart.microblog.service.BlogService;
 import com.stewart.microblog.util.ResultVOUtil;
 import com.stewart.microblog.vo.ResultVO;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,8 +20,28 @@ import javax.annotation.Resource;
 public class BlogController {
     @Resource
     private BlogService blogService;
-    @GetMapping("/hot")
-    public ResultVO hotBlogs() {
-        return ResultVOUtil.success(null);
+    @PostMapping ("/like")
+    public ResultVO likeBlog(Integer blogId) {
+        return ResultVOUtil.success(blogService.likeBlog(blogId));
+    }
+    @PostMapping ("/dislike")
+    public ResultVO dislikeBlog(Integer blogId) {
+        return ResultVOUtil.success(blogService.dislikeBlog(blogId));
+    }
+    @PostMapping("/collect")
+    public ResultVO collectBlog(Integer blogId) {
+        return ResultVOUtil.success(blogService.collectBlog(blogId));
+    }
+    @PostMapping("/disCollect")
+    public ResultVO disCollectBlog(Integer blogId) {
+        return ResultVOUtil.success(blogService.disCollectBlog(blogId));
+    }
+    @PostMapping("/comment")
+    public ResultVO commentBlog(Integer blogId, String content) {
+        return ResultVOUtil.success(blogService.commentBlog(blogId, false, null,  content));
+    }
+    @PostMapping("/publish")
+    public ResultVO publishNewBlog(NewBlogDTO newBlogDTO) {
+        return ResultVOUtil.success(blogService.publishBlog(newBlogDTO));
     }
 }

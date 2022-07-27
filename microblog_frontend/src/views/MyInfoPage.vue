@@ -82,7 +82,6 @@ export default {
         url:"http://localhost:8181/user/updateDetailedInfo",
         data:this.form
       })
-      // axios.post('http://localhost:8181/user/updateDetailedInfo', data:this.form)
     }
   }
 }

@@ -37,6 +37,10 @@ public class HomeServiceImpl implements HomeService {
     private CommentRepository commentRepository;
     @Resource
     private GroupFollowRepository groupFollowRepository;
+    @Resource
+    private LikeSetRepository likeSetRepository;
+    @Resource
+    private CollectionRepository collectionRepository;
 
     @Override
     public HomeVO showHotBlogsHome() {
@@ -67,6 +71,7 @@ public class HomeServiceImpl implements HomeService {
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    blogId,
                     publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
@@ -75,7 +80,9 @@ public class HomeServiceImpl implements HomeService {
                     blogTopicList,
                     picUrl,
                     blog.getForwardNum(),
+                    (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getCollectNum(),
+                    (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getLikeNum(), comments.size(), commentList
             );
             blogVOList.add(blogVO);
@@ -126,6 +133,7 @@ public class HomeServiceImpl implements HomeService {
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    blogId,
                     publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
@@ -134,7 +142,9 @@ public class HomeServiceImpl implements HomeService {
                     blogTopicList,
                     picUrl,
                     blog.getForwardNum(),
+                    (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getCollectNum(),
+                    (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getLikeNum(), comments.size(), commentList
             );
             blogVOList.add(blogVO);
@@ -200,6 +210,7 @@ public class HomeServiceImpl implements HomeService {
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    blogId,
                     publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
@@ -208,7 +219,9 @@ public class HomeServiceImpl implements HomeService {
                     blogTopicList,
                     picUrl,
                     blog.getForwardNum(),
+                    (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getCollectNum(),
+                    (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getLikeNum(), comments.size(), commentList
             );
             blogVOList.add(blogVO);
@@ -267,6 +280,7 @@ public class HomeServiceImpl implements HomeService {
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
+                    blogId,
                     publisher.getId(),
                     dateFormat.format(blog.getTime()),
                     publisher.getNickname(),
@@ -275,7 +289,9 @@ public class HomeServiceImpl implements HomeService {
                     blogTopicList,
                     picUrl,
                     blog.getForwardNum(),
+                    (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getCollectNum(),
+                    (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getLikeNum(), comments.size(), commentList
             );
             blogVOList.add(blogVO);
