@@ -4,10 +4,7 @@ import com.stewart.microblog.dto.NewBlogDTO;
 import com.stewart.microblog.service.BlogService;
 import com.stewart.microblog.util.ResultVOUtil;
 import com.stewart.microblog.vo.ResultVO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -41,7 +38,7 @@ public class BlogController {
         return ResultVOUtil.success(blogService.commentBlog(blogId, false, null,  content));
     }
     @PostMapping("/publish")
-    public ResultVO publishNewBlog(NewBlogDTO newBlogDTO) {
+    public ResultVO publishNewBlog(@RequestBody NewBlogDTO newBlogDTO) {
         return ResultVOUtil.success(blogService.publishBlog(newBlogDTO));
     }
 }

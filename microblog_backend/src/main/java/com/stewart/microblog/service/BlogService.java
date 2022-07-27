@@ -2,10 +2,6 @@ package com.stewart.microblog.service;
 
 import com.stewart.microblog.dto.NewBlogDTO;
 import com.stewart.microblog.enums.StatusCode;
-import com.stewart.microblog.vo.UserPageVO;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * 博客功能接口
@@ -45,19 +41,24 @@ public interface BlogService {
     StatusCode disCollectBlog(Integer blogId);
 
     /**
-     *
+     * 博文评论功能接口
      * @param blogId
+     * Integer类型用户id
      * @param isReply
+     * Boolean类型是否为回复
      * @param replyCommentId
+     * Integer类型回复id
      * @param content
-     * @return
+     * String类型博文内容
+     * @return 状态码
      */
     StatusCode commentBlog(Integer blogId, Boolean isReply, Integer replyCommentId, String content);
 
     /**
-     *
+     * 发布博文功能接口
      * @param newBlogDTO
-     * @return
+     * 博文表单对象
+     * @return 状态码
      */
     StatusCode publishBlog(NewBlogDTO newBlogDTO);
     StatusCode repostBlog(Integer blogId);

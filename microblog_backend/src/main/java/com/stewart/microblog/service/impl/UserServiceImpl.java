@@ -44,6 +44,9 @@ public class UserServiceImpl implements UserService{
     @Resource
     private LikeSetRepository likeSetRepository;
 
+    private static final String NORMAL = "NORMAL";
+    private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm";
+
     @Override
     public StatusCode register(RegisterDTO registerDTO) {
         return null;
@@ -54,7 +57,7 @@ public class UserServiceImpl implements UserService{
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
-        User person = userRepository.findUserByIdAndState(personId, "NORMAL");
+        User person = userRepository.findUserByIdAndState(personId, NORMAL);
         String personPicImg = pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl();
         Integer followingNum = followRepository.countByUserIdAndDeleted(personId, false);
         Integer followerNum = followRepository.countByFollowingIdAndDeleted(personId, false);
@@ -69,12 +72,12 @@ public class UserServiceImpl implements UserService{
         List<Integer> publisherIdList = new ArrayList<>();
         publisherIdList.add(personId);
         List<Blog> blogList = blogRepository.findAllByScopeInAndDeletedAndStateAndPublisherIdInOrderByTimeDesc(
-                scopeList, false, "NORMAL", publisherIdList);
+                scopeList, false, NORMAL, publisherIdList);
         List<BlogVO> blogVOList = new ArrayList<>();
         for(Blog blog: blogList) {
             Integer blogId = blog.getId();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), "NORMAL");
+            SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
+            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), NORMAL);
             List<String> blogTopicList = new ArrayList<>();
             List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
             for(BlogTopic blogTopic: blogTopics) {
@@ -83,7 +86,7 @@ public class UserServiceImpl implements UserService{
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
             for(Comment comment: comments) {
-                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
@@ -105,7 +108,7 @@ public class UserServiceImpl implements UserService{
         }
         Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, false);
         return new UserPageVO(
-                personPicImg, person.getNickname(), person.getUsername(), followingNum, followerNum, (!(follow == null)), blogVOList
+                personPicImg, person.getNickname(), person.getUsername(), followingNum, followerNum, (follow != null), blogVOList
         );
     }
 
@@ -115,12 +118,12 @@ public class UserServiceImpl implements UserService{
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<BlogVO> blogVOList = new ArrayList<>();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
         List<Collection> collectionList = collectionRepository.findAllByUserIdAndDeleted(userId, false);
         for(Collection collection: collectionList) {
-            Blog blog = blogRepository.findBlogByIdAndStateAndDeleted(collection.getBlogId(), "NORMAL", false);
+            Blog blog = blogRepository.findBlogByIdAndStateAndDeleted(collection.getBlogId(), NORMAL, false);
             Integer blogId = blog.getId();
-            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), "NORMAL");
+            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), NORMAL);
             List<String> blogTopicList = new ArrayList<>();
             List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
             for(BlogTopic blogTopic: blogTopics) {
@@ -129,7 +132,7 @@ public class UserServiceImpl implements UserService{
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
             for(Comment comment: comments) {
-                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
+                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             blogVOList.add(new BlogVO(
@@ -163,7 +166,7 @@ public class UserServiceImpl implements UserService{
            ));
            information = informationRepository.findInformationByUserId(userId);
         }
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
         return new UserDetailedInfoVO(
                 information.getRealName(),
                 information.getGender(),
@@ -206,7 +209,7 @@ public class UserServiceImpl implements UserService{
         List<Blog> blogList = blogRepository.findAllByPublisherIdAndDeleted(userId, false);
         Integer totalBlogNum = blogList.size();
         Integer totalHeat = 0;
-        Integer totalCommentNum = 0;
+        int totalCommentNum = 0;
         Integer totalLikeNum = 0;
         Integer totalRepostNum = 0;
         Integer totalCollectNum = 0;
@@ -219,8 +222,8 @@ public class UserServiceImpl implements UserService{
             totalCollectNum += blog.getCollectNum();
         }
         Blog hotBlog =  blogRepository.findFirstByPublisherIdAndDeletedOrderByHeat(userId, false);
-        User publisher = userRepository.findUserByIdAndState(userId, "NORMAL");
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        User publisher = userRepository.findUserByIdAndState(userId, NORMAL);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
         Integer blogId = hotBlog.getId();
         List<String> blogTopicList = new ArrayList<>();
         List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
@@ -230,7 +233,7 @@ public class UserServiceImpl implements UserService{
         List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
         List<String> commentList = new ArrayList<>();
         for(Comment comment: comments) {
-            commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), "NORMAL").getNickname() + "： " + comment.getContent());
+            commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
         }
         String picUrl = (hotBlog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(hotBlog.getPhotoId(), false).getUrl());
         BlogVO blogVO = new BlogVO(
@@ -287,7 +290,7 @@ public class UserServiceImpl implements UserService{
         List<UserListItemVO> userListItemVOList = new ArrayList<>();
         for(Follow follow: followList) {
             Integer personId = follow.getFollowingId();
-            User person = userRepository.findUserByIdAndState(personId, "NORMAL");
+            User person = userRepository.findUserByIdAndState(personId, NORMAL);
             userListItemVOList.add(new UserListItemVO(
                     personId,
                     pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl(),
@@ -306,7 +309,7 @@ public class UserServiceImpl implements UserService{
         List<UserListItemVO> userListItemVOList = new ArrayList<>();
         for(Follow follow: followList) {
             Integer personId = follow.getUserId();
-            User person = userRepository.findUserByIdAndState(personId, "NORMAL");
+            User person = userRepository.findUserByIdAndState(personId, NORMAL);
             userListItemVOList.add(new UserListItemVO(
                     personId,
                     pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl(),

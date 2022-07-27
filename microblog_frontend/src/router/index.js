@@ -10,6 +10,7 @@ import PersonalPage from "@/views/PersonalPage";
 import MyCollections from "@/views/MyCollections";
 import MyInfoPage from "@/views/MyInfoPage";
 import MyStatPage from "@/views/MyStatPage";
+import PublishPage from "@/views/PublishPage";
 
 Vue.use(VueRouter)
 
@@ -63,6 +64,11 @@ const routes = [
         path: '/myStatPage',
         name: 'MyStatPage',
         component: MyStatPage
+    },
+    {
+        path: '/publishPage',
+        name: 'PublishPage',
+        component: PublishPage
     }
 ]
 

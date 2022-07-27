@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * 博客持久化接口
@@ -81,5 +80,20 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * @return 该发布者的博文列表
      */
     List<Blog> findAllByPublisherIdAndDeleted(Integer publishId, Boolean deleted);
+
+    /**
+     * 根据发布者id按热度获取最热博文
+     * @param publishId
+     * Integer类型发布者id
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 博文对象Blog
+     */
     Blog findFirstByPublisherIdAndDeletedOrderByHeat(Integer publishId, Boolean deleted);
+
+    /**
+     * 找到最新创建博文
+     * @return 博文对象Blog
+     */
+    Blog findFirstByOrderById();
 }

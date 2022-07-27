@@ -6,7 +6,7 @@
           <el-button icon="el-icon-arrow-left" onclick="window.location.href='http://localhost:8080/home'">返回</el-button>
         </div>
       </div>
-      <h style="font-size: 30px">我的收藏</h>
+      <div style="font-size: 30px">我的收藏</div>
       <div style="overflow:auto" >
         <dl class="list">
           <dd v-for="blog in blogList" class="list-item">
@@ -31,14 +31,14 @@
               </div>
               <div style="height: 10px"></div>
               <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">
-                <i class="el-icon-s-promotion"></i>{{blog.repostNum}}
+                <em class="el-icon-s-promotion"></em>{{blog.repostNum}}
                 <span>&emsp;&emsp;&emsp;</span>
-                <i class="el-icon-star-off" v-show="!blog.collecting" @click="collect(blog.blogId)"></i>
-                <i class="el-icon-star-on" style="color: crimson" v-show="blog.collecting" @click="disCollect(blog.blogId)"></i>
+                <em class="el-icon-star-off" v-show="!blog.collecting" @click="collect(blog.blogId)"></em>
+                <em class="el-icon-star-on" style="color: crimson" v-show="blog.collecting" @click="disCollect(blog.blogId)"></em>
                 {{blog.collectNum}}
                 <span>&emsp;&emsp;&emsp;</span>
-                <i class="el-icon-circle-check" v-show="!blog.liking" @click="like(blog.blogId)"></i>
-                <i class="el-icon-success" style="color: crimson" v-show="blog.liking" @click="dislike(blog.blogId)"></i>
+                <em class="el-icon-circle-check" v-show="!blog.liking" @click="like(blog.blogId)"></em>
+                <em class="el-icon-success" style="color: crimson" v-show="blog.liking" @click="dislike(blog.blogId)"></em>
                 {{blog.likeNum}}
               </div>
               <div style="height: 20px"></div>

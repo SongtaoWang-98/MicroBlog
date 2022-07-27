@@ -12,5 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NewBlogDTO {
+    private String scope;
+    private Integer picId;
     private String content;
 }

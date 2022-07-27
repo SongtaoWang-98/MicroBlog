@@ -27,4 +27,18 @@ public interface TopicRepository extends JpaRepository<Topic, Integer> {
      * @return 话题对象Topic
      */
     Topic findTopicByIdAndDeleted(Integer id, Boolean deleted);
+
+    /**
+     * 根据名称查询话题
+     * @param name
+     * String类型话题名称
+     * @return 话题对象Topic
+     */
+    Topic findTopicByName(String name);
+
+    /**
+     * 查询最新创建话题
+     * @return 话题对象Topic
+     */
+    Topic findFirstByOrderById();
 }

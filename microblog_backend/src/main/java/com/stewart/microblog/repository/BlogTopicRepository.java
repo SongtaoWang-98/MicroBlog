@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface BlogTopicRepository extends JpaRepository<BlogTopic, Integer> {
     /**
-     * 根据博客id查找
+     * 根据博客id查找博客-话题关系
      * @param blogId
      * Integer类型博客id
      * @param deleted

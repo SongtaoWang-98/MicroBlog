@@ -6,12 +6,14 @@ import com.stewart.microblog.enums.StatusCode;
 import com.stewart.microblog.repository.*;
 import com.stewart.microblog.service.BlogService;
 import com.stewart.microblog.util.GetCurrentUserUtil;
-import com.stewart.microblog.vo.UserPageVO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 博客功能接口实现类
@@ -29,12 +31,16 @@ public class BlogServiceImpl implements BlogService {
     private BlogRepository blogRepository;
     @Resource
     private CommentRepository commentRepository;
+    @Resource
+    private TopicRepository topicRepository;
+    @Resource
+    private BlogTopicRepository blogTopicRepository;
 
     @Override
     public StatusCode likeBlog(Integer blogId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
-        LikeSet likeSet = likeSetRepository.findByUserIdAndAndBlogId(userId, blogId);
+        LikeSet likeSet = likeSetRepository.findByUserIdAndBlogId(userId, blogId);
         if(likeSet != null) {
             likeSet.setDeleted(false);
             likeSetRepository.save(likeSet);
@@ -103,7 +109,40 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public StatusCode publishBlog(NewBlogDTO newBlogDTO) {
-        return null;
+        String userName = GetCurrentUserUtil.getCurrentUserName();
+        Integer userId = userRepository.findByUsername(userName).getId();
+        String content = newBlogDTO.getContent();
+        String regex = "#.*\n";
+        String str = content.replaceAll(regex, "");
+        Blog blog = new Blog(
+                null, userId, new Date(), newBlogDTO.getScope(), str,
+                newBlogDTO.getPicId(), 0, 0, 0, "NORMAL",
+                "ORIGINAL", null, 0, false
+        );
+        blogRepository.save(blog);
+        Blog thisBlog = blogRepository.findFirstByOrderById();
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(content);
+        List<String> topicList = new ArrayList<>();
+        while(matcher.find()) {
+            topicList.add(content.substring(matcher.start() + 1, matcher.end() - 1));
+        }
+        for(String s: topicList) {
+            Topic topic = topicRepository.findTopicByName(s);
+            if(topic != null) {
+                if(Boolean.TRUE.equals(topic.getDeleted())) {
+                    topic.setDeleted(false);
+                    topicRepository.save(topic);
+                }
+                blogTopicRepository.save(new BlogTopic(null, thisBlog.getId(), topic.getId(), false));
+            }
+            else {
+                topicRepository.save(new Topic(null, s, 0, false));
+                blogTopicRepository.save(new BlogTopic(null, thisBlog.getId(),
+                        topicRepository.findFirstByOrderById().getId(), false));
+            }
+        }
+        return StatusCode.SUCCESS;
     }
 
     @Override

@@ -46,15 +46,14 @@
           <span>&emsp;&emsp;&emsp;</span>
           <el-dropdown>
           <el-button style="font-size: 20px; background-color: #f3e9eb; border: 0">
-            分组查看<i class="el-icon-arrow-down el-icon--right"></i>
+            分组查看<em class="el-icon-arrow-down el-icon--right"></em>
           </el-button>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item v-for="group in groupList" key="index" @click.native="showByGroup(group.id)">{{ group.name }}</el-dropdown-item>
           </el-dropdown-menu>
           </el-dropdown>
           <span>&emsp;&emsp;&emsp;</span>
-          <el-button type="warning" round icon="el-icon-edit" size ="large">发布新博文</el-button>
-<!--          <el-link :underline="false" icon="el-icon-circle-plus" href="http://localhost:8080/home" style="font-size: 30px; color: #fc754e; margin: 0 auto">发布新博文</el-link>-->
+          <el-button type="warning" round icon="el-icon-edit" size ="large" onclick="window.location.href='http://localhost:8080/publishPage'">发布新博文</el-button>
         </div>
       </el-header>
       <el-main style="background-color: #e5ecf8">
@@ -85,14 +84,14 @@
                 </div>
                 <div style="height: 10px"></div>
                 <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">
-                  <i class="el-icon-s-promotion"></i>{{blog.repostNum}}
+                  <em class="el-icon-s-promotion"></em>{{blog.repostNum}}
                   <span>&emsp;&emsp;&emsp;</span>
-                  <i class="el-icon-star-off" v-show="!blog.collecting" @click="collect(blog.blogId)"></i>
-                  <i class="el-icon-star-on" style="color: crimson" v-show="blog.collecting" @click="disCollect(blog.blogId)"></i>
+                  <em class="el-icon-star-off" v-show="!blog.collecting" @click="collect(blog.blogId)"></em>
+                  <em class="el-icon-star-on" style="color: crimson" v-show="blog.collecting" @click="disCollect(blog.blogId)"></em>
                   {{blog.collectNum}}
                   <span>&emsp;&emsp;&emsp;</span>
-                  <i class="el-icon-circle-check" v-show="!blog.liking" @click="like(blog.blogId)"></i>
-                  <i class="el-icon-success" style="color: crimson" v-show="blog.liking" @click="dislike(blog.blogId)"></i>
+                  <em class="el-icon-circle-check" v-show="!blog.liking" @click="like(blog.blogId)"></em>
+                  <em class="el-icon-success" style="color: crimson" v-show="blog.liking" @click="dislike(blog.blogId)"></em>
                   {{blog.likeNum}}
                 </div>
                 <div style="height: 20px"></div>
