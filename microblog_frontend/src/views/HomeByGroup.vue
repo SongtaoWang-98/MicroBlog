@@ -32,6 +32,8 @@
         <div style="height: 40px"></div>
         <div><el-button type="danger" plain icon="el-icon-star-on" onclick="window.location.href='http://localhost:8080/myCollections'">我的收藏</el-button></div>
         <div style="height: 40px"></div>
+        <div><el-button plain @click="logout">退出登录</el-button></div>
+        <div style="height: 40px"></div>
       </div>
     </el-aside>
     <el-container>
@@ -167,19 +169,23 @@ export default {
   created() {
     const _this = this
     axios.get('http://localhost:8181/home/group?groupId=' + this.$route.params.id).then(function (resp) {
-      console.log(resp.data.data)
-      _this.circleUrl = resp.data.data.userImg
-      _this.nickname = resp.data.data.nickName
-      _this.username = resp.data.data.userName
-      _this.followingNum = resp.data.data.followingNum
-      _this.followerNum = resp.data.data.followerNum
-      _this.groupList = resp.data.data.groups
-      _this.blogList = resp.data.data.blogs
-      _this.topicList = resp.data.data.topics
-      console.log(_this)
-      _this.radio = 1
-      _this.input = ''
-      _this.comment = ''
+      if(resp.data.data === "USER_NOT_LOGIN") {
+        _this.$router.replace({path: '/loginPage'})
+      }
+      else {
+        console.log(resp.data.data)
+        _this.circleUrl = resp.data.data.userImg
+        _this.nickname = resp.data.data.nickName
+        _this.username = resp.data.data.userName
+        _this.followingNum = resp.data.data.followingNum
+        _this.followerNum = resp.data.data.followerNum
+        _this.groupList = resp.data.data.groups
+        _this.blogList = resp.data.data.blogs
+        _this.topicList = resp.data.data.topics
+        _this.radio = 1
+        _this.input = ''
+        _this.comment = ''
+      }
     })
   },
   computed: {
@@ -226,6 +232,10 @@ export default {
     },
     commentSubmit(blogId) {
       axios.post('http://localhost:8181/blog/comment?blogId=' + blogId + '&content=' + this.comment)
+      location.reload()
+    },
+    logout() {
+      axios.post('http://localhost:8181/logout')
       location.reload()
     }
   }

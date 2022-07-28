@@ -1,6 +1,9 @@
 package com.stewart.microblog.util;
 
-//import org.springframework.security.core.context.SecurityContextHolder;
+import com.stewart.microblog.service.impl.BlogServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  * 获取当前用户信息工具类
@@ -8,9 +11,12 @@ package com.stewart.microblog.util;
  */
 public class GetCurrentUserUtil {
     private GetCurrentUserUtil() {}
+    private static final Logger logger = LoggerFactory.getLogger(GetCurrentUserUtil.class);
 
     public static String getCurrentUserName() {
-//        return SecurityContextHolder.getContext().getAuthentication().getName();
-        return "songtao_wang@qq.com";
+        String currentName = SecurityContextHolder.getContext().getAuthentication().getName();
+        logger.info(currentName);
+        return currentName;
+//        return "songtao_wang@qq.com";
     }
 }

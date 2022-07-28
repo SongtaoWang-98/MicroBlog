@@ -54,8 +54,13 @@ export default {
   created() {
     const _this = this
     axios.get('http://localhost:8181/user/followingList').then(function (resp) {
-      console.log(resp.data.data)
-      _this.userList = resp.data.data.userList
+      console.log(resp.data)
+      if(resp.data.data === "USER_NOT_LOGIN") {
+        _this.$router.replace({path: '/loginPage'})
+      }
+      else {
+        _this.userList = resp.data.data.userList
+      }
     })
   },
 }

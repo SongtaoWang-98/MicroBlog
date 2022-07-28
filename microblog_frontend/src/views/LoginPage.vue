@@ -40,6 +40,16 @@ export default {
       this.$router.replace({path: '/signUpPage'});
     },
     handleSubmit() {
+      axios.post('http://localhost:8181/login?username=' + this.username + '&password=' + this.password)
+          .then(res=> {
+        console.log(res)
+            if(res.data.data==="USER_ACCOUNT_NOT_EXIST") alert("用户名不存在")
+            else if(res.data.data==='USER_CREDENTIALS_ERROR') alert("密码错误")
+            else if(res.data.data==="USER_ACCOUNT_LOCKED") alert("用户已封禁")
+            else if(res.data.code === 0) {
+              this.$router.replace({path: '/home'});
+            }
+      })
     }
   }
 }

@@ -73,6 +73,7 @@ export default {
     const _this = this
     axios.get('http://localhost:8181/user/collections').then(function (resp) {
       console.log(resp.data.data)
+
       _this.blogList = resp.data.data.blogs
       _this.comment = ''
     })

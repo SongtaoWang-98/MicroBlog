@@ -16,20 +16,17 @@ import javax.annotation.Resource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-//    @Autowired
-//    CustomizeAuthenticationEntryPoint authenticationEntryPoint;
-//
-//    @Autowired
-//    CustomizeAuthenticationSuccessHandler authenticationSuccessHandler;
-//
-//    @Autowired
-//    CustomizeAuthenticationFailureHandler authenticationFailureHandler;
-//
-//    @Autowired
-//    CustomizeLogoutSuccessHandler logoutSuccessHandler;
-//
-//    @Autowired
-//    UserDetailsServiceImpl userDetailsServiceImpl;
+    @Resource
+    CustomizeAuthenticationEntryPoint authenticationEntryPoint;
+
+    @Resource
+    CustomizeAuthenticationSuccessHandler authenticationSuccessHandler;
+
+    @Resource
+    CustomizeAuthenticationFailureHandler authenticationFailureHandler;
+
+    @Resource
+    CustomizeLogoutSuccessHandler logoutSuccessHandler;
 
     @Resource
     private UserDetailsServiceImpl userDetailsService;
@@ -51,21 +48,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .formLogin()
                 .permitAll()
-//                .successHandler(authenticationSuccessHandler)
-//                .failureHandler(authenticationFailureHandler)
+                .successHandler(authenticationSuccessHandler)
+                .failureHandler(authenticationFailureHandler)
                 .and().logout()
                 .permitAll()
-//                .logoutSuccessHandler(logoutSuccessHandler)
+                .logoutSuccessHandler(logoutSuccessHandler)
                 //登出之后删除cookie
                 .deleteCookies("JSESSIONID")
                 .and().authorizeRequests()
                 .antMatchers("/home/friends").hasAuthority("USER")
+                .antMatchers("/home/group").hasAuthority("USER")
+                .antMatchers("/home/new").hasAuthority("USER")
                 .antMatchers("/blog/**").hasAuthority("USER")
                 .antMatchers("/user/**").hasAuthority("USER")
                 .antMatchers("/manager/**").hasAuthority("MANAGER")
                 .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
                 .and().exceptionHandling()
-//                .authenticationEntryPoint(authenticationEntryPoint)
+                .authenticationEntryPoint(authenticationEntryPoint)
                 .and().cors()
                 //关闭跨站请求伪造攻击拦截
                 .and().csrf().disable();

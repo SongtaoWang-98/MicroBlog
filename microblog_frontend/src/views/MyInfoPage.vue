@@ -63,15 +63,20 @@ export default {
     const _this = this
     axios.get('http://localhost:8181/user/detailedInfo').then(function (resp) {
       console.log(resp.data.data)
-      _this.form.realName = resp.data.data.realName
-      _this.form.gender = resp.data.data.gender
-      _this.form.birthday = resp.data.data.birthday
-      _this.form.company = resp.data.data.company
-      _this.form.job = resp.data.data.job
-      _this.form.university = resp.data.data.university
-      _this.form.telNumber = resp.data.data.telNumber
-      _this.form.hobby = resp.data.data.hobby
-      _this.form.province = resp.data.data.province
+      if(resp.data.data === "USER_NOT_LOGIN") {
+        _this.$router.replace({path: '/loginPage'})
+      }
+      else{
+        _this.form.realName = resp.data.data.realName
+        _this.form.gender = resp.data.data.gender
+        _this.form.birthday = resp.data.data.birthday
+        _this.form.company = resp.data.data.company
+        _this.form.job = resp.data.data.job
+        _this.form.university = resp.data.data.university
+        _this.form.telNumber = resp.data.data.telNumber
+        _this.form.hobby = resp.data.data.hobby
+        _this.form.province = resp.data.data.province
+      }
     })
   },
   methods: {

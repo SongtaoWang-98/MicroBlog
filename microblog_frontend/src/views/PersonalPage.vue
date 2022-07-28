@@ -95,15 +95,20 @@ export default {
     const _this = this
     axios.get('http://localhost:8181/user/homePage?personId=' + this.$route.params.id).then(function (resp) {
       console.log(resp.data.data)
-      _this.circleUrl = resp.data.data.userImg
-      _this.nickname = resp.data.data.nickName
-      _this.username = resp.data.data.userName
-      _this.followingNum = resp.data.data.followingNum
-      _this.followerNum = resp.data.data.followerNum
-      _this.groupList = resp.data.data.groups
-      _this.blogList = resp.data.data.blogs
-      _this.comment = ''
-      _this.following = resp.data.data.following
+      if(resp.data.data === "USER_NOT_LOGIN") {
+        _this.$router.replace({path: '/loginPage'})
+      }
+      else {
+        _this.circleUrl = resp.data.data.userImg
+        _this.nickname = resp.data.data.nickName
+        _this.username = resp.data.data.userName
+        _this.followingNum = resp.data.data.followingNum
+        _this.followerNum = resp.data.data.followerNum
+        _this.groupList = resp.data.data.groups
+        _this.blogList = resp.data.data.blogs
+        _this.comment = ''
+        _this.following = resp.data.data.following
+      }
     })
   },
   methods: {

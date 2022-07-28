@@ -95,13 +95,18 @@ export default {
     const _this = this
     axios.get('http://localhost:8181/user/personalStat').then(function (resp) {
       console.log(resp.data.data)
-      _this.blogNum = resp.data.data.blogNum
-      _this.heat = resp.data.data.heat
-      _this.commentNum = resp.data.data.commentNum
-      _this.likeNum = resp.data.data.likeNum
-      _this.repostNum = resp.data.data.repostNum
-      _this.collectNum = resp.data.data.collectNum
-      _this.blog = resp.data.data.hottestBlog
+      if(resp.data.data === "USER_NOT_LOGIN") {
+        _this.$router.replace({path: '/loginPage'})
+      }
+      else {
+        _this.blogNum = resp.data.data.blogNum
+        _this.heat = resp.data.data.heat
+        _this.commentNum = resp.data.data.commentNum
+        _this.likeNum = resp.data.data.likeNum
+        _this.repostNum = resp.data.data.repostNum
+        _this.collectNum = resp.data.data.collectNum
+        _this.blog = resp.data.data.hottestBlog
+      }
     })
   },
   methods: {

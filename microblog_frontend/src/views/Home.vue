@@ -32,6 +32,8 @@
         <div style="height: 40px"></div>
         <div><el-button type="danger" plain icon="el-icon-star-on" onclick="window.location.href='http://localhost:8080/myCollections'">我的收藏</el-button></div>
         <div style="height: 40px"></div>
+        <div><el-button plain @click="logout">退出登录</el-button></div>
+        <div style="height: 40px"></div>
       </div>
     </el-aside>
     <el-container>
@@ -226,6 +228,10 @@ export default {
     },
     commentSubmit(blogId) {
       axios.post('http://localhost:8181/blog/comment?blogId=' + blogId + '&content=' + this.comment)
+      location.reload()
+    },
+    logout() {
+      axios.post('http://localhost:8181/logout')
       location.reload()
     }
   }
