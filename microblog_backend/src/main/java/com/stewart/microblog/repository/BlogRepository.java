@@ -95,5 +95,5 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * 找到最新创建博文
      * @return 博文对象Blog
      */
-    Blog findFirstByOrderById();
+    Blog findFirstByOrderByIdDesc();
 }

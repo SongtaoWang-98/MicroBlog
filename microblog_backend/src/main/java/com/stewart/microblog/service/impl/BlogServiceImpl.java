@@ -147,7 +147,7 @@ public class BlogServiceImpl implements BlogService {
                 "ORIGINAL", null, 0, false
         );
         blogRepository.save(blog);
-        Blog thisBlog = blogRepository.findFirstByOrderById();
+        Blog thisBlog = blogRepository.findFirstByOrderByIdDesc();
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(content);
         List<String> topicList = new ArrayList<>();
@@ -169,7 +169,7 @@ public class BlogServiceImpl implements BlogService {
             else {
                 topicRepository.save(new Topic(null, s, 0, false));
                 blogTopicRepository.save(new BlogTopic(null, thisBlog.getId(),
-                        topicRepository.findFirstByOrderById().getId(), false));
+                        topicRepository.findFirstByOrderByIdDesc().getId(), false));
             }
         }
         return StatusCode.SUCCESS;

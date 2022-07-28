@@ -8,6 +8,8 @@ import com.stewart.microblog.repository.*;
 import com.stewart.microblog.service.UserService;
 import com.stewart.microblog.util.GetCurrentUserUtil;
 import com.stewart.microblog.vo.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -46,6 +48,7 @@ public class UserServiceImpl implements UserService{
 
     private static final String NORMAL = "NORMAL";
     private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm";
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Override
     public StatusCode register(RegisterDTO registerDTO) {
@@ -54,8 +57,12 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserPageVO showPersonalPage(Integer personId) {
+        String format1 = String.format("展示用户id为%d用户的个人主页", personId);
+        logger.info(format1);
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
+        String format2 = String.format("当前登录用户：%s", userName);
+        logger.info(format2);
         Integer userId = user.getId();
         User person = userRepository.findUserByIdAndState(personId, NORMAL);
         String personPicImg = pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl();
@@ -74,6 +81,7 @@ public class UserServiceImpl implements UserService{
         List<Blog> blogList = blogRepository.findAllByScopeInAndDeletedAndStateAndPublisherIdInOrderByTimeDesc(
                 scopeList, false, NORMAL, publisherIdList);
         List<BlogVO> blogVOList = new ArrayList<>();
+        logger.info("加载博文列表");
         for(Blog blog: blogList) {
             Integer blogId = blog.getId();
             SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
@@ -114,12 +122,14 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public CollectionPageVO showMyCollections() {
+        logger.info("展示我的收藏页");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<BlogVO> blogVOList = new ArrayList<>();
         SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
         List<Collection> collectionList = collectionRepository.findAllByUserIdAndDeleted(userId, false);
+        logger.info("加载博文列表");
         for(Collection collection: collectionList) {
             Blog blog = blogRepository.findBlogByIdAndStateAndDeleted(collection.getBlogId(), NORMAL, false);
             Integer blogId = blog.getId();
@@ -156,6 +166,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserDetailedInfoVO showDetailedInfo() {
+        logger.info("展示详细信息页");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
         Information information = informationRepository.findInformationByUserId(userId);
@@ -182,6 +193,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public StatusCode updateDetailedInfo(DetailedInfoDTO detailedInfoDTO) throws ParseException {
+        logger.info("更新详细信息页");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -195,11 +207,13 @@ public class UserServiceImpl implements UserService{
                 detailedInfoDTO.getProvince()
         );
         informationRepository.save(information);
+        logger.info("更新详细信息操作成功");
         return StatusCode.SUCCESS;
     }
 
     @Override
     public UserStatVO showUserStatInfo() {
+        logger.info("显示用户统计信息");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
         List<Blog> blogList = blogRepository.findAllByPublisherIdAndDeleted(userId, false);
@@ -256,6 +270,8 @@ public class UserServiceImpl implements UserService{
     public StatusCode follow(Integer personId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
+        String format = String.format("添加用户id为%d的用户至id为%d的用户的关注关系", userId, personId);
+        logger.info(format);
         Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, true);
         if(follow != null) {
             follow.setDeleted(false);
@@ -271,6 +287,8 @@ public class UserServiceImpl implements UserService{
     public StatusCode unfollow(Integer personId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userRepository.findByUsername(userName).getId();
+        String format = String.format("删除用户id为%d的用户至id为%d的用户的关注关系", userId, personId);
+        logger.info(format);
         Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, false);
         follow.setDeleted(true);
         followRepository.save(follow);
@@ -279,6 +297,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserListVO showFollowingList() {
+        logger.info("展示用户关注列表");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
@@ -298,6 +317,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserListVO showFollowerList() {
+        logger.info("展示用户粉丝列表");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();

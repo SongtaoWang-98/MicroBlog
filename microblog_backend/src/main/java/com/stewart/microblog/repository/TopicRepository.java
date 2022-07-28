@@ -40,5 +40,5 @@ public interface TopicRepository extends JpaRepository<Topic, Integer> {
      * 查询最新创建话题
      * @return 话题对象Topic
      */
-    Topic findFirstByOrderById();
+    Topic findFirstByOrderByIdDesc();
 }

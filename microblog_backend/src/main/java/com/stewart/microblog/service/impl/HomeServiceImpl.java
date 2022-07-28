@@ -8,6 +8,8 @@ import com.stewart.microblog.vo.BlogVO;
 import com.stewart.microblog.vo.HomeGroupVO;
 import com.stewart.microblog.vo.HomeVO;
 import org.jetbrains.annotations.NotNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -46,10 +48,13 @@ public class HomeServiceImpl implements HomeService {
     private static final String PUBLIC = "PUBLIC";
     private static final String NORMAL = "NORMAL";
     private static final Integer TOPIC_NUM = 3;
+    private static final Logger logger = LoggerFactory.getLogger(HomeServiceImpl.class);
 
     @Override
     public HomeVO showHotBlogsHome() {
         String userName = GetCurrentUserUtil.getCurrentUserName();
+        String format = String.format("展示用户%s的微博客热门推荐页", userName);
+        logger.info(format);
         User user = userRepository.findByUsername(userName);
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByHeatDesc(PUBLIC, false, NORMAL);
         return createHomeVO(user, blogList);
@@ -58,6 +63,8 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public HomeVO showNewBlogsHome() {
         String userName = GetCurrentUserUtil.getCurrentUserName();
+        String format = String.format("展示用户%s的微博客最新推荐页", userName);
+        logger.info(format);
         User user = userRepository.findByUsername(userName);
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByTimeDesc(PUBLIC, false, NORMAL);
         return createHomeVO(user, blogList);
@@ -66,6 +73,8 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public HomeVO showFriendsBlogsHome() {
         String userName = GetCurrentUserUtil.getCurrentUserName();
+        String format = String.format("展示用户%s的微博客好友圈推荐页", userName);
+        logger.info(format);
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<Integer> friendIds = new ArrayList<>();
@@ -90,6 +99,8 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public HomeVO showGroupBlogsHome(Integer groupId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
+        String format = String.format("展示用户%s的微博客分组推荐页，分组id：%d", userName, groupId);
+        logger.info(format);
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
         List<GroupFollow>groupFollowList = groupFollowRepository.findAllByGroupIdAndDeleted(groupId, false);
@@ -115,6 +126,7 @@ public class HomeServiceImpl implements HomeService {
     }
 
     private List<BlogVO> convertBlogsToVO(List<Blog> blogList) {
+        logger.info("加载博文列表");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         User user = userRepository.findByUsername(userName);
         Integer userId = user.getId();
@@ -155,6 +167,7 @@ public class HomeServiceImpl implements HomeService {
     }
 
     List<HomeGroupVO> getGroupNameList(Integer userId) {
+        logger.info("加载用户分组列表");
         List<HomeGroupVO> groupNameList = new ArrayList<>();
         List<ConcernGroup> concernGroupList = concernGroupRepository.findByUserIdAndDeleted(userId, false);
         for(ConcernGroup concernGroup : concernGroupList) {
@@ -164,6 +177,7 @@ public class HomeServiceImpl implements HomeService {
     }
 
     List<String> getHotTopicList(){
+        logger.info("加载热门话题列表");
         List<String> topicNameList = new ArrayList<>();
         List<Topic> topicList = topicRepository.findAllByDeletedOrderByHeatDesc(false);
         for(int i = 0; i < Math.min(TOPIC_NUM, topicList.size()); i++) {
@@ -173,6 +187,7 @@ public class HomeServiceImpl implements HomeService {
     }
 
     HomeVO createHomeVO(@NotNull User user, List<Blog> blogList) {
+        logger.info("生成首页视图对象");
         return new HomeVO(
                 pictureRepository.findPictureByIdAndDeleted(user.getPhotoId(), false).getUrl(),
                 user.getNickname(),

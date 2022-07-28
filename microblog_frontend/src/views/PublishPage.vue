@@ -38,8 +38,11 @@ export default {
         method:"post",
         url:"http://localhost:8181/blog/publish",
         data:this.form
+      }).then(res=>{
+        console.log(res)
+        if(res.data.code === "-1") alert(res.data.message)
+        else window.location.href='http://localhost:8080/home'
       })
-      window.location.href='http://localhost:8080/home'
     }
   }
 }
