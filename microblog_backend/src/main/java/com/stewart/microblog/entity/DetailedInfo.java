@@ -16,7 +16,7 @@ import java.util.Date;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Information {
+public class DetailedInfo {
     @Id
     private Integer userId;
     private String realName;

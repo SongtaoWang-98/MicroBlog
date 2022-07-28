@@ -11,6 +11,8 @@ import MyCollections from "@/views/MyCollections";
 import MyInfoPage from "@/views/MyInfoPage";
 import MyStatPage from "@/views/MyStatPage";
 import PublishPage from "@/views/PublishPage";
+import LoginPage from "@/views/LoginPage";
+import SignUpPage from "@/views/SignUpPage";
 
 Vue.use(VueRouter)
 
@@ -69,6 +71,16 @@ const routes = [
         path: '/publishPage',
         name: 'PublishPage',
         component: PublishPage
+    },
+    {
+        path: '/loginPage',
+        name: 'LoginPage',
+        component: LoginPage
+    },
+    {
+        path: '/signUpPage',
+        name: 'SignUpPage',
+        component: SignUpPage
     }
 ]
 

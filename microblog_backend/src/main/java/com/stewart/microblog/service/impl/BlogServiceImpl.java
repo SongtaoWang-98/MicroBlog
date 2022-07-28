@@ -3,7 +3,6 @@ package com.stewart.microblog.service.impl;
 import com.stewart.microblog.dto.NewBlogDTO;
 import com.stewart.microblog.entity.*;
 import com.stewart.microblog.enums.StatusCode;
-import com.stewart.microblog.exception.GlobalExceptionHandler;
 import com.stewart.microblog.repository.*;
 import com.stewart.microblog.service.BlogService;
 import com.stewart.microblog.util.GetCurrentUserUtil;
@@ -27,7 +26,7 @@ public class BlogServiceImpl implements BlogService {
     @Resource
     private LikeSetRepository likeSetRepository;
     @Resource
-    private UserRepository userRepository;
+    private UserInfoRepository userInfoRepository;
     @Resource
     private CollectionRepository collectionRepository;
     @Resource
@@ -44,7 +43,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public StatusCode likeBlog(Integer blogId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userRepository.findByUsername(userName).getId();
+        Integer userId = userInfoRepository.findByUsername(userName).getId();
         LikeSet likeSet = likeSetRepository.findByUserIdAndBlogId(userId, blogId);
         if(likeSet != null) {
             String format = String.format("数据库有用户id为%d博文id为%d的点赞记录，删除标记为true", userId, blogId);
@@ -68,7 +67,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public StatusCode dislikeBlog(Integer blogId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userRepository.findByUsername(userName).getId();
+        Integer userId = userInfoRepository.findByUsername(userName).getId();
         LikeSet likeSet = likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false);
         likeSet.setDeleted(true);
         String format = String.format("查询用户id为%d博文id为%d的点赞记录，删除标记改为true", userId, blogId);
@@ -84,7 +83,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public StatusCode collectBlog(Integer blogId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userRepository.findByUsername(userName).getId();
+        Integer userId = userInfoRepository.findByUsername(userName).getId();
         Collection collection = collectionRepository.findByUserIdAndBlogId(userId, blogId);
         if(collection != null) {
             String format = String.format("数据库有用户id为%d博文id为%d的收藏记录，删除标记为true", userId, blogId);
@@ -108,7 +107,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public StatusCode disCollectBlog(Integer blogId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userRepository.findByUsername(userName).getId();
+        Integer userId = userInfoRepository.findByUsername(userName).getId();
         Collection collection = collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false);
         collection.setDeleted(true);
         String format = String.format("查询用户id为%d博文id为%d的收藏记录，删除标记改为true", userId, blogId);
@@ -124,7 +123,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public StatusCode commentBlog(Integer blogId,  Boolean isReply, Integer replyCommentId, String content) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userRepository.findByUsername(userName).getId();
+        Integer userId = userInfoRepository.findByUsername(userName).getId();
         Comment comment = new Comment(null, blogId, userId, content, new Date(), isReply, replyCommentId, false);
         String format = String.format("id为%d的用户与%s在id为%d的微博下发布评论，内容为%s", userId, new Date().toString(), blogId, content);
         logger.info(format);
@@ -135,7 +134,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public StatusCode publishBlog(NewBlogDTO newBlogDTO) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userRepository.findByUsername(userName).getId();
+        Integer userId = userInfoRepository.findByUsername(userName).getId();
         String content = newBlogDTO.getContent();
         String regex = "#.*\n";
         String str = content.replaceAll(regex, "");

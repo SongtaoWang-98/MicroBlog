@@ -23,7 +23,7 @@ import java.util.*;
 @Service
 public class HomeServiceImpl implements HomeService {
     @Resource
-    private UserRepository userRepository;
+    private UserInfoRepository userInfoRepository;
     @Resource
     private FollowRepository followRepository;
     @Resource
@@ -55,9 +55,12 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         String format = String.format("展示用户%s的微博客热门推荐页", userName);
         logger.info(format);
-        User user = userRepository.findByUsername(userName);
+        UserInfo userInfo = userInfoRepository.findByUsername(userName);
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByHeatDesc(PUBLIC, false, NORMAL);
-        return createHomeVO(user, blogList);
+        if(userInfo == null) {
+            return createAnonymousHomeVO(blogList);
+        }
+        return createHomeVO(userInfo, blogList);
     }
 
     @Override
@@ -65,9 +68,9 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         String format = String.format("展示用户%s的微博客最新推荐页", userName);
         logger.info(format);
-        User user = userRepository.findByUsername(userName);
+        UserInfo userInfo = userInfoRepository.findByUsername(userName);
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByTimeDesc(PUBLIC, false, NORMAL);
-        return createHomeVO(user, blogList);
+        return createHomeVO(userInfo, blogList);
     }
 
     @Override
@@ -75,8 +78,8 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         String format = String.format("展示用户%s的微博客好友圈推荐页", userName);
         logger.info(format);
-        User user = userRepository.findByUsername(userName);
-        Integer userId = user.getId();
+        UserInfo userInfo = userInfoRepository.findByUsername(userName);
+        Integer userId = userInfo.getId();
         List<Integer> friendIds = new ArrayList<>();
         friendIds.add(userId);
         List<Follow> followList = followRepository.findAllByUserIdAndDeleted(userId, false);
@@ -93,7 +96,7 @@ public class HomeServiceImpl implements HomeService {
         scopes.add("FOLLOW");
         scopes.add("FRIEND");
         List<Blog> blogList = blogRepository.findAllByScopeInAndDeletedAndStateAndPublisherIdInOrderByTimeDesc(scopes,false, NORMAL, friendIds);
-        return createHomeVO(user, blogList);
+        return createHomeVO(userInfo, blogList);
     }
 
     @Override
@@ -101,8 +104,8 @@ public class HomeServiceImpl implements HomeService {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         String format = String.format("展示用户%s的微博客分组推荐页，分组id：%d", userName, groupId);
         logger.info(format);
-        User user = userRepository.findByUsername(userName);
-        Integer userId = user.getId();
+        UserInfo userInfo = userInfoRepository.findByUsername(userName);
+        Integer userId = userInfo.getId();
         List<GroupFollow>groupFollowList = groupFollowRepository.findAllByGroupIdAndDeleted(groupId, false);
         List<Integer> groupMemberIds = new ArrayList<>();
         for(GroupFollow groupFollow: groupFollowList) {
@@ -114,9 +117,9 @@ public class HomeServiceImpl implements HomeService {
         List<Blog> blogList = blogRepository.findAllByScopeInAndDeletedAndStateAndPublisherIdInOrderByTimeDesc(scopes, false, NORMAL, groupMemberIds);
         List<BlogVO> blogVOList = convertBlogsToVO(blogList);
         return new HomeVO(
-                pictureRepository.findPictureByIdAndDeleted(user.getPhotoId(), false).getUrl(),
-                user.getNickname(),
-                user.getUsername(),
+                pictureRepository.findPictureByIdAndDeleted(userInfo.getPhotoId(), false).getUrl(),
+                userInfo.getNickname(),
+                userInfo.getUsername(),
                 followRepository.countByUserIdAndDeleted(userId, false),
                 followRepository.countByFollowingIdAndDeleted(userId, false),
                 getGroupNameList(userId),
@@ -128,13 +131,13 @@ public class HomeServiceImpl implements HomeService {
     private List<BlogVO> convertBlogsToVO(List<Blog> blogList) {
         logger.info("加载博文列表");
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        User user = userRepository.findByUsername(userName);
-        Integer userId = user.getId();
+        UserInfo userInfo = userInfoRepository.findByUsername(userName);
+        Integer userId = (userInfo == null ? 0 : userInfo.getId());
         List<BlogVO> blogVOList = new ArrayList<>();
         for(Blog blog: blogList) {
             Integer blogId = blog.getId();
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-            User publisher = userRepository.findUserByIdAndState(blog.getPublisherId(), NORMAL);
+            UserInfo publisher = userInfoRepository.findUserByIdAndState(blog.getPublisherId(), NORMAL);
             List<String> blogTopicList = new ArrayList<>();
             List<BlogTopic> blogTopics = blogTopicRepository.findBlogTopicsByBlogIdAndDeleted(blogId, false);
             for(BlogTopic blogTopic: blogTopics) {
@@ -143,7 +146,7 @@ public class HomeServiceImpl implements HomeService {
             List<Comment> comments = commentRepository.findAllByBlogIdAndDeleted(blogId, false);
             List<String> commentList = new ArrayList<>();
             for(Comment comment: comments) {
-                commentList.add(userRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
+                commentList.add(userInfoRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
             }
             String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
@@ -156,9 +159,9 @@ public class HomeServiceImpl implements HomeService {
                     blogTopicList,
                     picUrl,
                     blog.getForwardNum(),
-                    (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
+                    userId != 0 && (collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getCollectNum(),
-                    (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
+                    userId != 0 && (likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false) != null),
                     blog.getLikeNum(), comments.size(), commentList
             );
             blogVOList.add(blogVO);
@@ -186,15 +189,29 @@ public class HomeServiceImpl implements HomeService {
         return topicNameList;
     }
 
-    HomeVO createHomeVO(@NotNull User user, List<Blog> blogList) {
+    HomeVO createHomeVO(UserInfo userInfo, List<Blog> blogList) {
         logger.info("生成首页视图对象");
         return new HomeVO(
-                pictureRepository.findPictureByIdAndDeleted(user.getPhotoId(), false).getUrl(),
-                user.getNickname(),
-                user.getUsername(),
-                followRepository.countByUserIdAndDeleted(user.getId(), false),
-                followRepository.countByFollowingIdAndDeleted(user.getId(), false),
-                getGroupNameList(user.getId()),
+                pictureRepository.findPictureByIdAndDeleted(userInfo.getPhotoId(), false).getUrl(),
+                userInfo.getNickname(),
+                userInfo.getUsername(),
+                followRepository.countByUserIdAndDeleted(userInfo.getId(), false),
+                followRepository.countByFollowingIdAndDeleted(userInfo.getId(), false),
+                getGroupNameList(userInfo.getId()),
+                convertBlogsToVO(blogList),
+                getHotTopicList()
+        );
+    }
+
+    HomeVO createAnonymousHomeVO(List<Blog> blogList) {
+        logger.info("生成首页视图对象");
+        return new HomeVO(
+                pictureRepository.findPictureByIdAndDeleted(7, false).getUrl(),
+                "未登录",
+                "",
+                0,
+                0,
+                new ArrayList<>(),
                 convertBlogsToVO(blogList),
                 getHotTopicList()
         );

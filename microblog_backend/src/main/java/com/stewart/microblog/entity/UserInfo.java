@@ -11,7 +11,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-public class User {
+public class UserInfo {
     @Id
     private Integer id;
     private String username;
