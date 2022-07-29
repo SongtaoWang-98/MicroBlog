@@ -1,6 +1,8 @@
 server:
   port: 8181
 spring:
+  elasticsearch:
+    uris: localhost:9200
   datasource:
     url: jdbc:mysql://localhost:3306/microblog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root

@@ -1472,3 +1472,47 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 2022-07-29 16:17:48.762 INFO  --- [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-07-29 16:17:48.778 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
 2022-07-29 16:17:48.778 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-07-29 16:17:51.375 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:55  - Starting MicroblogApplication using Java 18.0.1.1 on em-4RRFDN3 with PID 11272 (E:\Project\microblog\microblog_backend\target\classes started by Administrator in E:\Project\microblog\microblog_backend)
+2022-07-29 16:17:51.378 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:634 - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 16:17:51.689 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-29 16:17:51.751 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 46 ms. Found 17 JPA repository interfaces.
+2022-07-29 16:17:52.072 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 8181 (http)
+2022-07-29 16:17:52.076 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8181"]
+2022-07-29 16:17:52.077 INFO  --- [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-07-29 16:17:52.077 INFO  --- [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-29 16:17:52.135 INFO  --- [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-07-29 16:17:52.135 INFO  --- [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 740 ms
+2022-07-29 16:17:52.219 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-07-29 16:17:52.344 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-07-29 16:17:52.375 INFO  --- [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-29 16:17:52.391 INFO  --- [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-29 16:17:52.454 INFO  --- [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-29 16:17:52.516 INFO  --- [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-29 16:17:52.813 INFO  --- [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-29 16:17:52.813 INFO  --- [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-29 16:17:53.001 WARN  --- [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration Line:219 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-29 16:17:53.390 INFO  --- [main] org.springframework.security.web.DefaultSecurityFilterChain Line:55  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@9c40f43, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cac0334, org.springframework.security.web.context.SecurityContextPersistenceFilter@317fa5dd, org.springframework.security.web.header.HeaderWriterFilter@236206f8, org.springframework.web.filter.CorsFilter@6329a5b9, org.springframework.security.web.authentication.logout.LogoutFilter@71ac5723, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7bb3294c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65234a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f6a6d46, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c92a59d, org.springframework.security.web.session.SessionManagementFilter@e5f05f8, org.springframework.security.web.access.ExceptionTranslationFilter@b272860, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65b1693c]
+2022-07-29 16:17:53.531 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8181"]
+2022-07-29 16:17:53.547 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 8181 (http) with context path ''
+2022-07-29 16:17:53.547 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:61  - Started MicroblogApplication in 2.444 seconds (JVM running for 2.773)
+2022-07-29 16:17:59.466 INFO  --- [http-nio-8181-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 16:17:59.466 INFO  --- [http-nio-8181-exec-2] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-07-29 16:17:59.467 INFO  --- [http-nio-8181-exec-2] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 0 ms
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:D600447C49BC8704F09C53D18AD7345D
+2022-07-29 16:31:24.094 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：null
+2022-07-29 16:31:24.110 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-07-29 16:31:24.110 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-07-29 16:31:24.110 ERROR --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:72  - 异常信息：Cannot invoke "Object.toString()" because the return value of "javax.servlet.http.HttpSession.getAttribute(String)" is null
+2022-07-29 16:31:24.110 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户anonymousUser的微博客热门推荐页
+2022-07-29 16:31:24.126 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:203 - 生成首页视图对象
+2022-07-29 16:31:24.141 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-07-29 16:31:24.235 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-07-29 17:41:19.312 INFO  --- [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-29 17:41:19.347 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-07-29 17:41:19.347 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
