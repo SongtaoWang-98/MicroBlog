@@ -13,6 +13,7 @@ import MyStatPage from "@/views/MyStatPage";
 import PublishPage from "@/views/PublishPage";
 import LoginPage from "@/views/LoginPage";
 import SignUpPage from "@/views/SignUpPage";
+import ManagerPage from "@/views/ManagerPage";
 
 Vue.use(VueRouter)
 
@@ -81,6 +82,11 @@ const routes = [
         path: '/signUpPage',
         name: 'SignUpPage',
         component: SignUpPage
+    },
+    {
+        path: '/managerPage',
+        name: 'ManagerPage',
+        component: ManagerPage
     }
 ]
 

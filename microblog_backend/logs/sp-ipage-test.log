@@ -1072,3 +1072,403 @@
 2022-07-29 16:02:25.819 INFO  --- [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-07-29 16:02:25.819 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
 2022-07-29 16:02:25.819 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-07-29 16:02:29.528 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:55  - Starting MicroblogApplication using Java 18.0.1.1 on em-4RRFDN3 with PID 14200 (E:\Project\microblog\microblog_backend\target\classes started by Administrator in E:\Project\microblog\microblog_backend)
+2022-07-29 16:02:29.528 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:634 - No active profile set, falling back to 1 default profile: "default"
+2022-07-29 16:02:29.871 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-29 16:02:29.918 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:201 - Finished Spring Data repository scanning in 46 ms. Found 17 JPA repository interfaces.
+2022-07-29 16:02:30.230 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 8181 (http)
+2022-07-29 16:02:30.246 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8181"]
+2022-07-29 16:02:30.246 INFO  --- [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-07-29 16:02:30.246 INFO  --- [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-29 16:02:30.293 INFO  --- [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-07-29 16:02:30.293 INFO  --- [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:292 - Root WebApplicationContext: initialization completed in 741 ms
+2022-07-29 16:02:30.386 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-07-29 16:02:30.532 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-07-29 16:02:30.562 INFO  --- [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-29 16:02:30.582 INFO  --- [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-29 16:02:30.638 INFO  --- [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-29 16:02:30.698 INFO  --- [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-29 16:02:31.006 INFO  --- [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-29 16:02:31.006 INFO  --- [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-29 16:02:31.209 WARN  --- [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration Line:219 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-29 16:02:31.609 INFO  --- [main] org.springframework.security.web.DefaultSecurityFilterChain Line:55  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34376069, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9c40f43, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a88849, org.springframework.security.web.header.HeaderWriterFilter@5c2ae7d7, org.springframework.web.filter.CorsFilter@6cac0334, org.springframework.security.web.authentication.logout.LogoutFilter@294bb6ae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4172c967, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@317fa5dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@712594f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6329a5b9, org.springframework.security.web.session.SessionManagementFilter@236206f8, org.springframework.security.web.access.ExceptionTranslationFilter@27c827ec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4549d616]
+2022-07-29 16:02:31.734 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8181"]
+2022-07-29 16:02:31.750 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 8181 (http) with context path ''
+2022-07-29 16:02:31.750 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:61  - Started MicroblogApplication in 2.512 seconds (JVM running for 2.83)
+2022-07-29 16:02:38.288 INFO  --- [http-nio-8181-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 16:02:38.288 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-07-29 16:02:38.289 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-07-29 16:02:55.685 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-07-29 16:02:55.685 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:02:55.685 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-07-29 16:02:55.685 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-07-29 16:02:55.686 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:02:55.686 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:02:55.686 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:02:55.686 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:02:55.687 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-07-29 16:02:55.687 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-07-29 16:02:55.721 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-07-29 16:02:55.730 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-07-29 16:02:55.736 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-07-29 16:02:55.739 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-07-29 16:02:55.803 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-07-29 16:03:13.773 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：POST
+2022-07-29 16:03:13.773 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:03:13.773 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/blog/dislike
+2022-07-29 16:03:13.773 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：blogId=1
+2022-07-29 16:03:13.773 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:03:13.774 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:03:13.774 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:03:13.774 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:03:13.774 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.BlogController.dislikeBlog
+2022-07-29 16:03:13.774 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：取消点赞博文
+2022-07-29 16:03:13.790 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.BlogServiceImpl Line:75  - 查询用户id为1博文id为1}的点赞记录，删除标记改为true
+2022-07-29 16:03:13.797 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.BlogServiceImpl Line:80  - 更新点赞数量-1 更新热度-1
+2022-07-29 16:03:14.186 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-07-29 16:03:14.186 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:03:14.186 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-07-29 16:03:14.186 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-07-29 16:03:14.187 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:03:14.187 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:03:14.187 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:03:14.187 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:03:14.187 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-07-29 16:03:14.187 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-07-29 16:03:14.193 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-07-29 16:03:14.197 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-07-29 16:03:14.199 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-07-29 16:03:14.200 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-07-29 16:03:14.256 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-07-29 16:03:29.044 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-07-29 16:03:29.045 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:03:29.045 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-07-29 16:03:29.045 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-07-29 16:03:29.045 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:03:29.045 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:03:29.045 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:03:29.045 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:03:29.046 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-07-29 16:03:29.046 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-07-29 16:03:29.049 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-07-29 16:03:29.052 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-07-29 16:03:29.054 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-07-29 16:03:29.056 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-07-29 16:03:29.110 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-07-29 16:03:47.661 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：POST
+2022-07-29 16:03:47.661 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:03:47.661 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/blog/like
+2022-07-29 16:03:47.662 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：blogId=1
+2022-07-29 16:03:47.662 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:03:47.662 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:03:47.662 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:03:47.662 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:03:47.662 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.BlogController.likeBlog
+2022-07-29 16:03:47.662 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：点赞博文
+2022-07-29 16:03:47.668 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.BlogServiceImpl Line:51  - 数据库有用户id为1博文id为1的点赞记录，删除标记为true
+2022-07-29 16:03:47.668 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.BlogServiceImpl Line:53  - 保存修改该点赞记录删除标记为false
+2022-07-29 16:03:47.669 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.BlogServiceImpl Line:63  - 更新点赞数量+1 更新热度+1
+2022-07-29 16:03:48.258 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-07-29 16:03:48.273 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:03:48.273 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-07-29 16:03:48.274 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-07-29 16:03:48.274 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:03:48.274 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:03:48.274 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:03:48.274 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:03:48.274 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-07-29 16:03:48.275 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-07-29 16:03:48.278 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-07-29 16:03:48.280 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-07-29 16:03:48.281 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-07-29 16:03:48.282 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-07-29 16:03:48.326 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-07-29 16:04:01.357 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：POST
+2022-07-29 16:04:01.357 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:04:01.357 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/blog/disCollect
+2022-07-29 16:04:01.357 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：blogId=3
+2022-07-29 16:04:01.358 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:04:01.358 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:04:01.358 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:04:01.358 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:04:01.358 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.BlogController.disCollectBlog
+2022-07-29 16:04:01.358 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：取消收藏博文
+2022-07-29 16:04:01.364 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.BlogServiceImpl Line:116 - 查询用户id为1博文id为3的收藏记录，删除标记改为true
+2022-07-29 16:04:01.368 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.BlogServiceImpl Line:121 - 更新收藏数量-1 更新热度-3
+2022-07-29 16:04:01.648 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-07-29 16:04:01.648 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-07-29 16:04:01.648 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-07-29 16:04:01.648 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-07-29 16:04:01.648 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-07-29 16:04:01.648 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-07-29 16:04:01.649 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7974586CBDB80C02C7F3CF34B62BDA08
+2022-07-29 16:04:01.649 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-07-29 16:04:01.649 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-07-29 16:04:01.649 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-07-29 16:04:01.652 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-07-29 16:04:01.654 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-07-29 16:04:01.658 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-07-29 16:04:01.659 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-07-29 16:04:01.688 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-07-29 16:13:26.776 ERROR --- [http-nio-8181-exec-3] org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter Line:240 - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 账户已被封禁！
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.springframework.security.authentication.LockedException: 账户已被封禁！
+	at com.stewart.microblog.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:37)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	... 60 common frames omitted
+2022-07-29 16:13:44.085 ERROR --- [http-nio-8181-exec-4] org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter Line:240 - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 用户不存在！
+	at com.stewart.microblog.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:34)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-29 16:14:11.909 ERROR --- [http-nio-8181-exec-5] org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter Line:240 - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 用户不存在！
+	at com.stewart.microblog.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:34)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-29 16:14:38.722 ERROR --- [http-nio-8181-exec-6] org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter Line:240 - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 用户不存在！
+	at com.stewart.microblog.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:34)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-29 16:17:48.762 INFO  --- [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-29 16:17:48.778 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-07-29 16:17:48.778 INFO  --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.

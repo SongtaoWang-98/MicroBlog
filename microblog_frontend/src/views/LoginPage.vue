@@ -46,9 +46,9 @@ export default {
             if(res.data.data==="USER_ACCOUNT_NOT_EXIST") alert("用户名不存在")
             else if(res.data.data==='USER_CREDENTIALS_ERROR') alert("密码错误")
             else if(res.data.data==="USER_ACCOUNT_LOCKED") alert("用户已封禁")
-            else if(res.data.code === 0) {
-              this.$router.replace({path: '/home'});
-            }
+            else if(res.data.code === "USER") this.$router.replace({path: '/home'})
+            else if(res.data.data === "MANAGER") this.$router.replace({path: '/managerPage'})
+            else alert("登录失败！")
       })
     }
   }
