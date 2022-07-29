@@ -89,6 +89,12 @@ export default {
   data () {
     return {
       blogNum: 10,
+      collectNum: 3,
+      heat: 10,
+      commentNum: 5,
+      likeNum: 5,
+      repostNum: 0,
+      blog: []
     }
   },
   created() {

@@ -53,8 +53,7 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public HomeVO showHotBlogsHome() {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        String format = String.format("展示用户%s的微博客热门推荐页", userName);
-        logger.info(format);
+        logger.info("展示用户{}的微博客热门推荐页", userName);
         UserInfo userInfo = userInfoRepository.findByUsername(userName);
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByHeatDesc(PUBLIC, false, NORMAL);
         if(userInfo == null) {
@@ -66,8 +65,7 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public HomeVO showNewBlogsHome() {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        String format = String.format("展示用户%s的微博客最新推荐页", userName);
-        logger.info(format);
+        logger.info("展示用户{}的微博客最新推荐页", userName);
         UserInfo userInfo = userInfoRepository.findByUsername(userName);
         List<Blog> blogList = blogRepository.findAllByScopeAndDeletedAndStateOrderByTimeDesc(PUBLIC, false, NORMAL);
         return createHomeVO(userInfo, blogList);
@@ -76,8 +74,7 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public HomeVO showFriendsBlogsHome() {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        String format = String.format("展示用户%s的微博客好友圈推荐页", userName);
-        logger.info(format);
+        logger.info("展示用户{}的微博客好友圈推荐页", userName);
         UserInfo userInfo = userInfoRepository.findByUsername(userName);
         Integer userId = userInfo.getId();
         List<Integer> friendIds = new ArrayList<>();
@@ -102,8 +99,7 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public HomeVO showGroupBlogsHome(Integer groupId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        String format = String.format("展示用户%s的微博客分组推荐页，分组id：%d", userName, groupId);
-        logger.info(format);
+        logger.info("展示用户{}的微博客分组推荐页，分组id：{}", userName, groupId);
         UserInfo userInfo = userInfoRepository.findByUsername(userName);
         Integer userId = userInfo.getId();
         List<GroupFollow>groupFollowList = groupFollowRepository.findAllByGroupIdAndDeleted(groupId, false);
@@ -132,7 +128,7 @@ public class HomeServiceImpl implements HomeService {
         logger.info("加载博文列表");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         UserInfo userInfo = userInfoRepository.findByUsername(userName);
-        Integer userId = (userInfo == null ? 0 : userInfo.getId());
+        int userId = (userInfo == null ? 0 : userInfo.getId());
         List<BlogVO> blogVOList = new ArrayList<>();
         for(Blog blog: blogList) {
             Integer blogId = blog.getId();

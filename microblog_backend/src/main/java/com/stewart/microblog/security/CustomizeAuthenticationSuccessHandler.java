@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -25,6 +26,8 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
             HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
             Authentication authentication) throws IOException {
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        HttpSession session = httpServletRequest.getSession();
+        session.setAttribute("user", name);
         ResultVO result = ResultVOUtil.success(name);
         httpServletResponse.getWriter().write(JSON.toJSONString(result));
     }

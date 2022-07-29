@@ -15,7 +15,7 @@ public class GetCurrentUserUtil {
 
     public static String getCurrentUserName() {
         String currentName = SecurityContextHolder.getContext().getAuthentication().getName();
-        logger.info(currentName);
+//        logger.info("当前用户为：{}", currentName);
         return currentName;
 //        return "songtao_wang@qq.com";
     }

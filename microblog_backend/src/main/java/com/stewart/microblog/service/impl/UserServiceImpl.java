@@ -57,12 +57,10 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserPageVO showPersonalPage(Integer personId) {
-        String format1 = String.format("展示用户id为%d用户的个人主页", personId);
-        logger.info(format1);
+        logger.info("展示用户id为{}用户的个人主页", personId);
         String userName = GetCurrentUserUtil.getCurrentUserName();
         UserInfo userInfo = userInfoRepository.findByUsername(userName);
-        String format2 = String.format("当前登录用户：%s", userName);
-        logger.info(format2);
+        logger.info("当前登录用户：{}", userName);
         Integer userId = userInfo.getId();
         UserInfo person = userInfoRepository.findUserByIdAndState(personId, NORMAL);
         String personPicImg = pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl();
@@ -270,8 +268,7 @@ public class UserServiceImpl implements UserService{
     public StatusCode follow(Integer personId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
-        String format = String.format("添加用户id为%d的用户至id为%d的用户的关注关系", userId, personId);
-        logger.info(format);
+        logger.info("添加用户id为{}的用户至id为{}的用户的关注关系", userId, personId);
         Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, true);
         if(follow != null) {
             follow.setDeleted(false);
@@ -287,8 +284,7 @@ public class UserServiceImpl implements UserService{
     public StatusCode unfollow(Integer personId) {
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
-        String format = String.format("删除用户id为%d的用户至id为%d的用户的关注关系", userId, personId);
-        logger.info(format);
+        logger.info("删除用户id为{}的用户至id为{}的用户的关注关系", userId, personId);
         Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, false);
         follow.setDeleted(true);
         followRepository.save(follow);

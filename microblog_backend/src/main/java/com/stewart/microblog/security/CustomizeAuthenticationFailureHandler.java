@@ -39,7 +39,14 @@ public class CustomizeAuthenticationFailureHandler implements AuthenticationFail
             result = ResultVOUtil.fail(LoginCode.USER_ACCOUNT_LOCKED);
         } else if (e instanceof InternalAuthenticationServiceException) {
             //用户不存在
-            result = ResultVOUtil.fail(LoginCode.USER_ACCOUNT_NOT_EXIST);
+            if(e.getCause() != null) {
+                if(e.getCause() instanceof LockedException){
+                    result = ResultVOUtil.fail(LoginCode.USER_ACCOUNT_LOCKED);
+                }
+            }
+            else {
+                result = ResultVOUtil.fail(LoginCode.USER_ACCOUNT_NOT_EXIST);
+            }
         }else{
             //其他错误
             result = ResultVOUtil.fail(LoginCode.COMMON_FAIL);
