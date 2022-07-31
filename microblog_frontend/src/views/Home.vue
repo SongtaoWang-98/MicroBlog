@@ -125,13 +125,13 @@
               v-model="input"
               clearable style="width: 200px">
           </el-input>
-          <el-button type="primary">GO</el-button>
+          <el-button type="primary" @click="search()">GO</el-button>
         </div>
         <div style="height: 40px">
           <el-radio-group v-model="radio">
-            <el-radio :label="3">博文</el-radio>
-            <el-radio :label="6">话题</el-radio>
-            <el-radio :label="9">用户</el-radio>
+            <el-radio :label="1">博文</el-radio>
+            <el-radio :label="2">话题</el-radio>
+            <el-radio :label="3">用户</el-radio>
           </el-radio-group>
         </div>
       </div>
@@ -233,6 +233,11 @@ export default {
     logout() {
       axios.post('http://localhost:8181/logout')
       location.reload()
+    },
+    search() {
+      if(this.radio === 1) window.location.href=('http://localhost:8080/searchByContent/' + this.input)
+      else if(this.radio === 2) window.location.href=('http://localhost:8080/searchByTopic/' + this.input)
+      else window.location.href=('http://localhost:8080/searchByUsername/' + this.input)
     }
   }
 }

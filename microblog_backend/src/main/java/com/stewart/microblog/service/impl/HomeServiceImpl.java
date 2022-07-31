@@ -124,7 +124,7 @@ public class HomeServiceImpl implements HomeService {
         );
     }
 
-    private List<BlogVO> convertBlogsToVO(List<Blog> blogList) {
+    public List<BlogVO> convertBlogsToVO(List<Blog> blogList) {
         logger.info("加载博文列表");
         String userName = GetCurrentUserUtil.getCurrentUserName();
         UserInfo userInfo = userInfoRepository.findByUsername(userName);
@@ -165,7 +165,7 @@ public class HomeServiceImpl implements HomeService {
         return blogVOList;
     }
 
-    List<HomeGroupVO> getGroupNameList(Integer userId) {
+    public List<HomeGroupVO> getGroupNameList(Integer userId) {
         logger.info("加载用户分组列表");
         List<HomeGroupVO> groupNameList = new ArrayList<>();
         List<ConcernGroup> concernGroupList = concernGroupRepository.findByUserIdAndDeleted(userId, false);
@@ -175,7 +175,7 @@ public class HomeServiceImpl implements HomeService {
         return groupNameList;
     }
 
-    List<String> getHotTopicList(){
+    public List<String> getHotTopicList(){
         logger.info("加载热门话题列表");
         List<String> topicNameList = new ArrayList<>();
         List<Topic> topicList = topicRepository.findAllByDeletedOrderByHeatDesc(false);
@@ -185,7 +185,7 @@ public class HomeServiceImpl implements HomeService {
         return topicNameList;
     }
 
-    HomeVO createHomeVO(UserInfo userInfo, List<Blog> blogList) {
+    public HomeVO createHomeVO(UserInfo userInfo, List<Blog> blogList) {
         logger.info("生成首页视图对象");
         return new HomeVO(
                 pictureRepository.findPictureByIdAndDeleted(userInfo.getPhotoId(), false).getUrl(),
@@ -199,7 +199,7 @@ public class HomeServiceImpl implements HomeService {
         );
     }
 
-    HomeVO createAnonymousHomeVO(List<Blog> blogList) {
+    public HomeVO createAnonymousHomeVO(List<Blog> blogList) {
         logger.info("生成首页视图对象");
         return new HomeVO(
                 pictureRepository.findPictureByIdAndDeleted(7, false).getUrl(),

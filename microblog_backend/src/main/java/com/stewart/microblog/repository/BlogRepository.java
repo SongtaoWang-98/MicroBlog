@@ -32,6 +32,7 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * @return 博客对象Blog
      */
     Blog findBlogByIdAndStateAndDeleted(Integer id, String state, Boolean deleted);
+    Blog findBlogByIdAndScopeAndStateAndDeleted(Integer id, String scope, String state, Boolean deleted);
 
     /**
      * 根据可见范围按热度倒序查看最热博文列表

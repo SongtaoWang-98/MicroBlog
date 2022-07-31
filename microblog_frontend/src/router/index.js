@@ -14,6 +14,9 @@ import PublishPage from "@/views/PublishPage";
 import LoginPage from "@/views/LoginPage";
 import SignUpPage from "@/views/SignUpPage";
 import ManagerPage from "@/views/ManagerPage";
+import SearchByContent from "@/views/SearchByContent";
+import SearchByTopic from "@/views/SearchByTopic";
+import SearchByUsername from "@/views/SearchByUsername";
 
 Vue.use(VueRouter)
 
@@ -87,6 +90,21 @@ const routes = [
         path: '/managerPage',
         name: 'ManagerPage',
         component: ManagerPage
+    },
+    {
+        path: '/searchByContent/:str',
+        name: 'SearchByContent',
+        component: SearchByContent
+    },
+    {
+        path: '/searchByTopic/:str',
+        name: 'SearchByTopic',
+        component: SearchByTopic
+    },
+    {
+        path: '/searchByUsername/:str',
+        name: 'SearchByUsername',
+        component: SearchByUsername
     }
 ]
 

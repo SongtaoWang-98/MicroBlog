@@ -2,11 +2,12 @@ server:
   port: 8181
 spring:
   elasticsearch:
-    uris: localhost:9200
+    rest:
+      uris: localhost:9200
   datasource:
     url: jdbc:mysql://localhost:3306/microblog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: false
@@ -15,6 +16,7 @@ spring:
         format_sql: false
   main:
     allow-circular-references: true
+    allow-bean-definition-overriding: true
   aop:
     proxy-target-class: true
     auto: true
