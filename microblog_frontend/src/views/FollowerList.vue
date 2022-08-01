@@ -13,7 +13,7 @@
         <dd v-for="user in userList">
           <div style="width: 500px; background-color: #e8fcd2; margin: 0 auto">
             <div style="height: 20px"></div>
-            <el-avatar :size="80" :src=getImgUrl(user.userImg) style="margin-left: 0"></el-avatar>
+            <el-avatar :size="80" :src=getImgUrl(user.userImg) style="margin-left: 0" @click.native="showPersonalPage(user.userId)"></el-avatar>
             <div class="nickname" style="font-size: 20px">{{ user.nickName }}</div>
             <div class="username" style="font-size: 15px; color: gray">{{ user.userName }}</div>
             <el-divider></el-divider>
@@ -49,6 +49,9 @@ export default {
     getImgUrl(src) {
       if(src==='') return
       return require('../../static/' + src)
+    },
+    showPersonalPage(id) {
+      window.location.href='http://localhost:8080/personalPage/' + id
     }
   },
   created() {

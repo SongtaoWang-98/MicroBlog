@@ -17,6 +17,8 @@ import ManagerPage from "@/views/ManagerPage";
 import SearchByContent from "@/views/SearchByContent";
 import SearchByTopic from "@/views/SearchByTopic";
 import SearchByUsername from "@/views/SearchByUsername";
+import MessageList from "@/views/MessageList";
+import MessagePage from "@/views/MessagePage";
 
 Vue.use(VueRouter)
 
@@ -105,6 +107,16 @@ const routes = [
         path: '/searchByUsername/:str',
         name: 'SearchByUsername',
         component: SearchByUsername
+    },
+    {
+        path: '/messageList',
+        name: 'MessageList',
+        component: MessageList
+    },
+    {
+        path: '/messagePage',
+        name: 'MessagePage',
+        component: MessagePage
     }
 ]
 

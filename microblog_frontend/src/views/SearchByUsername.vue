@@ -7,14 +7,15 @@
         </div>
       </div>
     </el-header>
-    <h1 style="font-size: 30px">关注列表</h1>
+    <h1 style="font-size: 30px">查询结果</h1>
     <el-main>
       <dl>
         <dd v-for="user in userList">
           <div style="width: 500px; background-color: #e8fcd2; margin: 0 auto">
             <div style="height: 20px"></div>
-            <el-avatar :size="80" :src=getImgUrl(user.userImg) style="margin-left: 0"></el-avatar>
-            <div class="nickname" style="font-size: 20px">{{ user.nickName }}</div>
+            <el-avatar :size="80" :src=getImgUrl(user.userImg) style="margin-left: 0" @click.native="showPersonalPage(user.userId)"></el-avatar>
+            <div class="nickname" style="font-size: 20px"><p class="xxx">
+              <a v-html= "user.nickName" ></a></p></div>
             <div class="username" style="font-size: 15px; color: gray"><p class="xxx">
               <a v-html= "user.userName" ></a></p></div>
             <el-divider></el-divider>
@@ -50,6 +51,9 @@ export default {
     getImgUrl(src) {
       if(src==='') return
       return require('../../static/' + src)
+    },
+    showPersonalPage(id) {
+      window.location.href='http://localhost:8080/personalPage/' + id
     }
   },
   created() {

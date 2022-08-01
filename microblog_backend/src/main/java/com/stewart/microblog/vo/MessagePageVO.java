@@ -1,8 +1,6 @@
 package com.stewart.microblog.vo;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * 单条私信视图类
@@ -11,5 +9,5 @@ import lombok.NoArgsConstructor;
 @Data
 //@NoArgsConstructor
 //@AllArgsConstructor
-public class SingleMessageVO {
+public class MessagePageVO {
 }

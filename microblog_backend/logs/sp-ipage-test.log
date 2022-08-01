@@ -10296,3 +10296,609 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2022-08-01 15:03:11.460 INFO  --- [SpringContextShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-08-01 15:03:11.461 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
 2022-08-01 15:03:11.466 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-08-01 15:03:34.254 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:03:34.254 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:DCC98E255422EBCAB18820246FF58DB6
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:03:34.255 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:03:34.258 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:03:34.262 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:03:34.264 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:03:34.265 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:03:34.320 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:07:55.428 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:DCC98E255422EBCAB18820246FF58DB6
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:07:55.429 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:07:55.430 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:07:55.435 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:07:55.437 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:07:55.439 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:07:55.439 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:07:55.477 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:08:05.710 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:DCC98E255422EBCAB18820246FF58DB6
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:08:05.711 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:08:05.716 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:08:05.718 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:08:05.720 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:08:05.721 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:08:05.757 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:6E69E2E0812F564A32F5036AE7BC5782
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：null
+2022-08-01 15:08:11.157 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:08:11.158 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:08:11.158 ERROR --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:72  - 异常信息：Cannot invoke "Object.toString()" because the return value of "javax.servlet.http.HttpSession.getAttribute(String)" is null
+2022-08-01 15:08:11.158 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户anonymousUser的微博客热门推荐页
+2022-08-01 15:08:11.160 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:203 - 生成首页视图对象
+2022-08-01 15:08:11.160 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:08:11.189 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:6E69E2E0812F564A32F5036AE7BC5782
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：null
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:08:13.352 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:08:13.353 ERROR --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:72  - 异常信息：Cannot invoke "Object.toString()" because the return value of "javax.servlet.http.HttpSession.getAttribute(String)" is null
+2022-08-01 15:08:13.353 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户anonymousUser的微博客热门推荐页
+2022-08-01 15:08:13.354 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:203 - 生成首页视图对象
+2022-08-01 15:08:13.355 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:08:13.375 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:08:31.463 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:450B71D4F74D7644407A8A40441FA52F
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：null
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:08:31.464 ERROR --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:72  - 异常信息：Cannot invoke "Object.toString()" because the return value of "javax.servlet.http.HttpSession.getAttribute(String)" is null
+2022-08-01 15:08:31.464 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户anonymousUser的微博客热门推荐页
+2022-08-01 15:08:31.466 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:203 - 生成首页视图对象
+2022-08-01 15:08:31.467 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:08:31.492 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:08:44.684 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:08:44.684 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:08:44.685 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:08:44.689 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:08:44.690 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:08:44.691 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:08:44.691 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:08:44.714 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:08:56.250 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:08:56.250 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:08:56.250 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:08:56.250 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:08:56.250 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:08:56.250 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:08:56.250 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:637F7B2CCE0A697756AC5A72D7B7B387
+2022-08-01 15:08:56.251 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:08:56.251 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:08:56.251 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:08:56.254 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:08:56.257 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:08:56.258 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:08:56.259 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:08:56.281 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:09:05.646 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/followerList
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:637F7B2CCE0A697756AC5A72D7B7B387
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.followerList
+2022-08-01 15:09:05.647 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示用户粉丝列表
+2022-08-01 15:09:05.654 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:316 - 展示用户粉丝列表
+2022-08-01 15:09:06.892 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:09:06.892 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:637F7B2CCE0A697756AC5A72D7B7B387
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:09:06.893 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:09:06.898 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:09:06.903 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:09:06.906 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:09:06.907 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:09:06.930 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/followingList
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.followingList
+2022-08-01 15:09:08.616 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示用户关注列表
+2022-08-01 15:09:08.620 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.UserServiceImpl Line:296 - 展示用户关注列表
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:09:10.261 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:09:10.265 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:09:10.266 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:09:10.268 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:09:10.268 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:09:10.290 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:09:11.247 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:09:11.247 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:09:11.247 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/followingList
+2022-08-01 15:09:11.247 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:09:11.247 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:09:11.247 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:09:11.248 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:09:11.248 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:09:11.248 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.followingList
+2022-08-01 15:09:11.248 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示用户关注列表
+2022-08-01 15:09:11.251 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:296 - 展示用户关注列表
+2022-08-01 15:09:13.218 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:09:13.218 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:09:13.219 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:09:13.223 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:09:13.225 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:09:13.226 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:09:13.226 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:09:13.249 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:09:21.359 WARN  --- [http-nio-8181-exec-4] org.elasticsearch.client.RestClient Line:65  - request [POST http://localhost:9200/user/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=dfs_query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 1 warnings: [299 Elasticsearch-8.3.3-801fed82df74dbe537f89b71b098ccaff88d2c56 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:09:24.968 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:09:24.973 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:09:24.975 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:09:24.975 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:09:24.976 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:09:24.997 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:13:16.622 WARN  --- [http-nio-8181-exec-1] org.elasticsearch.client.RestClient Line:65  - request [POST http://localhost:9200/user/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=dfs_query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 1 warnings: [299 Elasticsearch-8.3.3-801fed82df74dbe537f89b71b098ccaff88d2c56 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-08-01 15:13:17.628 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:13:17.628 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:13:17.628 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-01 15:13:17.629 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-01 15:13:17.629 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:13:17.629 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:13:17.629 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:13:17.629 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:13:17.629 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-01 15:13:17.629 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-01 15:13:17.635 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.UserServiceImpl Line:60  - 展示用户id为5用户的个人主页
+2022-08-01 15:13:17.636 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.UserServiceImpl Line:63  - 当前登录用户：songtao_wang@qq.com
+2022-08-01 15:13:17.645 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.UserServiceImpl Line:82  - 加载博文列表
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:32A2E77F11B8E88E9F285C73C0DD5100
+2022-08-01 15:13:24.789 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-01 15:13:24.790 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:13:24.790 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:13:24.794 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-01 15:13:24.796 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:13:24.797 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:13:24.797 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:13:24.819 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:14:30.246 WARN  --- [http-nio-8181-exec-8] org.elasticsearch.client.RestClient Line:65  - request [POST http://localhost:9200/user/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=dfs_query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 1 warnings: [299 Elasticsearch-8.3.3-801fed82df74dbe537f89b71b098ccaff88d2c56 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-08-01 15:14:32.739 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:14:33.043 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:14:33.043 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:14:33.043 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:14:33.043 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:14:33.044 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:14:33.044 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:637F7B2CCE0A697756AC5A72D7B7B387
+2022-08-01 15:14:33.044 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:14:33.044 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:14:33.044 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:14:33.047 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:14:33.048 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:14:33.050 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:14:33.050 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:14:33.072 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:14:58.260 INFO  --- [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-01 15:14:58.265 INFO  --- [SpringContextShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-01 15:14:58.266 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-08-01 15:14:58.269 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-08-01 15:15:00.069 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:55  - Starting MicroblogApplication using Java 18.0.1.1 on em-4RRFDN3 with PID 15728 (E:\Project\microblog\microblog_backend\target\classes started by Administrator in E:\Project\microblog\microblog_backend)
+2022-08-01 15:15:00.070 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:660 - No active profile set, falling back to default profiles: default
+2022-08-01 15:15:00.314 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 15:15:00.315 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-08-01 15:15:00.334 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 17 ms. Found 1 Elasticsearch repository interfaces.
+2022-08-01 15:15:00.335 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 15:15:00.335 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-01 15:15:00.361 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 22 ms. Found 17 JPA repository interfaces.
+2022-08-01 15:15:00.441 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 15:15:00.441 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-08-01 15:15:00.449 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.BlogTopicRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.450 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.CollectionRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.450 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.CommentRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.450 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.ConcernGroupRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.450 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.DetailedInfoRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.451 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.FollowRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.451 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.GroupFollowRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.451 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.HeatTimeRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.451 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.LikeSetRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.452 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.MessageRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.452 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.PhotographRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.452 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.PictureRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.452 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.ReportFeedbackRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.453 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.SysActionRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-01 15:15:00.453 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 11 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-08-01 15:15:00.759 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 8181 (http)
+2022-08-01 15:15:00.765 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8181"]
+2022-08-01 15:15:00.765 INFO  --- [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-08-01 15:15:00.766 INFO  --- [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-08-01 15:15:00.816 INFO  --- [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-08-01 15:15:00.817 INFO  --- [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:289 - Root WebApplicationContext: initialization completed in 719 ms
+2022-08-01 15:15:00.905 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-08-01 15:15:01.049 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-08-01 15:15:01.075 INFO  --- [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-01 15:15:01.096 INFO  --- [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-08-01 15:15:01.144 INFO  --- [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-01 15:15:01.197 INFO  --- [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-01 15:15:01.513 INFO  --- [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-01 15:15:01.518 INFO  --- [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-01 15:15:01.713 WARN  --- [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration Line:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-01 15:15:02.068 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.069 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.070 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-01 15:15:02.120 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:62  - Version Spring Data Elasticsearch: 4.1.5
+2022-08-01 15:15:02.120 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:63  - Version Elasticsearch Client in build: 7.9.3
+2022-08-01 15:15:02.120 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:64  - Version Elasticsearch Client used: 7.9.3
+2022-08-01 15:15:02.120 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:72  - Version Elasticsearch cluster: 8.3.3
+2022-08-01 15:15:02.120 WARN  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:75  - Version mismatch in between Elasticsearch Client and Cluster: 7.9.3 - 8.3.3
+2022-08-01 15:15:02.133 WARN  --- [main] org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentProperty Line:87  - Using the property name of 'id' to identify the id property is deprecated. Please annotate the id property with '@Id'
+2022-08-01 15:15:02.165 WARN  --- [main] org.elasticsearch.client.RestClient Line:65  - request [HEAD http://localhost:9200/blog?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open%2Cclosed&allow_no_indices=false] returned 1 warnings: [299 Elasticsearch-8.3.3-801fed82df74dbe537f89b71b098ccaff88d2c56 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-08-01 15:15:02.337 INFO  --- [main] org.springframework.security.web.DefaultSecurityFilterChain Line:51  - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bab1821, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c56e044, org.springframework.security.web.header.HeaderWriterFilter@30b075b9, org.springframework.web.filter.CorsFilter@7f6137fb, org.springframework.security.web.authentication.logout.LogoutFilter@65192f16, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7ab8c972, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@153cf928, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b2114ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57657b96, org.springframework.security.web.session.SessionManagementFilter@54a98358, org.springframework.security.web.access.ExceptionTranslationFilter@34f2d3a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60ae950f]
+2022-08-01 15:15:02.388 INFO  --- [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-01 15:15:02.449 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8181"]
+2022-08-01 15:15:02.455 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 8181 (http) with context path ''
+2022-08-01 15:15:02.466 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:61  - Started MicroblogApplication in 2.666 seconds (JVM running for 3.036)
+2022-08-01 15:15:20.701 INFO  --- [http-nio-8181-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 15:15:20.701 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-08-01 15:15:20.702 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-08-01 15:15:32.381 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:15:32.381 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:15:32.381 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:15:32.382 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:15:32.382 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:15:32.382 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:15:32.382 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:15:32.382 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:15:32.383 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:15:32.383 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:15:32.408 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:15:32.415 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:15:32.421 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:15:32.423 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:15:32.485 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:15:40.898 WARN  --- [http-nio-8181-exec-4] org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentProperty Line:87  - Using the property name of 'id' to identify the id property is deprecated. Please annotate the id property with '@Id'
+2022-08-01 15:15:40.921 WARN  --- [http-nio-8181-exec-4] org.elasticsearch.client.RestClient Line:65  - request [POST http://localhost:9200/user/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=dfs_query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 1 warnings: [299 Elasticsearch-8.3.3-801fed82df74dbe537f89b71b098ccaff88d2c56 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-08-01 15:15:42.160 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:15:42.161 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:15:42.161 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-01 15:15:42.161 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=1
+2022-08-01 15:15:42.161 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:15:42.161 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:15:42.162 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:15:42.162 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:15:42.162 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-01 15:15:42.162 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-01 15:15:42.171 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:60  - 展示用户id为1用户的个人主页
+2022-08-01 15:15:42.173 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:63  - 当前登录用户：gogogo@go.com
+2022-08-01 15:15:42.183 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:82  - 加载博文列表
+2022-08-01 15:15:48.040 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：POST
+2022-08-01 15:15:48.040 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:15:48.040 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/follow
+2022-08-01 15:15:48.040 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=1
+2022-08-01 15:15:48.041 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:15:48.041 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:15:48.041 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:15:48.041 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:15:48.041 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.followPerson
+2022-08-01 15:15:48.041 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：关注好友
+2022-08-01 15:15:48.047 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:271 - 添加用户id为5的用户至id为1的用户的关注关系
+2022-08-01 15:15:48.164 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:15:48.164 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:15:48.164 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-01 15:15:48.165 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=1
+2022-08-01 15:15:48.165 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:15:48.165 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:15:48.165 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:15:48.165 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:15:48.165 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-01 15:15:48.165 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-01 15:15:48.173 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:60  - 展示用户id为1用户的个人主页
+2022-08-01 15:15:48.175 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:63  - 当前登录用户：gogogo@go.com
+2022-08-01 15:15:48.181 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:82  - 加载博文列表
+2022-08-01 15:16:00.473 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:16:00.473 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:16:00.473 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:16:00.474 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:16:00.474 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:16:00.474 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:16:00.474 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:16:00.474 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:16:00.474 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:16:00.474 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:16:00.478 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:16:00.483 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:16:00.486 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:16:00.486 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:16:00.519 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:16:57.875 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:16:57.875 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:16:57.875 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/followingList
+2022-08-01 15:16:57.875 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:16:57.875 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:16:57.876 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:16:57.876 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:16:57.876 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:16:57.876 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.followingList
+2022-08-01 15:16:57.876 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示用户关注列表
+2022-08-01 15:16:57.880 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.UserServiceImpl Line:296 - 展示用户关注列表
+2022-08-01 15:16:59.177 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=1
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-01 15:16:59.178 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-01 15:16:59.182 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:60  - 展示用户id为1用户的个人主页
+2022-08-01 15:16:59.185 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:63  - 当前登录用户：gogogo@go.com
+2022-08-01 15:16:59.189 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:82  - 加载博文列表
+2022-08-01 15:17:00.378 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:17:00.379 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:17:00.383 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:17:00.386 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:17:00.388 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:17:00.388 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:17:00.417 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:17:01.484 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:01.484 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:01.484 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/followerList
+2022-08-01 15:17:01.485 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:01.485 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:01.485 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:01.485 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:01.485 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:01.485 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.followerList
+2022-08-01 15:17:01.485 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示用户粉丝列表
+2022-08-01 15:17:01.490 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.UserServiceImpl Line:316 - 展示用户粉丝列表
+2022-08-01 15:17:02.624 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:02.624 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:02.624 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-01 15:17:02.624 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=1
+2022-08-01 15:17:02.625 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:02.625 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:02.625 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:02.625 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:02.625 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-01 15:17:02.625 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-01 15:17:02.629 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.UserServiceImpl Line:60  - 展示用户id为1用户的个人主页
+2022-08-01 15:17:02.631 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.UserServiceImpl Line:63  - 当前登录用户：gogogo@go.com
+2022-08-01 15:17:02.634 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.UserServiceImpl Line:82  - 加载博文列表
+2022-08-01 15:17:04.381 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:04.381 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:17:04.382 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:17:04.387 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:17:04.388 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:17:04.390 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:17:04.391 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:17:04.424 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:17:14.991 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/new
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.newBlogs
+2022-08-01 15:17:14.992 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示最新博文
+2022-08-01 15:17:14.996 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:68  - 展示用户gogogo@go.com的微博客最新推荐页
+2022-08-01 15:17:15.000 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:17:15.002 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:17:15.002 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:17:15.025 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:17:16.253 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:16.253 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:16.254 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:17:16.254 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:16.254 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:16.254 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:16.254 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:16.254 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:16.254 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:17:16.255 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:17:16.258 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:17:16.262 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:17:16.263 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:17:16.264 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:17:16.286 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:17:33.414 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：POST
+2022-08-01 15:17:33.414 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:33.414 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/blog/publish
+2022-08-01 15:17:33.414 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:33.414 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:33.415 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:33.415 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:33.415 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:33.415 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.BlogController.publishNewBlog
+2022-08-01 15:17:33.415 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：发布博文
+2022-08-01 15:17:33.422 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.BlogServiceImpl Line:148 - 博文正文：热
+2022-08-01 15:17:33.426 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.BlogServiceImpl Line:161 - 用户发布博文话题：成都天气
+2022-08-01 15:17:33.577 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:17:33.578 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:17:33.581 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:17:33.584 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:17:33.586 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:17:33.587 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:17:33.609 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:17:35.531 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:17:35.535 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-01 15:17:35.537 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:17:35.538 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:17:35.539 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:17:35.562 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/new
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:17:40.075 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:17:40.076 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.newBlogs
+2022-08-01 15:17:40.076 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示最新博文
+2022-08-01 15:17:40.080 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:68  - 展示用户gogogo@go.com的微博客最新推荐页
+2022-08-01 15:17:40.083 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:17:40.084 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:17:40.085 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:17:40.109 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:24:11.665 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/new
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:EF453AA94B589D631071B0A2F404EE82
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.newBlogs
+2022-08-01 15:24:11.666 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示最新博文
+2022-08-01 15:24:11.671 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:68  - 展示用户gogogo@go.com的微博客最新推荐页
+2022-08-01 15:24:11.673 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-01 15:24:11.675 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-01 15:24:11.676 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:24:11.682 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-01 15:24:11.682 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-01 15:24:11.682 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:CD5DE3B4F0C7FE99050684E1E4A9C7A3
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：null
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-01 15:24:11.683 ERROR --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:72  - 异常信息：Cannot invoke "Object.toString()" because the return value of "javax.servlet.http.HttpSession.getAttribute(String)" is null
+2022-08-01 15:24:11.683 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户anonymousUser的微博客热门推荐页
+2022-08-01 15:24:11.686 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:203 - 生成首页视图对象
+2022-08-01 15:24:11.686 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-01 15:24:11.706 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 15:24:11.707 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-01 19:35:46.775 INFO  --- [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-01 19:35:46.782 INFO  --- [SpringContextShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-01 19:35:46.783 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-08-01 19:35:46.785 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
