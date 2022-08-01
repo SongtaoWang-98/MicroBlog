@@ -19,4 +19,5 @@ public interface BlogTopicRepository extends JpaRepository<BlogTopic, Integer> {
      * @return 博客-话题列表
      */
     List<BlogTopic> findBlogTopicsByBlogIdAndDeleted(Integer blogId, Boolean deleted);
+    List<BlogTopic> findBlogTopicsByTopicIdAndDeleted(Integer topicId, Boolean deleted);
 }

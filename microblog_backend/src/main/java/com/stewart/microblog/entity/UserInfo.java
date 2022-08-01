@@ -1,6 +1,8 @@
 package com.stewart.microblog.entity;
 
 import lombok.Data;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,6 +13,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
+@Document(indexName = "user")
 public class UserInfo {
     @Id
     private Integer id;
@@ -19,5 +22,6 @@ public class UserInfo {
     private String password;
     private String type;
     private String state;
+    @Field(name = "photo_id")
     private Integer photoId;
 }

@@ -3,6 +3,7 @@ package com.stewart.microblog.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,6 +18,7 @@ import javax.persistence.Id;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(indexName = "topic")
 public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
