@@ -12,4 +12,5 @@ import java.util.List;
 public interface MessageRepository extends JpaRepository<Message, Integer> {
     List<Message> findAllByReceiverIdAndDeletedOrderByTimeDesc(Integer receiverId, Boolean deleted);
     List<Message> findAllBySenderIdAndDeletedOrderByTimeDesc(Integer senderId, Boolean deleted);
+    List<Message> findAllBySenderIdAndReceiverIdAndDeletedOrderByTime(Integer senderId, Integer receiverId, Boolean deleted);
 }

@@ -114,7 +114,7 @@ const routes = [
         component: MessageList
     },
     {
-        path: '/messagePage',
+        path: '/messagePage/:id',
         name: 'MessagePage',
         component: MessagePage
     }
