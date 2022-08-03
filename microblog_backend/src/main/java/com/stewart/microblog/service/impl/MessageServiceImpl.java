@@ -12,7 +12,7 @@ import com.stewart.microblog.vo.MessageListItemVO;
 import com.stewart.microblog.vo.MessageListVO;
 import com.stewart.microblog.vo.MessagePageItemVO;
 import com.stewart.microblog.vo.MessagePageVO;
-import com.stewart.microblog.webSocket.WebSocketServer;
+import com.stewart.microblog.websocket.WebSocketServer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -98,10 +98,6 @@ public class MessageServiceImpl implements MessageService {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         //刷新已读标记
         for(Message message: receiveMessageList) {
-            message.setState("READ");
-            messageRepository.save(message);
-        }
-        for(Message message: sendMessageList) {
             message.setState("READ");
             messageRepository.save(message);
         }

@@ -9,7 +9,7 @@
     </el-header>
     <h1 style="font-size: 30px">与{{personName}}的对话</h1>
     <el-main>
-      <div style="width: 800px; height: 600px; border: 1px solid #000000; margin: 0 auto; overflow-y: scroll">
+      <div style="width: 800px; height: 600px; border: 1px solid #000000; margin: 0 auto; overflow-y: scroll" ref="sc">
         <dl>
           <dd v-for="message in messageList">
             <div style="width: 500px; height: 100px; background-color: cornsilk; margin-left: 0; border:1px solid #000000" v-show="message.type === 'RECEIVE'">
@@ -88,6 +88,10 @@ export default {
   },
   mounted() {
     this.initWebSocket()
+    this.scrollToBottom()
+  },
+  updated() {
+    this.scrollToBottom()
   },
   destroyed() {
     this.closeWebSocket()
@@ -134,8 +138,15 @@ export default {
     sendMessage() {
       axios.post('http://localhost:8181/message/send?personId=' + this.$route.params.id + "&content=" + this.input)
       this.send()
-      // this.$router.go(0)
     },
+    scrollToBottom() {
+      this.$nextTick(() => {
+        let middle= this.$refs["sc"];
+        middle.scrollTop = middle.scrollHeight;
+        middle.scrollTo(0, 10000)
+      })
+      window.scrollTo(0,50000)
+    }
   },
 }
 </script>

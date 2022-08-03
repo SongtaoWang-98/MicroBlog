@@ -1,6 +1,5 @@
-package com.stewart.microblog.webSocket;
+package com.stewart.microblog.websocket;
 
-import com.stewart.microblog.service.impl.HomeServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

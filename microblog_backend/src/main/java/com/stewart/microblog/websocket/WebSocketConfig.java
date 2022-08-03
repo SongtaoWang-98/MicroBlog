@@ -1,4 +1,4 @@
-package com.stewart.microblog.webSocket;
+package com.stewart.microblog.websocket;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

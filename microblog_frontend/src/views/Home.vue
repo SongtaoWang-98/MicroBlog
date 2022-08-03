@@ -26,7 +26,7 @@
       <div class="functions">
         <div><el-button type="success" plain icon="el-icon-camera-solid">我的相册</el-button></div>
         <div style="height: 40px"></div>
-        <div><el-button type="primary" plain icon="el-icon-s-promotion">我的私信</el-button></div>
+        <div><el-button type="primary" plain icon="el-icon-s-promotion" onclick="window.location.href='http://localhost:8080/messageList'">我的私信</el-button></div>
         <div style="height: 40px"></div>
         <div><el-button type="info" plain icon="el-icon-s-data" onclick="window.location.href='http://localhost:8080/myStatPage'">我的数据</el-button></div>
         <div style="height: 40px"></div>
