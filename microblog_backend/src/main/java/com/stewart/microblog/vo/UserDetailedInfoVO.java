@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * 用户详细信息视图类
  * @author 王松涛
@@ -13,6 +15,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDetailedInfoVO {
+    @JsonProperty("picUrl")
+    private String picUrl;
+    @JsonProperty("photos")
+    private List<PhotoVO> photos;
     @JsonProperty("realName")
     private String realName;
     @JsonProperty("gender")

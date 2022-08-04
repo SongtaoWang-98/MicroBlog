@@ -40,7 +40,7 @@
       </div>
       <div style="height: 30px"></div>
       <div>
-        <el-input v-model="input" placeholder="请输入内容" style="width: 700px"></el-input>
+        <el-input v-model="input" placeholder="请输入内容" style="width: 700px" @keyup.enter.native="sendMessage"></el-input>
         <el-button type="primary" @click="sendMessage">发送</el-button>
       </div>
       <div style="height: 100px"></div>
@@ -55,21 +55,8 @@ export default {
   name: "MessagePage",
   data () {
     return {
-      personName: "jackjack",
-      messageList: [
-        {
-          personPic: "Stewart/1.jpg",
-          time: "time",
-          content: "Content",
-          type: "SEND"
-        },
-        {
-          personPic: "Stewart/1.jpg",
-          time: "time2",
-          content: "Content2",
-          type: "RECEIVE"
-        }
-      ],
+      personName: "",
+      messageList: [],
       input: ''
     }
   },

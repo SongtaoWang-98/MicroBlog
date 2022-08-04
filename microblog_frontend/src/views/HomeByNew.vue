@@ -24,7 +24,7 @@
       </div>
       <div style="height: 100px"></div>
       <div class="functions">
-        <div><el-button type="success" plain icon="el-icon-camera-solid">我的相册</el-button></div>
+        <div><el-button type="success" plain icon="el-icon-camera-solid" onclick="window.location.href='http://localhost:8080/photoPage'">我的相册</el-button></div>
         <div style="height: 40px"></div>
         <div><el-button type="primary" plain icon="el-icon-s-promotion" onclick="window.location.href='http://localhost:8080/messageList'">我的私信</el-button></div>
         <div style="height: 40px"></div>
@@ -82,7 +82,7 @@
                 <div class="content" style="width: 300px; margin: 0 auto; text-align: left">{{blog.content}}</div>
                 <div style="height: 20px"></div>
                 <div class="pic" v-show="blog.img !== ''">
-                  <el-image style="width: 300px; height: 200px" :fit="scale-down" :src=getImgUrl(blog.img)></el-image>
+                  <el-image style="width: 300px; height: 200px" :fit="'scale-down'" :src=getImgUrl(blog.img)></el-image>
                 </div>
                 <div style="height: 10px"></div>
                 <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">

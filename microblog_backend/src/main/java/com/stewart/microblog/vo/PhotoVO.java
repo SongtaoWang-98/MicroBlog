@@ -5,16 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 /**
- * 相册内照片视图类
- * @author 王松涛
+ * @author Administrator
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PhotosVO {
-    @JsonProperty("photos")
-    List<PhotoVO> photoVOList;
+public class PhotoVO {
+    @JsonProperty("photoId")
+    Integer photoId;
+    @JsonProperty("url")
+    String photoUrl;
 }

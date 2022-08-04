@@ -1,6 +1,10 @@
 server:
   port: 8181
 spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      location: E:\Project\microblog\microblog_backend
   elasticsearch:
     rest:
       uris: localhost:9200

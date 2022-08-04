@@ -1,7 +1,6 @@
 package com.stewart.microblog.service;
 
 import com.stewart.microblog.dto.DetailedInfoDTO;
-import com.stewart.microblog.dto.RegisterDTO;
 import com.stewart.microblog.enums.StatusCode;
 import com.stewart.microblog.vo.*;
 
@@ -12,7 +11,6 @@ import java.text.ParseException;
  * @author 王松涛
  */
 public interface UserService {
-    StatusCode register(RegisterDTO registerDTO);
 
     /**
      * 根据用户id展示个人主页

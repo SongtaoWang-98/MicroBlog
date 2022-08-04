@@ -8,6 +8,10 @@
           <label>用户名</label>
         </div>
         <div class="user-box">
+          <input type="text" name="" required="" v-model="nickname">
+          <label>昵称</label>
+        </div>
+        <div class="user-box">
           <input type="password" name="" required="" v-model="password">
           <label>密码</label>
         </div>
@@ -36,21 +40,29 @@ export default {
   data() {
     return {
       username: '',
+      nickname:'',
       password: '',
       password2: ''
     }
   },
   methods: {
     handleSubmit() {
-      if(this.username===""||this.password===""){
-        this.msg = "请输入用户名密码"
-      }else{
-        axios.post('http://localhost:8181/userLogin',
-            {
-              username: this.username,
-              password: this.password
-            }).then(function (response) {
-          console.log(response)
+      if(this.username===""||this.password===""||this.password2===""||this.nickname===""){
+        alert("请输入相关信息")
+      }
+      else if(this.password !== this.password2) {
+        alert("两次密码不一致")
+      }
+      else{
+        axios.post('http://localhost:8181/signUp/sign?username=' +
+            this.username + '&nickname=' + this.nickname + '&password=' + this.password).then(function (resp) {
+          console.log(resp)
+          if(resp.data.data === 'USERNAME_EXISTS') {
+            alert("用户名已存在！")
+          }
+          else {
+            window.location.href='http://localhost:8080/loginPage'
+          }
         })
       }
     },

@@ -10,12 +10,12 @@
           <div class="nickname" style="font-size: 30px">{{ nickname }}</div>
           <div class="username" style="font-size: 20px; color: gray">{{ username }}</div>
           <div style="height: 40px"></div>
-          <div class="data">
+          <div class="data" v-if="this.username!==''">
             <el-link :underline="false" href="http://localhost:8080/followingList" style="font-size: 20px">{{ followingNum }}</el-link>
             <span>&emsp;&emsp;</span>
             <el-link :underline="false" href="http://localhost:8080/followerList" style="font-size: 20px">{{ followerNum }}</el-link>
           </div>
-          <div class="data" style="font-size: 20px">
+          <div class="data" style="font-size: 20px" v-if="this.username!==''">
             关注
             <span>&emsp;</span>
             粉丝
@@ -24,7 +24,7 @@
       </div>
       <div style="height: 100px"></div>
       <div class="functions">
-        <div><el-button type="success" plain icon="el-icon-camera-solid">我的相册</el-button></div>
+        <div><el-button type="success" plain icon="el-icon-camera-solid" onclick="window.location.href='http://localhost:8080/photoPage'">我的相册</el-button></div>
         <div style="height: 40px"></div>
         <div><el-button type="primary" plain icon="el-icon-s-promotion" onclick="window.location.href='http://localhost:8080/messageList'">我的私信</el-button></div>
         <div style="height: 40px"></div>
@@ -32,7 +32,7 @@
         <div style="height: 40px"></div>
         <div><el-button type="danger" plain icon="el-icon-star-on" onclick="window.location.href='http://localhost:8080/myCollections'">我的收藏</el-button></div>
         <div style="height: 40px"></div>
-        <div><el-button plain @click="logout">退出登录</el-button></div>
+        <div><el-button plain @click="logout" v-if="this.username!==''">退出登录</el-button></div>
         <div style="height: 40px"></div>
       </div>
     </el-aside>
@@ -82,7 +82,7 @@
                 <div class="content" style="width: 300px; margin: 0 auto; text-align: left">{{blog.content}}</div>
                 <div style="height: 20px"></div>
                 <div class="pic" v-show="blog.img !== ''">
-                  <el-image style="width: 300px; height: 200px" :fit="scale-down" :src=getImgUrl(blog.img)></el-image>
+                  <el-image style="width: 300px; height: 200px" :fit="'scale-down'" :src=getImgUrl(blog.img)></el-image>
                 </div>
                 <div style="height: 10px"></div>
                 <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">

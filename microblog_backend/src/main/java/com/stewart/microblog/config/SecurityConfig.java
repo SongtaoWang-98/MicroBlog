@@ -62,6 +62,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/blog/**").hasAuthority("USER")
                 .antMatchers("/user/**").hasAuthority("USER")
                 .antMatchers("/search/**").hasAuthority("USER")
+                .antMatchers("/message/**").hasAuthority("USER")
+                .antMatchers("/photo/**").hasAuthority("USER")
                 .antMatchers("/manager/**").hasAuthority("MANAGER")
                 .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
                 .and().exceptionHandling()

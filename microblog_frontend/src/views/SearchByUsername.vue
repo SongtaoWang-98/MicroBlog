@@ -35,12 +35,12 @@ export default {
     return {
       userList:[
         {
-          userImg: require("../../static/Stewart/2.jpg"),
+          userImg: require("../../static/songtao_wang@qq.com/2.jpg"),
           nickName: "001userNick",
           userName: "001user",
         },
         {
-          userImg: require("../../static/Stewart/1.jpg"),
+          userImg: require("../../static/songtao_wang@qq.com/1.jpg"),
           nickName: "002userNick",
           userName: "002user",
         }

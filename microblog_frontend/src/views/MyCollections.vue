@@ -73,9 +73,13 @@ export default {
     const _this = this
     axios.get('http://localhost:8181/user/collections').then(function (resp) {
       console.log(resp.data.data)
-
-      _this.blogList = resp.data.data.blogs
-      _this.comment = ''
+      if(resp.data.data === "USER_NOT_LOGIN") {
+        _this.$router.replace({path: '/loginPage'})
+      }
+      else {
+        _this.blogList = resp.data.data.blogs
+        _this.comment = ''
+      }
     })
   },
   methods: {

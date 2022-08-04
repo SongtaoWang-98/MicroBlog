@@ -3,7 +3,7 @@
     <el-header>
       <div>
         <div style="width:200px; margin-left:0">
-          <el-button icon="el-icon-arrow-left" onclick="this.$router.go(-1)">返回</el-button>
+          <el-button icon="el-icon-arrow-left" onclick="window.location.href='http://localhost:8080/home'">返回</el-button>
         </div>
       </div>
     </el-header>

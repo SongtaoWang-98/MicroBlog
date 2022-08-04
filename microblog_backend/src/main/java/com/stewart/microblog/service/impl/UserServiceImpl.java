@@ -1,7 +1,6 @@
 package com.stewart.microblog.service.impl;
 
 import com.stewart.microblog.dto.DetailedInfoDTO;
-import com.stewart.microblog.dto.RegisterDTO;
 import com.stewart.microblog.entity.*;
 import com.stewart.microblog.enums.StatusCode;
 import com.stewart.microblog.repository.*;
@@ -49,11 +48,6 @@ public class UserServiceImpl implements UserService{
     private static final String NORMAL = "NORMAL";
     private static final String TIME_FORMAT = "yyyy-MM-dd HH:mm";
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
-
-    @Override
-    public StatusCode register(RegisterDTO registerDTO) {
-        return null;
-    }
 
     @Override
     public UserPageVO showPersonalPage(Integer personId) {
@@ -166,7 +160,8 @@ public class UserServiceImpl implements UserService{
     public UserDetailedInfoVO showDetailedInfo() {
         logger.info("展示详细信息页");
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userInfoRepository.findByUsername(userName).getId();
+        UserInfo userInfo = userInfoRepository.findByUsername(userName);
+        Integer userId = userInfo.getId();
         DetailedInfo detailedInfo = detailedInfoRepository.findInformationByUserId(userId);
         if(detailedInfo == null) {
            detailedInfoRepository.save(new DetailedInfo(
@@ -176,7 +171,14 @@ public class UserServiceImpl implements UserService{
            detailedInfo = detailedInfoRepository.findInformationByUserId(userId);
         }
         SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
+        List<Picture> pictureList = pictureRepository.findAllByUserIdAndDeleted(userId, false);
+        List<PhotoVO> photoVOList = new ArrayList<>();
+        for(Picture picture: pictureList) {
+            photoVOList.add(new PhotoVO(picture.getId(), picture.getUrl()));
+        }
         return new UserDetailedInfoVO(
+                pictureRepository.findPictureByIdAndDeleted(userInfo.getPhotoId(), false).getUrl(),
+                photoVOList,
                 detailedInfo.getRealName(),
                 detailedInfo.getGender(),
                 dateFormat.format(detailedInfo.getBirthday()),
@@ -193,7 +195,12 @@ public class UserServiceImpl implements UserService{
     public StatusCode updateDetailedInfo(DetailedInfoDTO detailedInfoDTO) throws ParseException {
         logger.info("更新详细信息页");
         String userName = GetCurrentUserUtil.getCurrentUserName();
-        Integer userId = userInfoRepository.findByUsername(userName).getId();
+        UserInfo userInfo = userInfoRepository.findByUsername(userName);
+        Integer userId = userInfo.getId();
+
+        userInfo.setPhotoId(detailedInfoDTO.getPicId());
+        userInfoRepository.save(userInfo);
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date birthday;
         birthday = dateFormat.parse(detailedInfoDTO.getBirthday());

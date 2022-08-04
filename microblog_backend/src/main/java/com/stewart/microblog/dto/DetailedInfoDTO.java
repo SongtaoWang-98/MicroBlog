@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DetailedInfoDTO {
+    private Integer picId;
     private String realName;
     private String gender;
     private String birthday;
