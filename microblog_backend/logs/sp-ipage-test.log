@@ -3256,3 +3256,1342 @@ java.lang.InterruptedException: sleep interrupted
 2022-08-05 14:01:03.374 INFO  --- [SpringContextShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-08-05 14:01:03.374 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
 2022-08-05 14:01:03.374 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-08-05 14:03:39.863 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:55  - Starting MicroblogApplication using Java 18.0.1.1 on em-4RRFDN3 with PID 14488 (E:\Project\microblog\microblog_backend\target\classes started by Administrator in E:\Project\microblog\microblog_backend)
+2022-08-05 14:03:39.863 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:660 - No active profile set, falling back to default profiles: default
+2022-08-05 14:03:40.142 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-05 14:03:40.142 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-08-05 14:03:40.161 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 17 ms. Found 1 Elasticsearch repository interfaces.
+2022-08-05 14:03:40.161 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-05 14:03:40.161 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-05 14:03:40.184 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 21 ms. Found 16 JPA repository interfaces.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.BlogTopicRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.CollectionRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.CommentRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.ConcernGroupRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.DetailedInfoRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.FollowRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.GroupFollowRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.HeatTimeRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.LikeSetRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.MessageRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.PictureRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.ReportFeedbackRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.SysActionRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:03:40.252 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 11 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-08-05 14:03:40.584 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 8181 (http)
+2022-08-05 14:03:40.588 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8181"]
+2022-08-05 14:03:40.589 INFO  --- [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-08-05 14:03:40.589 INFO  --- [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-08-05 14:03:40.638 INFO  --- [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-08-05 14:03:40.638 INFO  --- [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:289 - Root WebApplicationContext: initialization completed in 748 ms
+2022-08-05 14:03:40.732 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-08-05 14:03:40.882 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-08-05 14:03:40.912 INFO  --- [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-05 14:03:40.932 INFO  --- [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-08-05 14:03:40.971 INFO  --- [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-05 14:03:41.033 INFO  --- [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-05 14:03:41.346 INFO  --- [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-05 14:03:41.346 INFO  --- [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 14:03:41.545 WARN  --- [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration Line:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-05 14:03:41.918 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.918 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.918 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.919 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.920 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.920 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.920 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.920 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.920 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:03:41.969 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:62  - Version Spring Data Elasticsearch: 4.1.5
+2022-08-05 14:03:41.969 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:63  - Version Elasticsearch Client in build: 7.9.3
+2022-08-05 14:03:41.969 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:64  - Version Elasticsearch Client used: 7.9.3
+2022-08-05 14:03:41.969 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:72  - Version Elasticsearch cluster: 8.3.3
+2022-08-05 14:03:41.969 WARN  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:75  - Version mismatch in between Elasticsearch Client and Cluster: 7.9.3 - 8.3.3
+2022-08-05 14:03:41.983 WARN  --- [main] org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentProperty Line:87  - Using the property name of 'id' to identify the id property is deprecated. Please annotate the id property with '@Id'
+2022-08-05 14:03:42.012 WARN  --- [main] org.elasticsearch.client.RestClient Line:65  - request [HEAD http://localhost:9200/blog?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open%2Cclosed&allow_no_indices=false] returned 1 warnings: [299 Elasticsearch-8.3.3-801fed82df74dbe537f89b71b098ccaff88d2c56 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-08-05 14:03:42.198 INFO  --- [main] org.springframework.security.web.DefaultSecurityFilterChain Line:51  - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@569d6e0d, org.springframework.security.web.context.SecurityContextPersistenceFilter@628b9af5, org.springframework.security.web.header.HeaderWriterFilter@7ceb7a60, org.springframework.web.filter.CorsFilter@43069adf, org.springframework.security.web.authentication.logout.LogoutFilter@10545d02, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@79d3fb99, org.springframework.security.web.session.ConcurrentSessionFilter@726ee6cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a3c3a04, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@653a5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18edbed9, org.springframework.security.web.session.SessionManagementFilter@6b8683b8, org.springframework.security.web.access.ExceptionTranslationFilter@586af46, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13e6ab86]
+2022-08-05 14:03:42.245 INFO  --- [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-05 14:03:42.313 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8181"]
+2022-08-05 14:03:42.318 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 8181 (http) with context path ''
+2022-08-05 14:03:42.327 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:61  - Started MicroblogApplication in 2.739 seconds (JVM running for 3.092)
+2022-08-05 14:03:43.923 INFO  --- [http-nio-8181-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-05 14:03:43.923 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-08-05 14:03:43.924 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 1 ms
+2022-08-05 14:03:43.968 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:03:43.968 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:03:43.968 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-05 14:03:43.968 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:03:43.968 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:03:43.969 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:03:43.969 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:BD809C875AC27D7F96D482C5C0703E0F
+2022-08-05 14:03:43.969 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：null
+2022-08-05 14:03:43.970 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-05 14:03:43.970 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-05 14:03:43.970 ERROR --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:72  - 异常信息：Cannot invoke "Object.toString()" because the return value of "javax.servlet.http.HttpSession.getAttribute(String)" is null
+2022-08-05 14:03:43.973 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户anonymousUser的微博客热门推荐页
+2022-08-05 14:03:44.065 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:203 - 生成首页视图对象
+2022-08-05 14:03:44.067 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:03:44.131 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:03:45.002 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:03:50.006 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:03:55.007 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:03:55.200 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:03:55.201 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-05 14:03:55.202 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-05 14:03:55.212 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-05 14:03:55.215 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-05 14:03:55.221 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-05 14:03:55.224 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:03:55.271 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:04:00.013 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:04:00.013 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:05.009 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:07.595 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:04:07.596 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:04:07.596 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-05 14:04:07.596 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:04:07.597 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:04:07.597 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:04:07.597 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:7A8572EFFE37587C1695BA60CF09CF33
+2022-08-05 14:04:07.597 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：gogogo@go.com
+2022-08-05 14:04:07.597 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-05 14:04:07.597 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-05 14:04:07.601 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户gogogo@go.com的微博客热门推荐页
+2022-08-05 14:04:07.603 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-05 14:04:07.604 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-05 14:04:07.604 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:04:07.639 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:04:09.704 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:04:09.704 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:04:09.705 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-05 14:04:09.705 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:04:09.705 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:04:09.705 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:04:09.705 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:04:09.705 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:04:09.706 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-05 14:04:09.706 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-05 14:04:09.711 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-05 14:04:09.715 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-05 14:04:09.716 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-05 14:04:09.716 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:04:09.750 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:04:10.013 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:10.511 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-05 14:04:10.512 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-05 14:04:10.516 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-05 14:04:10.518 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-05 14:04:10.519 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-05 14:04:10.519 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:04:10.552 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:04:15.015 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:20.023 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:20.633 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:04:20.633 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:04:20.633 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/new
+2022-08-05 14:04:20.633 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:04:20.634 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:04:20.634 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:04:20.634 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:04:20.634 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:04:20.634 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.newBlogs
+2022-08-05 14:04:20.634 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示最新博文
+2022-08-05 14:04:20.638 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:68  - 展示用户songtao_wang@qq.com的微博客最新推荐页
+2022-08-05 14:04:20.641 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-05 14:04:20.642 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-05 14:04:20.643 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:04:20.675 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:04:23.319 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:04:23.319 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:04:23.319 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:04:23.319 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:04:23.319 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:04:23.319 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:04:23.320 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:04:23.320 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:04:23.320 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:04:23.320 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:04:23.326 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:04:23.326 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:04:23.332 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:04:25.006 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:30.010 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:35.017 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:40.017 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:45.009 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:50.013 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:04:55.009 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:00.004 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:05:00.020 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:05.004 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:10.010 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:15.001 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:20.016 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:25.025 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:30.027 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:35.018 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:40.011 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:45.017 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:50.030 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:05:55.013 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:00.006 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:00.021 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:06:05.021 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:10.013 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:15.011 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:20.017 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:25.024 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:30.022 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:35.006 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:40.024 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:45.005 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:50.017 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:06:55.004 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:00.012 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:07:00.027 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:05.028 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:10.018 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:15.015 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:20.019 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:25.016 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:30.015 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:35.015 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:40.018 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:45.017 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:50.015 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:07:55.019 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:00.010 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:08:00.026 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:05.014 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:10.017 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:15.023 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:20.007 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:25.005 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:30.008 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:35.024 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:40.009 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:45.023 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:50.021 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:08:55.013 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:00.013 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:00.013 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:09:05.004 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:10.007 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:15.025 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:20.024 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:25.015 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:30.013 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:35.001 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:40.009 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:45.022 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:50.022 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:09:55.005 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:00.024 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:00.024 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:10:05.029 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:10.020 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:15.015 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:16.558 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:10:16.559 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:10:16.563 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:10:16.564 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:10:16.566 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:10:16.899 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:10:16.903 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:10:16.905 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:10:16.911 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:10:20.029 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:25.006 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:30.013 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:35.028 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:40.022 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:45.026 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:50.010 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:10:55.015 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:00.015 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:00.015 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:11:05.029 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:11:09.198 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:11:10.016 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:11.634 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:11:11.634 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:11:11.635 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:11:11.639 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:11:11.640 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:11:11.642 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:11:14.954 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:11:14.954 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:11:14.954 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:11:14.954 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:11:14.954 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:11:14.954 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:11:14.954 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:11:14.955 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:11:14.955 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:11:14.955 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:11:14.958 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:11:14.959 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:11:14.963 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:11:15.015 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:20.003 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:25.012 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:30.030 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:35.001 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:11:36.733 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:11:36.736 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:11:36.736 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:11:36.738 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:11:40.018 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:42.924 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:11:42.924 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:11:42.925 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:11:42.929 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:11:42.929 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:11:42.931 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:11:45.016 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:50.003 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:11:52.672 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:F5FB7BFA6E575D3A3312A889F60821CB
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:11:52.673 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:11:52.674 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:11:52.677 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:11:52.678 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:11:52.680 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:11:55.024 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:00.006 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:12:00.022 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:05.018 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:10.010 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:15.010 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:20.015 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:25.002 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:30.018 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:35.024 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:40.022 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:45.018 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:50.011 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:12:55.010 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:00.016 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:13:00.016 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:05.027 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:10.013 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:15.012 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:20.024 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:25.010 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:30.021 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:35.004 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:40.015 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:40.272 INFO  --- [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-05 14:13:40.272 INFO  --- [SpringContextShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 14:13:40.272 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-08-05 14:13:40.272 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.
+2022-08-05 14:13:43.698 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:55  - Starting MicroblogApplication using Java 18.0.1.1 on em-4RRFDN3 with PID 14992 (E:\Project\microblog\microblog_backend\target\classes started by Administrator in E:\Project\microblog\microblog_backend)
+2022-08-05 14:13:43.700 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:660 - No active profile set, falling back to default profiles: default
+2022-08-05 14:13:43.982 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-05 14:13:43.982 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-08-05 14:13:43.998 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 16 ms. Found 1 Elasticsearch repository interfaces.
+2022-08-05 14:13:43.998 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-05 14:13:43.998 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-05 14:13:44.014 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 20 ms. Found 16 JPA repository interfaces.
+2022-08-05 14:13:44.092 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:250 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-05 14:13:44.092 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:128 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.BlogTopicRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.CollectionRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.CommentRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.ConcernGroupRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.DetailedInfoRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.FollowRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.GroupFollowRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.HeatTimeRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.LikeSetRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.MessageRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.PictureRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.ReportFeedbackRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport Line:349 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.stewart.microblog.repository.SysActionRepository. If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository.
+2022-08-05 14:13:44.107 INFO  --- [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:188 - Finished Spring Data repository scanning in 12 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-08-05 14:13:44.435 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:108 - Tomcat initialized with port(s): 8181 (http)
+2022-08-05 14:13:44.435 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8181"]
+2022-08-05 14:13:44.435 INFO  --- [main] org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2022-08-05 14:13:44.435 INFO  --- [main] org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-08-05 14:13:44.498 INFO  --- [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2022-08-05 14:13:44.498 INFO  --- [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Line:289 - Root WebApplicationContext: initialization completed in 768 ms
+2022-08-05 14:13:44.576 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:110 - HikariPool-1 - Starting...
+2022-08-05 14:13:44.732 INFO  --- [main] com.zaxxer.hikari.HikariDataSource Line:123 - HikariPool-1 - Start completed.
+2022-08-05 14:13:44.748 INFO  --- [main] org.hibernate.jpa.internal.util.LogHelper Line:31  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-05 14:13:44.779 INFO  --- [main] org.hibernate.Version Line:44  - HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-08-05 14:13:44.826 INFO  --- [main] org.hibernate.annotations.common.Version Line:56  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-05 14:13:44.873 INFO  --- [main] org.hibernate.dialect.Dialect Line:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-05 14:13:45.185 INFO  --- [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Line:52  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-05 14:13:45.185 INFO  --- [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 14:13:45.384 WARN  --- [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration Line:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:270 - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.759 WARN  --- [main] org.springframework.data.convert.CustomConversions Line:260 - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-08-05 14:13:45.822 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:62  - Version Spring Data Elasticsearch: 4.1.5
+2022-08-05 14:13:45.822 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:63  - Version Elasticsearch Client in build: 7.9.3
+2022-08-05 14:13:45.822 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:64  - Version Elasticsearch Client used: 7.9.3
+2022-08-05 14:13:45.822 INFO  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:72  - Version Elasticsearch cluster: 8.3.3
+2022-08-05 14:13:45.822 WARN  --- [main] org.springframework.data.elasticsearch.support.VersionInfo Line:75  - Version mismatch in between Elasticsearch Client and Cluster: 7.9.3 - 8.3.3
+2022-08-05 14:13:45.846 WARN  --- [main] org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentProperty Line:87  - Using the property name of 'id' to identify the id property is deprecated. Please annotate the id property with '@Id'
+2022-08-05 14:13:45.883 WARN  --- [main] org.elasticsearch.client.RestClient Line:65  - request [HEAD http://localhost:9200/blog?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open%2Cclosed&allow_no_indices=false] returned 1 warnings: [299 Elasticsearch-8.3.3-801fed82df74dbe537f89b71b098ccaff88d2c56 "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-08-05 14:13:46.071 INFO  --- [main] org.springframework.security.web.DefaultSecurityFilterChain Line:51  - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@522221e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@79d3fb99, org.springframework.security.web.header.HeaderWriterFilter@5e445ffe, org.springframework.web.filter.CorsFilter@14060410, org.springframework.security.web.authentication.logout.LogoutFilter@701996e9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@23263586, org.springframework.security.web.session.ConcurrentSessionFilter@20e25bf7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7154a248, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60c33609, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58397dd, org.springframework.security.web.session.SessionManagementFilter@2a9fd482, org.springframework.security.web.access.ExceptionTranslationFilter@78ca8258, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60c68c7b]
+2022-08-05 14:13:46.118 INFO  --- [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-05 14:13:46.196 INFO  --- [main] org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8181"]
+2022-08-05 14:13:46.196 INFO  --- [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:220 - Tomcat started on port(s): 8181 (http) with context path ''
+2022-08-05 14:13:46.211 INFO  --- [main] com.stewart.microblog.MicroblogApplication Line:61  - Started MicroblogApplication in 2.79 seconds (JVM running for 3.17)
+2022-08-05 14:13:50.011 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:13:55.017 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:00.004 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:00.019 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:14:05.009 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:10.002 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:15.011 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:17.030 INFO  --- [http-nio-8181-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-05 14:14:17.031 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-08-05 14:14:17.031 INFO  --- [http-nio-8181-exec-1] org.springframework.web.servlet.DispatcherServlet Line:547 - Completed initialization in 0 ms
+2022-08-05 14:14:17.329 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:14:17.329 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:14:17.329 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/hot
+2022-08-05 14:14:17.330 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:14:17.330 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:14:17.330 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:14:17.330 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:14:17.330 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:14:17.331 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.hotBlogs
+2022-08-05 14:14:17.331 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示热门博文
+2022-08-05 14:14:17.338 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:56  - 展示用户songtao_wang@qq.com的微博客热门推荐页
+2022-08-05 14:14:17.341 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-05 14:14:17.347 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-05 14:14:17.349 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:14:17.412 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:14:20.003 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:20.586 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:14:20.587 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:14:20.587 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/home/new
+2022-08-05 14:14:20.587 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：null
+2022-08-05 14:14:20.587 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:14:20.587 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:14:20.587 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:14:20.587 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:14:20.588 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.HomeController.newBlogs
+2022-08-05 14:14:20.588 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：展示最新博文
+2022-08-05 14:14:20.591 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:68  - 展示用户songtao_wang@qq.com的微博客最新推荐页
+2022-08-05 14:14:20.595 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:189 - 生成首页视图对象
+2022-08-05 14:14:20.596 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:169 - 加载用户分组列表
+2022-08-05 14:14:20.597 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:128 - 加载博文列表
+2022-08-05 14:14:20.638 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.HomeServiceImpl Line:179 - 加载热门话题列表
+2022-08-05 14:14:25.007 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:30.014 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:30.602 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:14:30.602 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:14:30.602 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:14:30.602 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:14:30.603 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:14:30.603 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:14:30.603 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:14:30.603 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:14:30.603 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:14:30.603 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:14:30.610 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:14:30.611 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:14:30.617 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:14:35.004 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:35.328 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：POST
+2022-08-05 14:14:35.328 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:14:35.328 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/follow
+2022-08-05 14:14:35.328 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:14:35.328 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:14:35.328 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:14:35.329 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:14:35.329 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:14:35.329 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.followPerson
+2022-08-05 14:14:35.329 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：关注好友
+2022-08-05 14:14:35.333 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.service.impl.UserServiceImpl Line:278 - 添加用户id为1的用户至id为5的用户的关注关系
+2022-08-05 14:14:35.712 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:14:35.712 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:14:35.712 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:14:35.712 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:14:35.712 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:14:35.712 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:14:35.712 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:14:35.713 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:14:35.713 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:14:35.713 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:14:35.716 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:14:35.717 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:14:35.722 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:14:40.004 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:45.010 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:50.014 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:14:55.001 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:00.015 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:00.015 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:15:05.016 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:10.007 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:15.015 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:20.006 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:25.005 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:30.020 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:35.019 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:40.006 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:45.007 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:50.016 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:15:55.003 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:00.007 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:00.023 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:16:05.004 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:10.019 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:15.017 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:20.022 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:25.008 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:30.018 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:31.260 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:16:31.261 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:16:31.262 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:16:31.266 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:16:31.266 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:16:31.268 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:16:35.008 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:40.012 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:45.017 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:50.005 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:16:55.008 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:00.009 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:17:00.024 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:05.011 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:08.349 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:17:08.350 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:17:08.350 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:17:08.350 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:17:08.350 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:17:08.350 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:17:08.350 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:17:08.351 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:17:08.351 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:17:08.351 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:17:08.354 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:17:08.355 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:17:08.357 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:17:09.530 ERROR --- [http-nio-8181-exec-1] com.stewart.microblog.exception.GlobalExceptionHandler Line:38  - 未知异常！原因是:
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:147)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:125)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 91 common frames omitted
+2022-08-05 14:17:09.547 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.websocket.WebSocketServer Line:58  - 有新窗口开始监听:undefined,当前在线人数为:1
+2022-08-05 14:17:10.012 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:12.304 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.websocket.WebSocketServer Line:74  - 释放的sid为undefined
+2022-08-05 14:17:12.304 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.websocket.WebSocketServer Line:76  - 有一连接关闭！当前在线人数为:0
+2022-08-05 14:17:12.550 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:17:12.550 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:17:12.551 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:17:12.551 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:17:12.551 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:17:12.551 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:17:12.551 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:17:12.551 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:17:12.552 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:17:12.552 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:17:12.558 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:17:12.558 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:17:12.561 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:17:14.903 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.websocket.WebSocketServer Line:58  - 有新窗口开始监听:undefined,当前在线人数为:1
+2022-08-05 14:17:14.906 ERROR --- [http-nio-8181-exec-9] com.stewart.microblog.exception.GlobalExceptionHandler Line:38  - 未知异常！原因是:
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:147)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:125)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 91 common frames omitted
+2022-08-05 14:17:15.025 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:15.878 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.websocket.WebSocketServer Line:74  - 释放的sid为undefined
+2022-08-05 14:17:15.878 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.websocket.WebSocketServer Line:76  - 有一连接关闭！当前在线人数为:0
+2022-08-05 14:17:16.126 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:17:16.126 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:17:16.126 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:17:16.126 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:17:16.126 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:17:16.127 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:17:16.127 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:17:16.127 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:17:16.127 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:17:16.127 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:17:16.131 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:17:16.132 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:17:16.134 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:17:17.341 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.websocket.WebSocketServer Line:58  - 有新窗口开始监听:undefined,当前在线人数为:1
+2022-08-05 14:17:17.344 ERROR --- [http-nio-8181-exec-5] com.stewart.microblog.exception.GlobalExceptionHandler Line:38  - 未知异常！原因是:
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:147)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:125)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 91 common frames omitted
+2022-08-05 14:17:18.193 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.websocket.WebSocketServer Line:74  - 释放的sid为undefined
+2022-08-05 14:17:18.194 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.websocket.WebSocketServer Line:76  - 有一连接关闭！当前在线人数为:0
+2022-08-05 14:17:18.435 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.websocket.WebSocketServer Line:58  - 有新窗口开始监听:undefined,当前在线人数为:1
+2022-08-05 14:17:18.440 ERROR --- [http-nio-8181-exec-3] com.stewart.microblog.exception.GlobalExceptionHandler Line:38  - 未知异常！原因是:
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:147)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:125)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 91 common frames omitted
+2022-08-05 14:17:20.005 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:21.983 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.websocket.WebSocketServer Line:74  - 释放的sid为undefined
+2022-08-05 14:17:21.983 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.websocket.WebSocketServer Line:76  - 有一连接关闭！当前在线人数为:0
+2022-08-05 14:17:22.240 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:17:22.241 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:17:22.241 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:17:22.241 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:17:22.241 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:17:22.241 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:17:22.241 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:17:22.241 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:17:22.242 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:17:22.242 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:17:22.246 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:17:22.246 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:17:22.249 INFO  --- [http-nio-8181-exec-7] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:17:25.016 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:30.029 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:32.710 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.websocket.WebSocketServer Line:58  - 有新窗口开始监听:undefined,当前在线人数为:1
+2022-08-05 14:17:32.713 ERROR --- [http-nio-8181-exec-6] com.stewart.microblog.exception.GlobalExceptionHandler Line:38  - 未知异常！原因是:
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:147)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:125)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 91 common frames omitted
+2022-08-05 14:17:33.935 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.websocket.WebSocketServer Line:74  - 释放的sid为undefined
+2022-08-05 14:17:33.935 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.websocket.WebSocketServer Line:76  - 有一连接关闭！当前在线人数为:0
+2022-08-05 14:17:34.187 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:17:34.187 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:17:34.188 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:17:34.193 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:17:34.193 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:17:34.195 INFO  --- [http-nio-8181-exec-8] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:17:35.013 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:40.005 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:45.016 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:50.021 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:17:55.025 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:00.011 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:00.027 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:18:05.018 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:10.003 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:15.015 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:20.012 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:25.006 INFO  --- [pool-2-thread-3] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:30.008 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:35.020 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:40.018 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:18:41.426 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:18:45.013 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:45.764 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:18:45.764 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:18:45.764 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:18:45.764 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:18:45.765 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:18:45.765 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:18:45.765 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:18:45.765 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:18:45.765 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:18:45.765 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:18:45.768 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:18:45.769 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:18:45.771 INFO  --- [http-nio-8181-exec-10] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:18:50.006 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:18:55.027 INFO  --- [pool-2-thread-5] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:00.011 INFO  --- [pool-2-thread-1] com.stewart.microblog.service.impl.HeatServiceImpl Line:60  - 记录话题热度
+2022-08-05 14:19:00.026 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:05.018 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:10.029 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:19:11.636 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:19:11.641 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:19:11.642 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:19:11.644 INFO  --- [http-nio-8181-exec-3] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:19:12.594 INFO  --- [http-nio-8181-exec-4] com.stewart.microblog.websocket.WebSocketServer Line:58  - 有新窗口开始监听:5,当前在线人数为:1
+2022-08-05 14:19:14.415 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.websocket.WebSocketServer Line:74  - 释放的sid为5
+2022-08-05 14:19:14.415 INFO  --- [http-nio-8181-exec-9] com.stewart.microblog.websocket.WebSocketServer Line:76  - 有一连接关闭！当前在线人数为:0
+2022-08-05 14:19:14.659 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:19:14.660 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:19:14.664 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:19:14.664 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:19:14.668 INFO  --- [http-nio-8181-exec-6] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:19:15.011 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:15.627 INFO  --- [http-nio-8181-exec-2] com.stewart.microblog.websocket.WebSocketServer Line:58  - 有新窗口开始监听:5,当前在线人数为:1
+2022-08-05 14:19:19.096 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.websocket.WebSocketServer Line:74  - 释放的sid为5
+2022-08-05 14:19:19.096 INFO  --- [http-nio-8181-exec-5] com.stewart.microblog.websocket.WebSocketServer Line:76  - 有一连接关闭！当前在线人数为:0
+2022-08-05 14:19:19.347 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:50  - 请求方法：GET
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:51  - 请求协议：HTTP/1.1
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:52  - 请求URL：http://localhost:8181/user/homePage
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:53  - 请求参数：personId=5
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:54  - 请求源ip：0:0:0:0:0:0:0:1
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:55  - 请求本地端口：8181
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:56  - SESSIONID:694306CA9247C9386CDB482BB7ED98AF
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:57  - 请求人：songtao_wang@qq.com
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:58  - 请求调用Controller接口：com.stewart.microblog.controller.UserController.personalHomePage
+2022-08-05 14:19:19.348 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.aop.SystemLogAspect Line:60  - 功能描述：查看用户主页
+2022-08-05 14:19:19.352 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:54  - 展示用户id为5用户的个人主页
+2022-08-05 14:19:19.352 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:57  - 当前登录用户：songtao_wang@qq.com
+2022-08-05 14:19:19.355 INFO  --- [http-nio-8181-exec-1] com.stewart.microblog.service.impl.UserServiceImpl Line:76  - 加载博文列表
+2022-08-05 14:19:20.003 INFO  --- [pool-2-thread-4] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:25.018 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:30.024 INFO  --- [pool-2-thread-2] com.stewart.microblog.service.impl.HeatServiceImpl Line:43  - 刷新话题热度
+2022-08-05 14:19:32.888 INFO  --- [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-05 14:19:32.888 INFO  --- [SpringContextShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Line:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-05 14:19:32.888 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:350 - HikariPool-1 - Shutdown initiated...
+2022-08-05 14:19:32.888 INFO  --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource Line:352 - HikariPool-1 - Shutdown completed.

@@ -27,7 +27,7 @@
         <div><el-button type="success" plain v-show="!following" @click="follow">关注</el-button></div>
         <div><el-button type="success" plain v-show="following" @click="unfollow">已关注</el-button></div>
         <div style="height: 40px"></div>
-        <div><el-button type="primary" plain>私信</el-button></div>
+        <div><el-button type="primary" plain @click="sendMessage">私信</el-button></div>
         <div style="height: 40px"></div>
         <div><el-button icon="el-icon-arrow-left" onclick="window.location.href='http://localhost:8080/home'">返回</el-button></div>
       </div>
@@ -48,7 +48,7 @@
                 <div class="content" style="width: 300px; margin: 0 auto; text-align: left">{{blog.content}}</div>
                 <div style="height: 20px"></div>
                 <div class="pic" v-show="blog.img !== ''">
-                  <el-image style="width: 300px; height: 200px" :fit="scale-down" :src=getImgUrl(blog.img)></el-image>
+                  <el-image style="width: 300px; height: 200px" :fit="'scale-down'" :src=getImgUrl(blog.img)></el-image>
                 </div>
                 <div style="height: 10px"></div>
                 <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">
@@ -88,7 +88,8 @@ export default {
   data () {
     return {
       circleUrl: "",
-      comment: ""
+      comment: "",
+      personId: 0
     }
   },
   created() {
@@ -103,6 +104,7 @@ export default {
         _this.$router.replace({path: '/loginPage'})
       }
       else {
+        _this.personId = resp.data.data.personId
         _this.circleUrl = resp.data.data.userImg
         _this.nickname = resp.data.data.nickName
         _this.username = resp.data.data.userName
@@ -149,6 +151,9 @@ export default {
     commentSubmit(blogId) {
       axios.post('http://localhost:8181/blog/comment?blogId=' + blogId + '&content=' + this.comment)
       location.reload()
+    },
+    sendMessage() {
+      window.location.href='http://localhost:8080/messagePage/' + this.personId
     }
   }
 }

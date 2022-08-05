@@ -15,6 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserPageVO {
+    @JsonProperty("personId")
+    private Integer personId;
     @JsonProperty("userImg")
     private String userImg;
     @JsonProperty("nickName")
