@@ -20,6 +20,7 @@ import SearchByUsername from "@/views/SearchByUsername";
 import MessageList from "@/views/MessageList";
 import MessagePage from "@/views/MessagePage";
 import photoPage from "@/views/PhotoPage";
+import SearchBySpecificTopic from "@/views/SearchBySpecificTopic";
 
 Vue.use(VueRouter)
 
@@ -103,6 +104,11 @@ const routes = [
         path: '/searchByTopic/:str',
         name: 'SearchByTopic',
         component: SearchByTopic
+    },
+    {
+        path: '/searchBySpecificTopic/:str',
+        name: 'SearchBySpecificTopic',
+        component: SearchBySpecificTopic
     },
     {
         path: '/searchByUsername/:str',

@@ -1,6 +1,7 @@
 package com.stewart.microblog.config;
 
 import com.stewart.microblog.security.*;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -9,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 import org.springframework.web.cors.CorsUtils;
 
 import javax.annotation.Resource;
@@ -36,6 +38,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    @ConditionalOnMissingBean(SessionInformationExpiredStrategy.class)
+    public SessionInformationExpiredStrategy informationExpiredStrategy(){
+        return new MySessionInformationExpiredStrategy();
+    }
+
+    @Resource
+    private SessionInformationExpiredStrategy sessionInformationExpiredStrategy;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
@@ -61,7 +72,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/home/new").hasAuthority("USER")
                 .antMatchers("/blog/**").hasAuthority("USER")
                 .antMatchers("/user/**").hasAuthority("USER")
-                .antMatchers("/search/**").hasAuthority("USER")
                 .antMatchers("/message/**").hasAuthority("USER")
                 .antMatchers("/photo/**").hasAuthority("USER")
                 .antMatchers("/manager/**").hasAuthority("MANAGER")
@@ -71,6 +81,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().cors()
                 //关闭跨站请求伪造攻击拦截
                 .and().csrf().disable();
+
+        http.sessionManagement().maximumSessions(1).expiredSessionStrategy(sessionInformationExpiredStrategy);
     }
 }
 

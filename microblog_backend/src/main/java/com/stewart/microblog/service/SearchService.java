@@ -12,4 +12,5 @@ public interface SearchService {
     SearchResultVO searchByTopic(String str);
     SearchResultVO searchByContent(String str);
     UserListVO searchByUsername(String str);
+    SearchResultVO searchBySpecificTopic(String str);
 }

@@ -5,6 +5,6 @@ package com.stewart.microblog.service;
  * @author 王松涛
  */
 public interface HeatService {
-    void refreshHeat();
+    void refreshTopicHeat();
     void recordTopicHeat();
 }

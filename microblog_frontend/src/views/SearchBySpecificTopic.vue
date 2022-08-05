@@ -6,7 +6,7 @@
           <el-button icon="el-icon-arrow-left" onclick="window.location.href='http://localhost:8080/home'">返回</el-button>
         </div>
       </div>
-      <div style="font-size: 30px">我的收藏</div>
+      <div style="font-size: 30px">查询结果</div>
       <div style="overflow:auto" >
         <dl class="list">
           <dd v-for="blog in blogList" class="list-item">
@@ -24,7 +24,8 @@
                 <div style="height: 24px; width:300px; font-size: 20px; color: darkblue; margin: 0 auto; text-align: left">#{{topic}}</div>
               </div>
               <div style="height: 10px"></div>
-              <div class="content" style="width: 300px; margin: 0 auto; text-align: left">{{blog.content}}</div>
+              <div class="content" style="width: 300px; margin: 0 auto; text-align: left"><p class="xxx">
+                <a v-html= "blog.content" ></a></p></div>
               <div style="height: 20px"></div>
               <div class="pic" v-show="blog.img !== ''">
                 <el-image style="width: 300px; height: 200px" :fit="scale-down" :src=getImgUrl(blog.img)></el-image>
@@ -62,7 +63,7 @@
 
 <script>
 export default {
-  name: "MyCollections",
+  name: "SearchBySpecificTopic",
   data () {
     return {
       blogList: null,
@@ -71,24 +72,15 @@ export default {
   },
   created() {
     const _this = this
-    axios.get('http://localhost:8181/user/collections').then(function (resp) {
+    axios.get('http://localhost:8181/search/bySpecificTopic?str=' + this.$route.params.str).then(function (resp) {
       console.log(resp.data.data)
-      if(resp.data.data === "USER_NOT_LOGIN") {
-        _this.$router.replace({path: '/loginPage'})
-      }
-      else if(resp.data.data === "USER_ACCOUNT_USE_BY_OTHERS") {
-        alert("账号被挤下线！")
-        _this.$router.replace({path: '/loginPage'})
-      }
-      else {
-        _this.blogList = resp.data.data.blogs
-        _this.comment = ''
-      }
+      _this.blogList = resp.data.data.blogs
+      _this.comment = ''
     })
   },
   methods: {
     getImgUrl(src) {
-      if(src==='') return
+      if (src === '') return
       return require('../../static/' + src)
     },
     like(blogId) {

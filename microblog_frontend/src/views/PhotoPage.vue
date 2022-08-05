@@ -56,6 +56,10 @@ export default {
       if(resp.data.data === "USER_NOT_LOGIN") {
         _this.$router.replace({path: '/loginPage'})
       }
+      else if(resp.data.data === "USER_ACCOUNT_USE_BY_OTHERS") {
+        alert("账号被挤下线！")
+        _this.$router.replace({path: '/loginPage'})
+      }
       else {
         _this.photos = resp.data.data.photos
       }

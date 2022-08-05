@@ -64,7 +64,7 @@
               class="list"
               v-infinite-scroll="load"
               infinite-scroll-disabled="disabled">
-            <dd v-for="blog in blogList" class="list-item">
+            <dd v-for="(blog, index) in blogList" class="list-item">
               <div style="width: 750px; background-color: #c7d9fc; margin: 0 auto">
                 <div class="time" style="height: 20px">{{blog.time}}</div>
                 <div style="height: 20px"><el-link :underline="false" href="https://element.eleme.io" icon="el-icon-warning-outline" style="font-size: 10px; color: rgba(255,9,57,0.89); float: right; margin-right: 20px">举报</el-link></div>
@@ -98,8 +98,8 @@
                 </div>
                 <div style="height: 20px"></div>
                 <div class="comment" style="height: 40px; width:320px; font-size: 20px; margin: 0 auto">
-                  <el-input v-model="comment" placeholder="评论" style="width: 250px"></el-input>
-                  <el-button type="primary" size="small" @click="commentSubmit(blog.blogId)">发送</el-button>
+                  <el-input v-model="commentData[index]" placeholder="评论" style="width: 250px"></el-input>
+                  <el-button type="primary" size="small" @click="commentSubmit(blog.blogId, commentData[index])">发送</el-button>
                 </div>
                 <div style="height: 20px"></div>
                 <div class="comments" v-for="comment in blog.comments" style=" width: 300px; margin: 0 auto; text-align: left">
@@ -139,7 +139,7 @@
       <div class="topics" style="height: 200px">
         <div style="height: 60px; font-size: 40px; color: rgba(58,58,70,0.89)">热门话题</div>
         <div style="height: 80px"></div>
-        <div v-for="topic in topicList" key="index" style="font-size: 28px; color: rgba(255,9,57,0.89)">
+        <div v-for="topic in topicList" key="index" style="font-size: 28px; color: rgba(255,9,57,0.89)" @click="searchHotTopic(topic)">
           <div style="width: 300px; height: 80px; margin: 0 auto; text-align: left">#{{topic}}</div></div>
       </div>
     </el-aside>
@@ -161,9 +161,9 @@ export default {
       groupList:["朋友","同学","默认分组"],
       radio: '1',
       input:'',
-      comment:'',
       topicList:["天气真好","猫猫狗狗","发工资"],
-      blogList:[]
+      blogList:[],
+      commentData:[]
     }
   },
   created() {
@@ -171,6 +171,10 @@ export default {
     axios.get('http://localhost:8181/home/new').then(function (resp) {
       console.log(resp.data.data)
       if(resp.data.data === "USER_NOT_LOGIN") {
+        _this.$router.replace({path: '/loginPage'})
+      }
+      else if(resp.data.data === "USER_ACCOUNT_USE_BY_OTHERS") {
+        alert("账号被挤下线！")
         _this.$router.replace({path: '/loginPage'})
       }
       else {
@@ -184,7 +188,7 @@ export default {
         _this.topicList = resp.data.data.topics
         _this.radio = 1
         _this.input = ''
-        _this.comment = ''
+        _this.commentData = []
       }
     })
   },
@@ -230,8 +234,8 @@ export default {
       axios.post('http://localhost:8181/blog/disCollect?blogId=' + blogId)
       location.reload()
     },
-    commentSubmit(blogId) {
-      axios.post('http://localhost:8181/blog/comment?blogId=' + blogId + '&content=' + this.comment)
+    commentSubmit(blogId, str) {
+      axios.post('http://localhost:8181/blog/comment?blogId=' + blogId + '&content=' + str)
       location.reload()
     },
     logout() {
@@ -242,6 +246,9 @@ export default {
       if(this.radio === 1) window.location.href=('http://localhost:8080/searchByContent/' + this.input)
       else if(this.radio === 2) window.location.href=('http://localhost:8080/searchByTopic/' + this.input)
       else window.location.href=('http://localhost:8080/searchByUsername/' + this.input)
+    },
+    searchHotTopic(str) {
+      window.location.href=('http://localhost:8080/searchBySpecificTopic/' + str)
     }
   }
 }

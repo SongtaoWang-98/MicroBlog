@@ -44,4 +44,12 @@ public class SearchController {
         }
         return ResultVOUtil.success(searchService.searchByUsername(str));
     }
+    @GetMapping("/bySpecificTopic")
+    @SystemControllerLog(description = "查询详细话题")
+    public ResultVO searchBySpecificTopic(String str) {
+        if(str.length() == 0) {
+            throw new BizException("-1", "搜索话题内容不能为空");
+        }
+        return ResultVOUtil.success(searchService.searchBySpecificTopic(str));
+    }
 }

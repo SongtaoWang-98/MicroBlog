@@ -8,6 +8,7 @@ import com.stewart.microblog.esrepository.ESBlogRepository;
 import com.stewart.microblog.repository.BlogRepository;
 import com.stewart.microblog.repository.BlogTopicRepository;
 import com.stewart.microblog.repository.PictureRepository;
+import com.stewart.microblog.repository.TopicRepository;
 import com.stewart.microblog.service.SearchService;
 import com.stewart.microblog.vo.SearchResultVO;
 import com.stewart.microblog.vo.UserListItemVO;
@@ -17,6 +18,7 @@ import org.elasticsearch.index.query.FuzzyQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.core.SearchHit;
 import org.springframework.data.elasticsearch.core.SearchHits;
@@ -45,6 +47,8 @@ public class SearchServiceImpl implements SearchService {
     private HomeServiceImpl homeService;
     @Resource
     private ElasticsearchRestTemplate elasticsearchRestTemplate;
+    @Resource
+    private TopicRepository topicRepository;
 
     @Override
     public SearchResultVO searchByTopic(String str) {
@@ -151,5 +155,16 @@ public class SearchServiceImpl implements SearchService {
                             .getUrl(), userInfo.getNickname(), userInfo.getUsername()));
         }
         return new UserListVO(userListItemVOList);
+    }
+
+    @Override
+    public SearchResultVO searchBySpecificTopic(String str) {
+        Topic topic = topicRepository.findTopicByName(str);
+        List<Blog> blogList = new ArrayList<>();
+        List<BlogTopic> blogTopicList = blogTopicRepository.findBlogTopicsByTopicIdAndDeleted(topic.getId(), false);
+        for(BlogTopic blogTopic: blogTopicList) {
+            blogList.add(blogRepository.findBlogByIdAndDeleted(blogTopic.getBlogId(), false));
+        }
+        return new SearchResultVO(homeService.convertBlogsToVO(blogList));
     }
 }

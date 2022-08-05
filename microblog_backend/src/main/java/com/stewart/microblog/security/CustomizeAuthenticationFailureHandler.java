@@ -47,6 +47,9 @@ public class CustomizeAuthenticationFailureHandler implements AuthenticationFail
             else {
                 result = ResultVOUtil.fail(LoginCode.USER_ACCOUNT_NOT_EXIST);
             }
+        } else if (e instanceof AuthenticationServiceException) {
+            //账号被挤下线
+            result = ResultVOUtil.fail(LoginCode.USER_ACCOUNT_USE_BY_OTHERS);
         }else{
             //其他错误
             result = ResultVOUtil.fail(LoginCode.COMMON_FAIL);
