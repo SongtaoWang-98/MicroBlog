@@ -25,4 +25,8 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
      * @return 用户对象User
      */
     UserInfo findUserByIdAndState(Integer id, String state);
+
+    UserInfo findUserInfoById(Integer id);
+
+    UserInfo findFirstByOrderById();
 }

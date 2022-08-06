@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * 用户实体类
@@ -31,4 +32,5 @@ public class UserInfo {
     private String state;
     @Field(name = "photo_id")
     private Integer photoId;
+    private Date lastTime;
 }

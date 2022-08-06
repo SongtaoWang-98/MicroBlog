@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * @author stewartwang
@@ -34,6 +35,8 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
         HttpSession session = httpServletRequest.getSession();
         session.setAttribute("user", name);
         UserInfo userInfo = userInfoRepository.findByUsername(name);
+        userInfo.setLastTime(new Date());
+        userInfoRepository.save(userInfo);
         ResultVO result = ResultVOUtil.success(userInfo.getType());
         httpServletResponse.getWriter().write(JSON.toJSONString(result));
     }

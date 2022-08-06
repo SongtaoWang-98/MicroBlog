@@ -9,7 +9,11 @@ import lombok.NoArgsConstructor;
  * @author 王松涛
  */
 @Data
-//@NoArgsConstructor
-//@AllArgsConstructor
-public class ManagerTopicStatVO {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ManagerTopicListItemVO {
+    private Integer topicId;
+    private String topicName;
+    private Integer heat;
+    private Integer blogNum;
 }
