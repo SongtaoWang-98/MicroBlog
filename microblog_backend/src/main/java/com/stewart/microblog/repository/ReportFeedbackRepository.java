@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author 王松涛
  */
 public interface ReportFeedbackRepository extends JpaRepository<ReportFeedback, Integer> {
+
 }

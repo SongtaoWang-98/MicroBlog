@@ -1,5 +1,6 @@
 package com.stewart.microblog.vo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ManagerTopicTrendVO {
-    private String startTime;
-    private String endTime;
+    @JsonProperty("timeList")
+    List<String> timeList;
+    @JsonProperty("heatList")
     List<Integer> heatList;
 }

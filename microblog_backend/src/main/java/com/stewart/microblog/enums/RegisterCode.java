@@ -9,11 +9,11 @@ import lombok.Getter;
 
 @Getter
 public enum RegisterCode {
-    /* 成功*/
+    /* 成功 */
     SUCCESS(200,"成功"),
 
+    /* 失败 */
     USERNAME_EXISTS(1001,"用户名已存在"),
-
     FAIL(2001,"注册失败");
 
     private final Integer code;

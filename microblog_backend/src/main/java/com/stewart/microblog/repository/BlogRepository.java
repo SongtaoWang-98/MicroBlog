@@ -32,6 +32,19 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * @return 博客对象Blog
      */
     Blog findBlogByIdAndStateAndDeleted(Integer id, String state, Boolean deleted);
+
+    /**
+     * 根据博客id查找博客
+     * @param id
+     * Integer类型博客id
+     * @param scope
+     * String类型博文可见范围
+     * @param state
+     * String类型博文状态
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 博客对象Blog
+     */
     Blog findBlogByIdAndScopeAndStateAndDeleted(Integer id, String scope, String state, Boolean deleted);
 
     /**

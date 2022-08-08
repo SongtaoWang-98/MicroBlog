@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * 认证入口点接口实现类，认证异常返回相应Response
+ * @author Administrator
+ */
 @Component
 public class CustomizeAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override

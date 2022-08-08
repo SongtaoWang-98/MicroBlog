@@ -21,6 +21,7 @@ import MessageList from "@/views/MessageList";
 import MessagePage from "@/views/MessagePage";
 import photoPage from "@/views/PhotoPage";
 import SearchBySpecificTopic from "@/views/SearchBySpecificTopic";
+import topicTrend from "@/views/TopicTrend";
 
 Vue.use(VueRouter)
 
@@ -129,6 +130,11 @@ const routes = [
         path: '/photoPage',
         name: 'photoPage',
         component: photoPage
+    },
+    {
+        path: '/topicTrend/:id',
+        name: 'topicTrend',
+        component: topicTrend
     }
 ]
 

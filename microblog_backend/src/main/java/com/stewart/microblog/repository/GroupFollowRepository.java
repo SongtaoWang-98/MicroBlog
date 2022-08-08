@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface GroupFollowRepository extends JpaRepository<GroupFollow, Integer> {
+
     /**
      * 通过关注组id查找关注组包含列表
      * @param groupId

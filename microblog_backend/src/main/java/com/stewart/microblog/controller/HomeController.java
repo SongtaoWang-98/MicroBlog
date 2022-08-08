@@ -21,24 +21,42 @@ public class HomeController {
     @Resource
     private HomeService homeService;
 
+    /**
+     * 展示热门博文接口
+     * @return ResultVO
+     */
     @SystemControllerLog(description = "展示热门博文")
     @GetMapping("/hot")
     public ResultVO hotBlogs() {
         return ResultVOUtil.success(homeService.showHotBlogsHome());
     }
 
+    /**
+     * 展示最新博文接口
+     * @return ResultVO
+     */
     @SystemControllerLog(description = "展示最新博文")
     @GetMapping("/new")
     public ResultVO newBlogs() {
         return ResultVOUtil.success(homeService.showNewBlogsHome());
     }
 
+    /**
+     * 展示好友圈博文接口
+     * @return ResultVO
+     */
     @SystemControllerLog(description = "展示好友圈博文")
     @GetMapping("/friends")
     public ResultVO friendsBlogs() {
         return ResultVOUtil.success(homeService.showFriendsBlogsHome());
     }
 
+    /**
+     * 展示热门博文接口
+     * @param groupId
+     * Integer类型用户组id
+     * @return ResultVO
+     */
     @GetMapping("/group")
     @SystemControllerLog(description = "按分组展示博文")
     public ResultVO groupBlogs(Integer groupId) {

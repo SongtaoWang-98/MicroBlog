@@ -7,7 +7,7 @@ package com.stewart.microblog.exception;
 public interface BaseErrorInfoInterface {
 
     /**
-     *  错误码
+     * 错误码
      * @return
      * String类型状态码
      */

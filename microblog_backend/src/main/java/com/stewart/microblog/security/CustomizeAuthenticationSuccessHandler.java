@@ -20,7 +20,8 @@ import java.io.IOException;
 import java.util.Date;
 
 /**
- * @author stewartwang
+ * 实现了认证成功处理接口，对认证成功之后进行处理
+ * @author 王松涛
  */
 @Component
 public class CustomizeAuthenticationSuccessHandler implements AuthenticationSuccessHandler {

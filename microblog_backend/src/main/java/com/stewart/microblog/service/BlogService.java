@@ -8,6 +8,7 @@ import com.stewart.microblog.enums.StatusCode;
  * @author 王松涛
  */
 public interface BlogService {
+
     /**
      * 点赞博文接口
      * @param blogId
@@ -61,6 +62,7 @@ public interface BlogService {
      * @return 状态码
      */
     StatusCode publishBlog(NewBlogDTO newBlogDTO);
+
     StatusCode repostBlog(Integer blogId);
     StatusCode reportBlog(Integer blogId, String content, String email);
 }

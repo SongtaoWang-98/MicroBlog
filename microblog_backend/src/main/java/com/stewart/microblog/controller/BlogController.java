@@ -19,6 +19,13 @@ import javax.annotation.Resource;
 public class BlogController {
     @Resource
     private BlogService blogService;
+
+    /**
+     * 点赞博文接口
+     * @param blogId
+     * Integer类型博文id
+     * @return ResultVO
+     */
     @PostMapping ("/like")
     @SystemControllerLog(description = "点赞博文")
     public ResultVO likeBlog(Integer blogId) {
@@ -27,6 +34,13 @@ public class BlogController {
         }
         return ResultVOUtil.success(blogService.likeBlog(blogId));
     }
+
+    /**
+     * 取消点赞博文接口
+     * @param blogId
+     * Integer类型博文id
+     * @return ResultVO
+     */
     @PostMapping ("/dislike")
     @SystemControllerLog(description = "取消点赞博文")
     public ResultVO dislikeBlog(Integer blogId) {
@@ -35,6 +49,13 @@ public class BlogController {
         }
         return ResultVOUtil.success(blogService.dislikeBlog(blogId));
     }
+
+    /**
+     * 收藏博文接口
+     * @param blogId
+     * Integer类型博文id
+     * @return ResultVO
+     */
     @PostMapping("/collect")
     @SystemControllerLog(description = "收藏博文")
     public ResultVO collectBlog(Integer blogId) {
@@ -43,6 +64,13 @@ public class BlogController {
         }
         return ResultVOUtil.success(blogService.collectBlog(blogId));
     }
+
+    /**
+     * 取消收藏博文接口
+     * @param blogId
+     * Integer类型博文id
+     * @return ResultVO
+     */
     @PostMapping("/disCollect")
     @SystemControllerLog(description = "取消收藏博文")
     public ResultVO disCollectBlog(Integer blogId) {
@@ -51,6 +79,13 @@ public class BlogController {
         }
         return ResultVOUtil.success(blogService.disCollectBlog(blogId));
     }
+
+    /**
+     * 评论博文接口
+     * @param blogId
+     * Integer类型博文id
+     * @return ResultVO
+     */
     @PostMapping("/comment")
     @SystemControllerLog(description = "评论博文")
     public ResultVO commentBlog(Integer blogId, String content) {
@@ -62,6 +97,13 @@ public class BlogController {
         }
         return ResultVOUtil.success(blogService.commentBlog(blogId, false, null,  content));
     }
+
+    /**
+     * 发布博文接口
+     * @param newBlogDTO
+     * 博文表单对象newBlogDTO
+     * @return ResultVO
+     */
     @PostMapping("/publish")
     @SystemControllerLog(description = "发布博文")
     public ResultVO publishNewBlog(@RequestBody NewBlogDTO newBlogDTO) {

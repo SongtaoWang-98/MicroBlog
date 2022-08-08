@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author 王松涛
  */
 public interface LikeSetRepository extends JpaRepository<LikeSet, Integer> {
+
     /**
      * 根据用户id和博客id查询点赞关系
      * @param userId

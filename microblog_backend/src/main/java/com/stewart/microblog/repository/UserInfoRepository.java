@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author 王松涛
  */
 public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
+
     /**
      * 通过用户名查询用户
      * @param userName
@@ -26,7 +27,17 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
      */
     UserInfo findUserByIdAndState(Integer id, String state);
 
+    /**
+     * 通过id查找用户
+     * @param id
+     * Integer累心用户id
+     * @return 用户对象UserInfo
+     */
     UserInfo findUserInfoById(Integer id);
 
+    /**
+     * 查找最后一个用户id所对应的用户
+     * @return 用户对象UserInfo
+     */
     UserInfo findFirstByOrderById();
 }

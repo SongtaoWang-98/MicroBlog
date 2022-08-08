@@ -7,18 +7,20 @@ import org.springframework.security.web.session.SessionInformationExpiredEvent;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 
 import javax.annotation.Resource;
-import javax.servlet.ServletException;
 import java.io.IOException;
 
+/**
+ * session信息过期策略接口实现，用于实现单登录
+ * @author 王松涛
+ */
 public class MySessionInformationExpiredStrategy implements SessionInformationExpiredStrategy {
-
 
     @Resource
     private CustomizeAuthenticationFailureHandler myAuthenticationFailureHandler;
 
     @Override
     public void onExpiredSessionDetected(SessionInformationExpiredEvent event) throws IOException {
-        // 1. 获取用户名
+        //获取用户名
         UserDetails userDetails =
                 (UserDetails)event.getSessionInformation().getPrincipal();
 

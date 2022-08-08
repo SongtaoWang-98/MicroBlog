@@ -39,6 +39,9 @@ public class BlogServiceImpl implements BlogService {
     @Resource
     private BlogTopicRepository blogTopicRepository;
 
+    /**
+     * 日志logger对象
+     */
     private static final Logger logger = LoggerFactory.getLogger(BlogServiceImpl.class);
 
     @Override

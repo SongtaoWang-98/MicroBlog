@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author stewartwang
+ * 实现了认证失败处理接口，对不同认证失败异常进行处理
+ * @author 王松涛
  */
 @Component
 public class CustomizeAuthenticationFailureHandler implements AuthenticationFailureHandler {

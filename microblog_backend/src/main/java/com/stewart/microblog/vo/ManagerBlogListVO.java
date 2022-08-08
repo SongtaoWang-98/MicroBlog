@@ -15,6 +15,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ManagerBlogListVO {
-    @JsonProperty("blogs")
+    @JsonProperty("blogList")
     private List<ManagerBlogListItemVO> managerBlogListItemVOList;
 }

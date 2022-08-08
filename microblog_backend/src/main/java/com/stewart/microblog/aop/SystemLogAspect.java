@@ -19,8 +19,8 @@ import java.lang.reflect.Method;
 import java.util.Date;
 
 /**
- * Title: SystemControllerLog
- * Description: 切点类
+ * 切点类实现
+ * @author 王松涛
  */
 @Aspect
 @Component
@@ -39,14 +39,13 @@ public class SystemLogAspect {
     /**
      * @Description  前置通知  用于拦截Controller层记录用户的操作
      */
-
     @Before("controllerAspect()")
     public void doBefore(JoinPoint joinPoint){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         HttpSession session = request.getSession();
 
         try {
-            //*========控制台输出=========*//
+            //控制台输出
             logger.info("请求方法：{}", request.getMethod());
             logger.info("请求协议：{}", request.getProtocol());
             logger.info("请求URL：{}", request.getRequestURL());
@@ -59,7 +58,7 @@ public class SystemLogAspect {
                     (joinPoint.getTarget().getClass().getName() + "." + joinPoint.getSignature().getName()));
             logger.info("功能描述：{}", getControllerMethodDescription(joinPoint));
 
-            //*========数据库日志=========*//
+            //数据库日志
             sysActionRepository.save(new SysAction(
                     null, request.getRemoteAddr(), request.getRequestURL().toString(), request.getMethod(),
                     request.getQueryString(), request.getLocalPort(), session.getId(),

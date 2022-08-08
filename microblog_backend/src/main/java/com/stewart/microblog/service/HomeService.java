@@ -8,6 +8,7 @@ import com.stewart.microblog.vo.HomeVO;
  * @author 王松涛
  */
 public interface HomeService {
+
     /**
      * 展示热门博文界面
      * @return 热门博文视图对象

@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface PictureRepository extends JpaRepository<Picture, Integer> {
+
     /**
      * 通过照片id查询照片
      * @param id
@@ -19,5 +20,14 @@ public interface PictureRepository extends JpaRepository<Picture, Integer> {
      * @return 照片对象Picture
      */
     Picture findPictureByIdAndDeleted(Integer id, Boolean deleted);
+
+    /**
+     * 通过用户id查询照片
+     * @param id
+     * Integer类型用户id
+     * @param deleted
+     * Boolean类型照片标记
+     * @return 照片列表
+     */
     List<Picture> findAllByUserIdAndDeleted(Integer id, Boolean deleted);
 }

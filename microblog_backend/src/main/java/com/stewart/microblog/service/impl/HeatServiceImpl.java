@@ -47,7 +47,9 @@ public class HeatServiceImpl implements HeatService {
             List<BlogTopic> blogTopicList = blogTopicRepository.findBlogTopicsByTopicIdAndDeleted(topic.getId(), false);
             for(BlogTopic blogTopic: blogTopicList) {
                 Blog blog = blogRepository.findBlogByIdAndDeleted(blogTopic.getBlogId(), false);
-                topicHeat += blog.getHeat();
+                if(blog != null) {
+                    topicHeat += blog.getHeat();
+                }
             }
             topic.setHeat(topicHeat);
             topicRepository.save(topic);

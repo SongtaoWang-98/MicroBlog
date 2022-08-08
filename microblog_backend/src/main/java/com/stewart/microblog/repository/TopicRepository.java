@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface TopicRepository extends JpaRepository<Topic, Integer> {
+
     /**
      * 话题列表依热度倒序排列
      * @param deleted

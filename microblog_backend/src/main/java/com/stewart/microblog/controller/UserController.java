@@ -21,6 +21,13 @@ import java.text.ParseException;
 public class UserController {
     @Resource
     private UserService userService;
+
+    /**
+     * 查看用户主页接口
+     * @param personId
+     * Integer类型用户id
+     * @return ResultVO
+     */
     @GetMapping("/homePage")
     @SystemControllerLog(description = "查看用户主页")
     public ResultVO personalHomePage(Integer personId) {
@@ -29,32 +36,66 @@ public class UserController {
         }
         return ResultVOUtil.success(userService.showPersonalPage(personId));
     }
+
+    /**
+     * 展示用户收藏列表接口
+     * @return ResultVO
+     */
     @GetMapping("/collections")
     @SystemControllerLog(description = "展示用户收藏列表")
     public ResultVO showMyCollections() {
         return ResultVOUtil.success(userService.showMyCollections());
     }
+
+    /**
+     * 展示用户关注列表接口
+     * @return ResultVO
+     */
     @GetMapping("/followingList")
     @SystemControllerLog(description = "展示用户关注列表")
     public ResultVO followingList() {
         return ResultVOUtil.success(userService.showFollowingList());
     }
+
+    /**
+     * 展示用户粉丝列表接口
+     * @return ResultVO
+     */
     @GetMapping("/followerList")
     @SystemControllerLog(description = "展示用户粉丝列表")
     public ResultVO followerList() {
         return ResultVOUtil.success(userService.showFollowerList());
     }
+
+    /**
+     * 展示用户详细信息接口
+     * @return ResultVO
+     */
     @GetMapping("/detailedInfo")
     @SystemControllerLog(description = "展示用户详细信息")
     public ResultVO detailedInfo() {
         return ResultVOUtil.success(userService.showDetailedInfo());
     }
+
+    /**
+     * 修改用户详细信息接口
+     * @param detailedInfoDTO
+     * 用户详细信息表单对象
+     * @return ResultVO
+     */
     @PostMapping("/updateDetailedInfo")
     @SystemControllerLog(description = "修改用户详细信息")
     public ResultVO updateDetailedInfo(@RequestBody DetailedInfoDTO detailedInfoDTO) throws ParseException {
         StatusCode statusCode = userService.updateDetailedInfo(detailedInfoDTO);
         return ResultVOUtil.success(statusCode.getMsg());
     }
+
+    /**
+     * 关注好友功能接口
+     * @param personId
+     * Integer类型关注用户id
+     * @return ResultVO
+     */
     @PostMapping("/follow")
     @SystemControllerLog(description = "关注好友")
     public ResultVO followPerson(Integer personId) {
@@ -63,6 +104,13 @@ public class UserController {
         }
         return ResultVOUtil.success(userService.follow(personId));
     }
+
+    /**
+     * 取消关注好友功能接口
+     * @param personId
+     * Integer类型取消关注用户id
+     * @return ResultVO
+     */
     @PostMapping("/unfollow")
     @SystemControllerLog(description = "取消关注")
     public ResultVO unfollowPerson(Integer personId) {
@@ -71,6 +119,11 @@ public class UserController {
         }
         return ResultVOUtil.success(userService.unfollow(personId));
     }
+
+    /**
+     * 展示个人统计功能接口
+     * @return ResultVO
+     */
     @GetMapping("/personalStat")
     @SystemControllerLog(description = "展示个人统计")
     public ResultVO showPersonalStat() {

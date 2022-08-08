@@ -4,7 +4,6 @@ import com.stewart.microblog.entity.Blog;
 import com.stewart.microblog.entity.BlogTopic;
 import com.stewart.microblog.entity.Topic;
 import com.stewart.microblog.entity.UserInfo;
-import com.stewart.microblog.esrepository.ESBlogRepository;
 import com.stewart.microblog.repository.BlogRepository;
 import com.stewart.microblog.repository.BlogTopicRepository;
 import com.stewart.microblog.repository.PictureRepository;
@@ -14,11 +13,8 @@ import com.stewart.microblog.vo.SearchResultVO;
 import com.stewart.microblog.vo.UserListItemVO;
 import com.stewart.microblog.vo.UserListVO;
 import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.FuzzyQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.core.SearchHit;
 import org.springframework.data.elasticsearch.core.SearchHits;
@@ -35,8 +31,6 @@ import java.util.*;
  */
 @Service
 public class SearchServiceImpl implements SearchService {
-    @Resource
-    private ESBlogRepository esBlogRepository;
     @Resource
     private BlogRepository blogRepository;
     @Resource
@@ -115,8 +109,10 @@ public class SearchServiceImpl implements SearchService {
             //放到实体类中
             Blog blog = blogRepository.findBlogByIdAndScopeAndStateAndDeleted(
                     searchHit.getContent().getId(), "PUBLIC", "NORMAL", false);
-            blog.setContent(searchHit.getContent().getContent());
-            blogList.add(blog);
+            if(blog != null) {
+                blog.setContent(searchHit.getContent().getContent());
+                blogList.add(blog);
+            }
         }
         return new SearchResultVO(homeService.convertBlogsToVO(blogList));
     }

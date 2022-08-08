@@ -6,10 +6,13 @@ import store from './store'
 import './plugins/element.js'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import * as echarts from 'echarts'
 
 // Vue.use(ElementUI, {size: "small"});
 
 Vue.config.productionTip = false
+
+Vue.prototype.$echarts = echarts
 
 import axios from 'axios'    //导入axios
 axios.defaults.withCredentials = true    //全局设置axios允许携带cookie进行访问

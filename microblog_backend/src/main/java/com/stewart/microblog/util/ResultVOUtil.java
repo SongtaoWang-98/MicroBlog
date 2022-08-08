@@ -7,6 +7,13 @@ import com.stewart.microblog.vo.ResultVO;
  * @author 王松涛
  */
 public class ResultVOUtil {
+
+    /**
+     * 成功信息模板
+     * @param data
+     * 数据对象
+     * @return ResultVO
+     */
     public static ResultVO success(Object data){
         ResultVO resultVO = new ResultVO();
         resultVO.setCode(0);
@@ -15,6 +22,12 @@ public class ResultVOUtil {
         return resultVO;
     }
 
+    /**
+     * 失败信息模板
+     * @param data
+     * 数据对象
+     * @return ResultVO
+     */
     public static ResultVO fail(Object data){
         ResultVO resultVO = new ResultVO();
         resultVO.setCode(1);

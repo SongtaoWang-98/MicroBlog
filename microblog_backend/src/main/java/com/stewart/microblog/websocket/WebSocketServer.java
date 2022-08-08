@@ -13,7 +13,6 @@ import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
-
  * ServerEndpoint 注解是一个类层次的注解，它的功能主要是将目前的类定义成一个websocket服务器端,
  * 注解的值将被用于监听用户连接的终端访问URL地址,客户端可以通过这个URL来连接到WebSocket服务器端
  */
@@ -21,15 +20,24 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @Service
 @ServerEndpoint("/websocket/{sid}")
 public class WebSocketServer {
-    private static final Logger logger = LoggerFactory.getLogger(WebSocketServer.class);
-    //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
-    private static int onlineCount = 0;
-    //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
-    private static CopyOnWriteArraySet<WebSocketServer> webSocketSet = new CopyOnWriteArraySet<>();
 
-    //与某个客户端的连接会话，需要通过它来给客户端发送数据
+    private static final Logger logger = LoggerFactory.getLogger(WebSocketServer.class);
+
+    /**
+     * 静态变量，用来记录当前在线连接数
+     */
+    private static int onlineCount = 0;
+    /**
+     * 线程安全Set，用来存放每个客户端对应的MyWebSocket对象
+     */
+    private static CopyOnWriteArraySet<WebSocketServer> webSocketSet = new CopyOnWriteArraySet<>();
+    /**
+     * 与某个客户端的连接会话
+     */
     private Session session;
-    //接收sid
+    /**
+     * 接收sid
+     */
     private String sid = "";
 
     @Override
@@ -78,7 +86,6 @@ public class WebSocketServer {
 
     /**
      * 收到客户端消息后调用的方法
-     * @ Param message 客户端发送过来的消息
      */
     @OnMessage
     public void onMessage(String message, Session session) {
@@ -94,8 +101,7 @@ public class WebSocketServer {
     }
 
     /**
-     * @ Param session
-     * @ Param error
+     * 发生错误的方法
      */
     @OnError
     public void onError(Session session, Throwable error) {
@@ -110,22 +116,7 @@ public class WebSocketServer {
         this.session.getBasicRemote().sendText(message);
     }
 
-    /**
-     * 群发自定义消息
-     */
-    public static void sendInfo(String message, @PathParam("sid") String sid) throws IOException {
-        logger.info("推送消息到窗口{}，推送内容:{}", sid, message);
 
-        for (WebSocketServer item : webSocketSet) {
-            try {
-                //这里可以设定只推送给这个sid的，为null则全部推送
-               if (item.sid.equals(sid)) {
-                    item.sendMessage(message);
-                }
-            } catch (IOException ignored) {
-            }
-        }
-    }
 
     public static synchronized int getOnlineCount() {
         return onlineCount;
@@ -139,7 +130,4 @@ public class WebSocketServer {
         WebSocketServer.onlineCount--;
     }
 
-    public static Set<WebSocketServer> getWebSocketSet() {
-        return webSocketSet;
-    }
 }

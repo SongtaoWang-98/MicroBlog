@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface CommentRepository extends JpaRepository<Comment, Integer> {
+
     /**
      * 根据博客id查找评论列表
      * @param blogId

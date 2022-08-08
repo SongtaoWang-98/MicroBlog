@@ -75,6 +75,7 @@ public interface UserService {
      * @return 用户列表视图对象
      */
     UserListVO showFollowerList();
+
     GroupListVO showGroupList();
     StatusCode createGroup(String groupName);
     StatusCode deleteGroup(Integer groupId);

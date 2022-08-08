@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface FollowRepository extends JpaRepository<Follow, Integer> {
+
     /**
      * 根据被关注id查找粉丝数量
      * @param userId

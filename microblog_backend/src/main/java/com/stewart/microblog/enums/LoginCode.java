@@ -16,7 +16,7 @@ public enum LoginCode {
     /* 默认失败 */
     COMMON_FAIL(999, "失败"),
 
-    /* 参数错误：1000～1999 */
+    /* 参数错误 */
     PARAM_NOT_VALID(1001, "参数无效"),
     PARAM_IS_BLANK(1002, "参数为空"),
     PARAM_TYPE_ERROR(1003, "参数类型错误"),

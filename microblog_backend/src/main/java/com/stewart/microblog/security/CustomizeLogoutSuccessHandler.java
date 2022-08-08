@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author Administrator
+ * 登出成功接口实现
+ * @author 王松涛
  */
 @Component
 public class CustomizeLogoutSuccessHandler implements LogoutSuccessHandler {

@@ -6,7 +6,6 @@ import lombok.Getter;
  * 状态代码枚举类
  * @author 王松涛
  */
-
 @Getter
 public enum StatusCode {
     //成功

@@ -103,7 +103,7 @@ public class ManageServiceImpl implements ManageService {
                     blog.getId(), userInfoRepository.findUserInfoById(blog.getPublisherId()).getUsername(),
                     dateFormat.format(blog.getTime()), blog.getScope(), blog.getContent(),
                     blog.getLikeNum(), blog.getCollectNum(), blog.getForwardNum(),
-                    blog.getState(), blog.getHeat(), blog.getDeleted()
+                    blog.getState(), blog.getHeat(), blog.getDeleted() ? "已删除" : " "
             ));
         }
         return new ManagerBlogListVO(managerBlogListItemVOList);
@@ -146,12 +146,13 @@ public class ManageServiceImpl implements ManageService {
     @Override
     public ManagerTopicTrendVO showTopicTrend(Integer topicId) {
         List<Integer> heatList = new ArrayList<>();
+        List<String> timeList = new ArrayList<>();
         List<HeatTime> heatTimeList = heatTimeRepository.findByTopicId(topicId);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm");
         for(HeatTime heatTime: heatTimeList) {
+            timeList.add(dateFormat.format(heatTime.getTime()));
             heatList.add(heatTime.getHeat());
         }
-        return new ManagerTopicTrendVO(dateFormat.format(heatTimeList.get(0).getTime()),
-                dateFormat.format(heatTimeList.get(0).getTime()), heatList);
+        return new ManagerTopicTrendVO(timeList, heatList);
     }
 }

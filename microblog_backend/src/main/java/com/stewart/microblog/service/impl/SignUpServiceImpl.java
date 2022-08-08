@@ -7,6 +7,7 @@ import com.stewart.microblog.enums.StatusCode;
 import com.stewart.microblog.repository.DetailedInfoRepository;
 import com.stewart.microblog.repository.UserInfoRepository;
 import com.stewart.microblog.service.SignUpService;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -23,6 +24,8 @@ public class SignUpServiceImpl implements SignUpService {
     private UserInfoRepository userInfoRepository;
     @Resource
     private DetailedInfoRepository detailedInfoRepository;
+    @Resource
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public RegisterCode signUp(String username, String nickname, String password) {
@@ -31,7 +34,7 @@ public class SignUpServiceImpl implements SignUpService {
         }
         else {
             userInfoRepository.save(new UserInfo(
-                    null, username, nickname, password, "USER",
+                    null, username, nickname, passwordEncoder.encode(password), "USER",
                     "NORMAL", 5, new Date()
             ));
             detailedInfoRepository.save(new DetailedInfo(userInfoRepository.findFirstByOrderById().getId(), null,

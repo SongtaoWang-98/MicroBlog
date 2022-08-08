@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface BlogTopicRepository extends JpaRepository<BlogTopic, Integer> {
+
     /**
      * 根据博客id查找博客-话题关系
      * @param blogId
@@ -19,5 +20,14 @@ public interface BlogTopicRepository extends JpaRepository<BlogTopic, Integer> {
      * @return 博客-话题列表
      */
     List<BlogTopic> findBlogTopicsByBlogIdAndDeleted(Integer blogId, Boolean deleted);
+
+    /**
+     * 根据话题id查找博客-话题关系
+     * @param topicId
+     * Integer类型话题id
+     * @param deleted
+     * Boolean类型删除标记
+     * @return 博客-话题列表
+     */
     List<BlogTopic> findBlogTopicsByTopicIdAndDeleted(Integer topicId, Boolean deleted);
 }

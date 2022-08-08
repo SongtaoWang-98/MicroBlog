@@ -20,6 +20,13 @@ import javax.annotation.Resource;
 public class SearchController {
     @Resource
     private SearchService searchService;
+
+    /**
+     * 查询博文正文功能接口
+     * @param str
+     * String类型查询内容
+     * @return ResultVO
+     */
     @GetMapping("/byContent")
     @SystemControllerLog(description = "查询博文正文")
     public ResultVO searchByContent(String str) {
@@ -28,6 +35,13 @@ public class SearchController {
         }
         return ResultVOUtil.success(searchService.searchByContent(str));
     }
+
+    /**
+     * 查询话题功能接口
+     * @param str
+     * String类型查询内容
+     * @return ResultVO
+     */
     @GetMapping("/byTopic")
     @SystemControllerLog(description = "查询话题")
     public ResultVO searchByTopic(String str) {
@@ -36,6 +50,13 @@ public class SearchController {
         }
         return ResultVOUtil.success(searchService.searchByTopic(str));
     }
+
+    /**
+     * 查询用户功能接口
+     * @param str
+     * String类型查询内容
+     * @return ResultVO
+     */
     @GetMapping("/byUser")
     @SystemControllerLog(description = "查询用户")
     public ResultVO searchByUsername(String str) {
@@ -44,6 +65,13 @@ public class SearchController {
         }
         return ResultVOUtil.success(searchService.searchByUsername(str));
     }
+
+    /**
+     * 精确查询话题功能接口
+     * @param str
+     * String类型查询内容
+     * @return ResultVO
+     */
     @GetMapping("/bySpecificTopic")
     @SystemControllerLog(description = "查询详细话题")
     public ResultVO searchBySpecificTopic(String str) {

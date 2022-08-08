@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface CollectionRepository extends JpaRepository<Collection, Integer> {
+
     /**
      * 根据用户id查询所有收藏
      * @param userId

@@ -17,15 +17,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * @author Administrator
+ * 用户认证实现类
+ * @author 王松涛
  */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
     private UserInfoRepository userInfoRepository;
-    @Resource
-    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws AuthenticationException {
@@ -37,7 +36,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new LockedException("账户已被封禁！");
         }
         String role = userInfo.getType();
-        return new User(userInfo.getUsername(), passwordEncoder.encode(userInfo.getPassword()),
+        return new User(userInfo.getUsername(), userInfo.getPassword(),
                 true, true, true, true,
                 new ArrayList<>(Collections.singleton(new SimpleGrantedAuthority(role))));
     }

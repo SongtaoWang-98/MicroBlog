@@ -10,6 +10,7 @@ import java.util.List;
  * @author 王松涛
  */
 public interface ConcernGroupRepository extends JpaRepository<ConcernGroup, Integer> {
+
     /**
      * 根据用户id查找关注组列表
      * @param userId

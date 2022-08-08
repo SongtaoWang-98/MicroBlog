@@ -56,18 +56,11 @@ public class ResultResponse {
 
     /**
      * 成功
-     *
-     * @return
      */
     public static ResultResponse success() {
         return success(null);
     }
 
-    /**
-     * 成功
-     * @param data
-     * @return
-     */
     public static ResultResponse success(Object data) {
         ResultResponse rb = new ResultResponse();
         rb.setCode(ExceptionEnum.SUCCESS.getResultCode());
@@ -87,9 +80,6 @@ public class ResultResponse {
         return rb;
     }
 
-    /**
-     * 失败
-     */
     public static ResultResponse error(String code, String message) {
         ResultResponse rb = new ResultResponse();
         rb.setCode(code);
@@ -98,9 +88,6 @@ public class ResultResponse {
         return rb;
     }
 
-    /**
-     * 失败
-     */
     public static ResultResponse error( String message) {
         ResultResponse rb = new ResultResponse();
         rb.setCode("-1");
