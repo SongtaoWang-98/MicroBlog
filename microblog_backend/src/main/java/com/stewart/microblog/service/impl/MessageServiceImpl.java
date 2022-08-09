@@ -12,7 +12,6 @@ import com.stewart.microblog.vo.MessageListItemVO;
 import com.stewart.microblog.vo.MessageListVO;
 import com.stewart.microblog.vo.MessagePageItemVO;
 import com.stewart.microblog.vo.MessagePageVO;
-import com.stewart.microblog.websocket.WebSocketServer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -31,8 +30,7 @@ public class MessageServiceImpl implements MessageService {
     private UserInfoRepository userInfoRepository;
     @Resource
     private PictureRepository pictureRepository;
-    @Resource
-    private WebSocketServer webSocketServer;
+
     @Override
     public MessageListVO showMessageList() {
         //获取当前用户
@@ -86,12 +84,12 @@ public class MessageServiceImpl implements MessageService {
         //获取当前用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
-
+        //获取双方头像信息
         String personPic = pictureRepository.findPictureByIdAndDeleted(userInfoRepository.findUserByIdAndState(
                 personId, "NORMAL").getPhotoId(), false).getUrl();
         String userPic = pictureRepository.findPictureByIdAndDeleted(userInfoRepository.findUserByIdAndState(
                 userId, "NORMAL").getPhotoId(), false).getUrl();
-
+        //获取双方聊天历史记录
         List<MessagePageItemVO> messagePageItemVOList = new ArrayList<>();
         List<Message> receiveMessageList = messageRepository.findAllBySenderIdAndReceiverIdAndDeletedOrderByTime(personId, userId, false);
         List<Message> sendMessageList = messageRepository.findAllBySenderIdAndReceiverIdAndDeletedOrderByTime(userId, personId, false);
@@ -131,7 +129,7 @@ public class MessageServiceImpl implements MessageService {
         //获取当前用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
-
+        //创建新的私信对象
         Message message = new Message(
                 null, userId, personId, new Date(), "UNREAD", content, false
         );

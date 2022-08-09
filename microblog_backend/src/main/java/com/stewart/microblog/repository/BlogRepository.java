@@ -103,7 +103,7 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
      * Boolean类型删除标记
      * @return 博文对象Blog
      */
-    Blog findFirstByPublisherIdAndDeletedOrderByHeat(Integer publishId, Boolean deleted);
+    Blog findFirstByPublisherIdAndDeletedOrderByHeatDesc(Integer publishId, Boolean deleted);
 
     /**
      * 找到最新创建博文

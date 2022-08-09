@@ -31,6 +31,10 @@ public class UserServiceImpl implements UserService{
     @Resource
     private FollowRepository followRepository;
     @Resource
+    private GroupFollowRepository groupFollowRepository;
+    @Resource
+    private ConcernGroupRepository concernGroupRepository;
+    @Resource
     private BlogRepository blogRepository;
     @Resource
     private BlogTopicRepository blogTopicRepository;
@@ -88,7 +92,7 @@ public class UserServiceImpl implements UserService{
             for(Comment comment: comments) {
                 commentList.add(userInfoRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
             }
-            String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
+            String picUrl = (blog.getPhotoId() == 0 ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             BlogVO blogVO = new BlogVO(
                     blogId,
                     publisher.getId(),
@@ -181,7 +185,7 @@ public class UserServiceImpl implements UserService{
                 photoVOList,
                 detailedInfo.getRealName(),
                 detailedInfo.getGender(),
-                dateFormat.format(detailedInfo.getBirthday()),
+                detailedInfo.getBirthday() == null ? null : dateFormat.format(detailedInfo.getBirthday()),
                 detailedInfo.getCompany(),
                 detailedInfo.getJob(),
                 detailedInfo.getUniversity(),
@@ -236,7 +240,7 @@ public class UserServiceImpl implements UserService{
             totalRepostNum += blog.getForwardNum();
             totalCollectNum += blog.getCollectNum();
         }
-        Blog hotBlog =  blogRepository.findFirstByPublisherIdAndDeletedOrderByHeat(userId, false);
+        Blog hotBlog =  blogRepository.findFirstByPublisherIdAndDeletedOrderByHeatDesc(userId, false);
         UserInfo publisher = userInfoRepository.findUserByIdAndState(userId, NORMAL);
         SimpleDateFormat dateFormat = new SimpleDateFormat(TIME_FORMAT);
         Integer blogId = hotBlog.getId();
@@ -250,7 +254,7 @@ public class UserServiceImpl implements UserService{
         for(Comment comment: comments) {
             commentList.add(userInfoRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
         }
-        String picUrl = (hotBlog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(hotBlog.getPhotoId(), false).getUrl());
+        String picUrl = (hotBlog.getPhotoId() == 0 ? "" : pictureRepository.findPictureByIdAndDeleted(hotBlog.getPhotoId(), false).getUrl());
         BlogVO blogVO = new BlogVO(
                 blogId,
                 publisher.getId(),
@@ -282,7 +286,18 @@ public class UserServiceImpl implements UserService{
             followRepository.save(follow);
         }
         else {
-            followRepository.save(new Follow(null, userId, personId, false));
+            follow = new Follow(null, userId, personId, false);
+            followRepository.save(follow);
+        }
+        //将其加入默认分组
+        Integer defaultGroupId = concernGroupRepository.findByUserIdAndName(userId, "默认分组").getId();
+        GroupFollow groupFollow = groupFollowRepository.findByGroupIdAndFollowIdAndDeleted(defaultGroupId, follow.getId(), true);
+        if(groupFollow!=null) {
+            groupFollow.setDeleted(false);
+            groupFollowRepository.save(groupFollow);
+        }
+        else {
+            groupFollowRepository.save(new GroupFollow(null, defaultGroupId, follow.getId(),false));
         }
         return StatusCode.SUCCESS;
     }
@@ -295,6 +310,10 @@ public class UserServiceImpl implements UserService{
         Follow follow = followRepository.findFollowByUserIdAndFollowingIdAndDeleted(userId, personId, false);
         follow.setDeleted(true);
         followRepository.save(follow);
+        //分组表中删除
+        GroupFollow groupFollow = groupFollowRepository.findByFollowIdAndDeleted(follow.getId(), false);
+        groupFollow.setDeleted(true);
+        groupFollowRepository.save(groupFollow);
         return StatusCode.SUCCESS;
     }
 
@@ -309,6 +328,9 @@ public class UserServiceImpl implements UserService{
         for(Follow follow: followList) {
             Integer personId = follow.getFollowingId();
             UserInfo person = userInfoRepository.findUserByIdAndState(personId, NORMAL);
+            if(person == null) {
+                continue;
+            }
             userListItemVOList.add(new UserListItemVO(
                     personId,
                     pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl(),
@@ -329,6 +351,9 @@ public class UserServiceImpl implements UserService{
         for(Follow follow: followList) {
             Integer personId = follow.getUserId();
             UserInfo person = userInfoRepository.findUserByIdAndState(personId, NORMAL);
+            if(person == null) {
+                continue;
+            }
             userListItemVOList.add(new UserListItemVO(
                     personId,
                     pictureRepository.findPictureByIdAndDeleted(person.getPhotoId(), false).getUrl(),

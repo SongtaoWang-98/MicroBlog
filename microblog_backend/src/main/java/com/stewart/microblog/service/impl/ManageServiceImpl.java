@@ -20,7 +20,6 @@ import java.util.List;
  */
 @Service
 public class ManageServiceImpl implements ManageService {
-
     @Resource
     private UserInfoRepository userInfoRepository;
     @Resource
@@ -103,7 +102,7 @@ public class ManageServiceImpl implements ManageService {
                     blog.getId(), userInfoRepository.findUserInfoById(blog.getPublisherId()).getUsername(),
                     dateFormat.format(blog.getTime()), blog.getScope(), blog.getContent(),
                     blog.getLikeNum(), blog.getCollectNum(), blog.getForwardNum(),
-                    blog.getState(), blog.getHeat(), blog.getDeleted() ? "已删除" : " "
+                    blog.getState(), blog.getHeat(), Boolean.TRUE.equals(blog.getDeleted()) ? "已删除" : " "
             ));
         }
         return new ManagerBlogListVO(managerBlogListItemVOList);

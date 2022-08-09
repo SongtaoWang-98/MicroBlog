@@ -27,7 +27,7 @@
               <div class="content" style="width: 300px; margin: 0 auto; text-align: left">{{blog.content}}</div>
               <div style="height: 20px"></div>
               <div class="pic" v-show="blog.img !== ''">
-                <el-image style="width: 300px; height: 200px" :fit="scale-down" :src=getImgUrl(blog.img)></el-image>
+                <el-image style="width: 300px; height: 200px" :fit="'scale-down'" :src=getImgUrl(blog.img)></el-image>
               </div>
               <div style="height: 10px"></div>
               <div class="interact" style="height: 24px; width:300px; font-size: 20px; margin: 0 auto">

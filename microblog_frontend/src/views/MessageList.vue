@@ -44,7 +44,7 @@ export default {
         {
           messageId: 123,
           personId: 123,
-          personPic: "Stewart/1.jpg",
+          personPic: "b",
           personName: "name",
           lastTime: "time",
           lastContent: "Content",
@@ -53,7 +53,7 @@ export default {
         {
           messageId: 123,
           personId: 123,
-          personPic: "Stewart/1.jpg",
+          personPic: "",
           personName: "name2",
           lastTime: "time2",
           lastContent: "Content2",

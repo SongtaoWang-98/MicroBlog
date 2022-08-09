@@ -110,8 +110,7 @@
               <el-divider></el-divider>
             </dd>
           </dl>
-          <p v-if="loading">加载中...</p>
-          <p v-if="noMore">没有更多了</p>
+          <p>没有更多了</p>
         </div>
       </el-main>
     </el-container>

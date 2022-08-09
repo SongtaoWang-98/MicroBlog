@@ -12,8 +12,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author 王松涛
  */
 @SpringBootApplication
-@EnableElasticsearchRepositories(basePackages = {"com.stewart.microblog.esrepository"})
-@EnableJpaRepositories(basePackages = {"com.stewart.microblog.repository"})
 @EnableScheduling
 public class MicroblogApplication {
 

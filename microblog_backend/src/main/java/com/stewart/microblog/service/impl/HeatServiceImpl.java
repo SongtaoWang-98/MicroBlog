@@ -36,10 +36,18 @@ public class HeatServiceImpl implements HeatService {
     @Resource
     private HeatTimeRepository heatTimeRepository;
 
+    /**
+     * 日志logger对象
+     */
     private static final Logger logger = LoggerFactory.getLogger(HeatServiceImpl.class);
+
+    /**
+     * 注解设置定时任务，每5s执行一次
+     */
     @Scheduled(cron = "*/5 * * * * *")
     @Override
     public void refreshTopicHeat(){
+        //遍历话题列表，一一刷新热度
         logger.info("刷新话题热度");
         List<Topic> topicList = topicRepository.findAllByDeletedOrderByHeatDesc(false);
         for(Topic topic: topicList) {
@@ -56,9 +64,13 @@ public class HeatServiceImpl implements HeatService {
         }
     }
 
-    @Scheduled(cron = "*/300 * * * * *")
+    /**
+     * 注解设置定时任务，每20s执行一次
+     */
+    @Scheduled(cron = "*/20 * * * * *")
     @Override
     public void recordTopicHeat() {
+        //保存话题热度-时间
         logger.info("记录话题热度");
         List<Topic> topicList = topicRepository.findAllByDeletedOrderByHeatDesc(false);
         for(Topic topic: topicList) {

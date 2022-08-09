@@ -1,9 +1,11 @@
 package com.stewart.microblog.service.impl;
 
+import com.stewart.microblog.entity.ConcernGroup;
 import com.stewart.microblog.entity.DetailedInfo;
 import com.stewart.microblog.entity.UserInfo;
 import com.stewart.microblog.enums.RegisterCode;
 import com.stewart.microblog.enums.StatusCode;
+import com.stewart.microblog.repository.ConcernGroupRepository;
 import com.stewart.microblog.repository.DetailedInfoRepository;
 import com.stewart.microblog.repository.UserInfoRepository;
 import com.stewart.microblog.service.SignUpService;
@@ -19,11 +21,12 @@ import java.util.Date;
  */
 @Service
 public class SignUpServiceImpl implements SignUpService {
-
     @Resource
     private UserInfoRepository userInfoRepository;
     @Resource
     private DetailedInfoRepository detailedInfoRepository;
+    @Resource
+    private ConcernGroupRepository concernGroupRepository;
     @Resource
     private PasswordEncoder passwordEncoder;
 
@@ -35,10 +38,12 @@ public class SignUpServiceImpl implements SignUpService {
         else {
             userInfoRepository.save(new UserInfo(
                     null, username, nickname, passwordEncoder.encode(password), "USER",
-                    "NORMAL", 5, new Date()
+                    "NORMAL", 2, new Date()
             ));
-            detailedInfoRepository.save(new DetailedInfo(userInfoRepository.findFirstByOrderById().getId(), null,
-                    null, null, null, null, null, null, null, null));
+            Integer newUserId = userInfoRepository.findFirstByOrderByIdDesc().getId();
+            detailedInfoRepository.save(new DetailedInfo(newUserId, null,
+                    null, new Date(), null, null, null, null, null, null));
+            concernGroupRepository.save(new ConcernGroup(null, newUserId, "默认分组", false));
             String filePath1 = "../microblog_frontend/static/" + username;
             //生成相册文件夹
             File file1=new File(filePath1);

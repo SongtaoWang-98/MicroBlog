@@ -3,6 +3,8 @@ package com.stewart.microblog.repository;
 import com.stewart.microblog.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  * 用户数据持久层接口
  * @author 王松涛
@@ -39,5 +41,7 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
      * 查找最后一个用户id所对应的用户
      * @return 用户对象UserInfo
      */
-    UserInfo findFirstByOrderById();
+    UserInfo findFirstByOrderByIdDesc();
+
+    List<UserInfo> findAllByType(String type);
 }

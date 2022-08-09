@@ -29,15 +29,12 @@ public class PhotoServiceImpl implements PhotoService {
     @Resource
     private PictureRepository pictureRepository;
 
-    private static String BASE_PATH =  "../microblog_frontend/static/";
-
     @Override
     public PhotosVO showPhotos() {
         //获取当前用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
-
-
+        //获取当前用户所有照片
         List<Picture> pictureList = pictureRepository.findAllByUserIdAndDeleted(userId, false);
         List<PhotoVO> photoVOList = new ArrayList<>();
         for(Picture picture: pictureList) {
@@ -51,12 +48,12 @@ public class PhotoServiceImpl implements PhotoService {
         //获取当前用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
-
         int userPicNum = pictureRepository.findAllByUserIdAndDeleted(userId, false).size() +
                 pictureRepository.findAllByUserIdAndDeleted(userId, true).size() + 1;
         String path =  userName + '/' + userPicNum + ".jpg";
-
-        String fileName = BASE_PATH + path;
+        //设置图片保存路径
+        String basePath = "../microblog_frontend/static/";
+        String fileName = basePath + path;
         if (!file.isEmpty()) {
             try {
                 File realFile = new File(fileName);

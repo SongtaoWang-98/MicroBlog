@@ -20,4 +20,12 @@ public interface ConcernGroupRepository extends JpaRepository<ConcernGroup, Inte
      * @return 关注组列表
      */
     List<ConcernGroup> findByUserIdAndDeleted(Integer userId, Boolean deleted);
+
+    /**
+     *
+     * @param userId
+     * @param name
+     * @return
+     */
+    ConcernGroup findByUserIdAndName(Integer userId, String name);
 }

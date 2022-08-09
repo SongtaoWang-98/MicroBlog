@@ -20,4 +20,6 @@ public interface GroupFollowRepository extends JpaRepository<GroupFollow, Intege
      * @return 有关该关注组的关注组-关注列表
      */
     List<GroupFollow> findAllByGroupIdAndDeleted(Integer groupId, Boolean deleted);
+    GroupFollow findByFollowIdAndDeleted(Integer followId, Boolean deleted);
+    GroupFollow findByGroupIdAndFollowIdAndDeleted(Integer groupId, Integer followId, Boolean deleted);
 }

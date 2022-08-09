@@ -45,10 +45,12 @@ public class BlogServiceImpl implements BlogService {
     private static final Logger logger = LoggerFactory.getLogger(BlogServiceImpl.class);
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public StatusCode likeBlog(Integer blogId) {
+        //获取当前登录用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
+        //获取当前用户与目标博文的点赞记录
         LikeSet likeSet = likeSetRepository.findByUserIdAndBlogId(userId, blogId);
         if(likeSet != null) {
             logger.info("数据库有用户id为{}博文id为{}的点赞记录，删除标记为true", userId, blogId);
@@ -60,6 +62,7 @@ public class BlogServiceImpl implements BlogService {
             likeSetRepository.save(new LikeSet(null, userId, blogId, false));
             logger.info("插入用户id为{}博文id为{}的点赞记录", userId, blogId);
         }
+        //更新点赞数据
         Blog blog = blogRepository.findBlogByIdAndDeleted(blogId, false);
         blog.setLikeNum(blog.getLikeNum() + 1);
         blog.setHeat(blog.getHeat() + 1);
@@ -69,11 +72,14 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public StatusCode dislikeBlog(Integer blogId) {
+        //获取当前登录用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
+        //查看当前用户与目标博文的被的点赞记录
         LikeSet likeSet = likeSetRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false);
+        //更新删除标记数据
         likeSet.setDeleted(true);
         logger.info("查询用户id为{}博文id为{}}的点赞记录，删除标记改为true", userId, blogId);
         likeSetRepository.save(likeSet);
@@ -86,10 +92,12 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public StatusCode collectBlog(Integer blogId) {
+        //获取当前登录用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
+        //获取当前用户与目标博文的收藏记录
         Collection collection = collectionRepository.findByUserIdAndBlogId(userId, blogId);
         if(collection != null) {
             logger.info("数据库有用户id为{}博文id为{}的收藏记录，删除标记为true", userId, blogId);
@@ -101,6 +109,7 @@ public class BlogServiceImpl implements BlogService {
             collectionRepository.save(new Collection(null, userId, blogId, false));
             logger.info("插入用户id为{}博文id为{}的收藏记录", userId, blogId);
         }
+        //更新收藏关系
         Blog blog = blogRepository.findBlogByIdAndDeleted(blogId, false);
         blog.setCollectNum(blog.getCollectNum() + 1);
         blog.setHeat(blog.getHeat() + 3);
@@ -110,11 +119,14 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public StatusCode disCollectBlog(Integer blogId) {
+        //获取当前登录用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
+        //获取当前用户与目标博文的收藏关系对象
         Collection collection = collectionRepository.findByUserIdAndBlogIdAndDeleted(userId, blogId, false);
+        //更新收藏关系
         collection.setDeleted(true);
         logger.info("查询用户id为{}博文id为{}的收藏记录，删除标记改为true", userId, blogId);
         collectionRepository.save(collection);
@@ -127,11 +139,14 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public StatusCode commentBlog(Integer blogId,  Boolean isReply, Integer replyCommentId, String content) {
+        //获取当前登录用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
+        //创建新评论对象
         Comment comment = new Comment(null, blogId, userId, content, new Date(), isReply, replyCommentId, false);
+        //保存评论
         logger.info("id为{}的用户与{}在id为{}的微博下发布评论，内容为{}", userId, new Date(), blogId, content);
         commentRepository.save(comment);
         Blog blog = blogRepository.findBlogByIdAndDeleted(blogId, false);
@@ -141,10 +156,12 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackOn = Exception.class)
     public StatusCode publishBlog(NewBlogDTO newBlogDTO) {
+        //获取当前登录用户
         String userName = GetCurrentUserUtil.getCurrentUserName();
         Integer userId = userInfoRepository.findByUsername(userName).getId();
+        //使用正则表达式分割正文并保存
         String content = newBlogDTO.getContent();
         String regex = "#.*\n";
         String str = content.replaceAll(regex, "");
@@ -156,6 +173,7 @@ public class BlogServiceImpl implements BlogService {
         );
         blogRepository.save(blog);
         Blog thisBlog = blogRepository.findFirstByOrderByIdDesc();
+        //使用正则表达式获取用户所使用话题
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(content);
         List<String> topicList = new ArrayList<>();
@@ -164,6 +182,7 @@ public class BlogServiceImpl implements BlogService {
             logger.info("用户发布博文话题：{}", t);
             topicList.add(t);
         }
+        //更新博文-话题关系表
         for(String s: topicList) {
             Topic topic = topicRepository.findTopicByName(s);
             if(topic != null) {
