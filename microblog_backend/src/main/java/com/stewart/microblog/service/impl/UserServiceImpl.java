@@ -128,6 +128,9 @@ public class UserServiceImpl implements UserService{
         logger.info("加载博文列表");
         for(Collection collection: collectionList) {
             Blog blog = blogRepository.findBlogByIdAndStateAndDeleted(collection.getBlogId(), NORMAL, false);
+            if(blog == null) {
+                continue;
+            }
             Integer blogId = blog.getId();
             UserInfo publisher = userInfoRepository.findUserByIdAndState(blog.getPublisherId(), NORMAL);
             List<String> blogTopicList = new ArrayList<>();
@@ -140,7 +143,7 @@ public class UserServiceImpl implements UserService{
             for(Comment comment: comments) {
                 commentList.add(userInfoRepository.findUserByIdAndState(comment.getSenderId(), NORMAL).getNickname() + "： " + comment.getContent());
             }
-            String picUrl = (blog.getPhotoId() == null ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
+            String picUrl = (blog.getPhotoId() == 0 ? "" : pictureRepository.findPictureByIdAndDeleted(blog.getPhotoId(), false).getUrl());
             blogVOList.add(new BlogVO(
                     blogId,
                     publisher.getId(),

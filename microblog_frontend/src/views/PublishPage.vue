@@ -20,7 +20,7 @@
       </div>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">立即创建</el-button>
-        <el-button>取消</el-button>
+        <el-button onclick="window.location.href='http://localhost:8080/home'">取消</el-button>
       </el-form-item>
     </el-form>
     <div style="width: 1000px; margin: 0 auto" v-if="Visible">

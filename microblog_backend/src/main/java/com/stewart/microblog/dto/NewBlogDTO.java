@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 发布新博客表单类
+ *
  * @author 王松涛
  */
 @Data

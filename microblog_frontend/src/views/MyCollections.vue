@@ -72,7 +72,7 @@ export default {
   created() {
     const _this = this
     axios.get('http://localhost:8181/user/collections').then(function (resp) {
-      console.log(resp.data.data)
+      console.log(resp.data)
       if(resp.data.data === "USER_NOT_LOGIN") {
         _this.$router.replace({path: '/loginPage'})
       }
